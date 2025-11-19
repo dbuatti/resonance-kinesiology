@@ -46,13 +46,13 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="lg:order-2">
-              {/* Image Placeholder */}
-              <div className="w-full h-96 bg-gray-100 rounded-3xl shadow-xl flex items-center justify-center border-4 border-gray-200">
-                <div className="text-center text-gray-500">
-                  <User className="h-24 w-24 mx-auto mb-4 text-gray-400" />
-                  <p className="text-2xl font-medium">Practitioner Photo</p>
-                  <p className="text-sm">300x400px recommended</p>
-                </div>
+              {/* Practitioner Photo */}
+              <div className="w-full h-96 rounded-3xl shadow-xl overflow-hidden border-4 border-gray-200">
+                <img 
+                  src="/daniele-buatti-practitioner.jpeg" 
+                  alt="Daniele Buatti, The Embodied Practitioner" 
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
             </div>
             <div className="lg:order-1">
