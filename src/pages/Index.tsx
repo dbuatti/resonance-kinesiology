@@ -33,6 +33,19 @@ const Index = () => {
         </nav>
       </header>
 
+      {/* Practitioner Photo Section - Circular Headshot */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <div className="w-48 h-48 mx-auto rounded-full shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50">
+            <img 
+              src="/daniele-buatti-hero.jpeg" 
+              alt="Daniele Buatti, The Embodied Practitioner" 
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section - Ethereal Background, Text Focused */}
       <section 
         className="relative py-32 md:py-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
@@ -64,41 +77,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Practitioner Photo & Philosophy Section (Combined) */}
-      <section className="bg-dyad-background-soft">
-        {/* Image Block (Dark Background) */}
-        <div className="bg-dyad-dark py-20">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <div className="w-full h-[450px] rounded-3xl shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50 mx-auto">
-              <img 
-                src="/daniele-buatti-hero.jpeg" 
-                alt="Daniele Buatti, The Embodied Practitioner" 
-                className="w-full h-full object-cover object-top scale-[1.8]"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* About/Philosophy - Text Block Only, Centered */}
-        <div className="py-32 bg-white">
-          <div className="container mx-auto px-6 max-w-3xl text-center">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-dyad-accent mb-4">
-              Daniele Buatti
-            </h3>
-            <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8 leading-snug">
-              The body doesn’t lie. It also doesn’t rush.
-            </h2>
-            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their <strong>felt sense</strong> to make it comprehensible and grounded.
-            </p>
-            {/* Removed border/padding for perfect centering */}
-            <p className="text-lg text-gray-600 mb-8 italic">
-              "Healing comes from <em>being</em> in the body, not escaping it."
-            </p>
-            <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
-              Read Full Profile →
-            </Button>
-          </div>
+      {/* About/Philosophy - Text Block Only, Centered */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-dyad-accent mb-4">
+            Daniele Buatti
+          </h3>
+          <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8 leading-snug">
+            The body doesn’t lie. It also doesn’t rush.
+          </h2>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their <strong>felt sense</strong> to make it comprehensible and grounded.
+          </p>
+          <p className="text-lg text-gray-600 mb-8 italic">
+            "Healing comes from <em>being</em> in the body, not escaping it."
+          </p>
+          <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
+            Read Full Profile →
+          </Button>
         </div>
       </section>
 
