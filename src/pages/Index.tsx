@@ -6,17 +6,12 @@ import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, User, Leaf } from "lucide-
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
-  // Soft, muted color palette for wellness feel
-  const primaryColor = "text-indigo-700";
-  const accentBg = "bg-indigo-50";
-  const accentText = "text-indigo-600";
-
   return (
     <div className="bg-white">
       {/* Header - Clean and simple */}
       <header className="container mx-auto px-6 py-6 max-w-6xl">
         <nav className="flex justify-between items-center">
-          <h1 className="text-3xl font-serif font-light tracking-wider text-gray-800">
+          <h1 className="text-3xl font-bold tracking-wider text-gray-800">
             Daniele Buatti
           </h1>
           <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 shadow-md text-lg px-6 py-3 rounded-full">
@@ -28,7 +23,7 @@ const Index = () => {
       {/* Hero - Soft Background */}
       <section className="min-h-[80vh] bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center text-gray-900 relative overflow-hidden py-32">
         <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-serif font-extralight mb-6 leading-tight tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-extralight mb-6 leading-tight tracking-tight">
             The Embodied Practitioner
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-10 text-gray-600">
@@ -62,7 +57,7 @@ const Index = () => {
               <h3 className="text-sm font-semibold uppercase tracking-widest text-purple-500 mb-4">
                 Core Philosophy
               </h3>
-              <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-8 leading-snug">
+              <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-8 leading-snug">
                 The body doesn’t lie. It also doesn’t rush.
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
@@ -83,7 +78,7 @@ const Index = () => {
       <section className="bg-indigo-50 py-32 text-gray-900">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-serif font-medium mb-6">What We Transform</h2>
+            <h2 className="text-5xl md:text-6xl font-medium mb-6">What We Transform</h2>
             <p className="text-2xl text-gray-700 max-w-3xl mx-auto">
               Working with the body’s natural intelligence to shift stress patterns and liberate expression.
             </p>
@@ -132,7 +127,7 @@ const Index = () => {
       {/* Session Structure - White Block */}
       <section className="bg-white py-32">
         <div className="container mx-auto px-6 max-w-6xl">
-          <h2 className="text-4xl font-serif font-medium text-center mb-4 text-gray-900">How We Work</h2>
+          <h2 className="text-4xl font-medium text-center mb-4 text-gray-900">How We Work</h2>
           <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
             I only offer 90-minute sessions, blending kinesiology, somatic tracking, and neurological reflex work.
           </p>
@@ -171,25 +166,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA / Contact - Soft Accent Background */}
-      <section className="bg-indigo-50 py-24 text-gray-900">
+      {/* CTA / Contact - Strong Purple Block */}
+      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 py-24 text-white">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h3 className="text-4xl md:text-5xl font-serif font-medium mb-8">Ready for Clarity?</h3>
-          <p className="text-xl mb-12 text-gray-700 leading-relaxed max-w-2xl mx-auto">
+          <h3 className="text-4xl md:text-5xl font-bold mb-8">Ready for Clarity?</h3>
+          <p className="text-xl mb-12 opacity-95 leading-relaxed max-w-2xl mx-auto">
             If you’re exhausted, overwhelmed, or disconnected from your body, this work meets you where you are.
           </p>
           
           <div className="space-y-4 mb-12 max-w-md mx-auto">
-            <Button variant="ghost" size="lg" className="justify-start h-14 text-indigo-700 hover:bg-indigo-100 w-full border border-indigo-200">
+            <Button variant="ghost" size="lg" className="justify-start h-14 text-white hover:bg-white/20 w-full border border-white/30">
               <Mail className="h-6 w-6 mr-4 flex-shrink-0" />
               daniele.kinesiology@gmail.com
             </Button>
-            <Button variant="ghost" size="lg" className="justify-start h-14 text-indigo-700 hover:bg-indigo-100 w-full border border-indigo-200">
+            <Button variant="ghost" size="lg" className="justify-start h-14 text-white hover:bg-white/20 w-full border border-white/30">
               <Phone className="h-6 w-6 mr-4 flex-shrink-0" />
               0424 174 067
             </Button>
           </div>
-          <Button size="lg" className="text-xl px-12 py-8 h-16 bg-indigo-600 text-white hover:bg-indigo-700 font-semibold shadow-2xl w-full sm:w-auto rounded-full">
+          <Button size="lg" className="text-xl px-12 py-8 h-16 bg-white text-purple-600 hover:bg-gray-50 font-semibold shadow-2xl w-full sm:w-auto rounded-full">
             Book Your 90-Minute Session
           </Button>
         </div>
