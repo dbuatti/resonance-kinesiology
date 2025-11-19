@@ -155,7 +155,7 @@ const Index = () => {
 
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
               <Mic2 className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
-              <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Vocal Liberation & Expression</CardTitle>
+              <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Vocal Freedom & Expression</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Transforming emotional suppression into vocal freedom for singers, performers, and creatives.
               </p>
