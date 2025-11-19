@@ -5,6 +5,7 @@ import { Card, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf } from "lucide-react";
 
 const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
+const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
 const Index = () => {
   return (
@@ -16,14 +17,24 @@ const Index = () => {
           <h1 className="text-2xl font-serif tracking-wider text-dyad-dark font-bold">
             ✦ Resonance Kinesiology
           </h1>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            <Button 
-              size="sm" 
-              className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
-            >
-              Book Session
-            </Button>
-          </a>
+          <div className="flex items-center space-x-4"> {/* Added a div for spacing */}
+            <a href={MUSIC_WORK_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-blue-600 hover:bg-blue-700 text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                My Music Work
+              </Button>
+            </a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Book Session
+              </Button>
+            </a>
+          </div>
         </nav>
       </header>
 
