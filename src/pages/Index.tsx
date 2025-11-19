@@ -53,7 +53,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-3 gap-16 items-start">
             
             {/* Text Column */}
-            <div className="lg:col-span-1 lg:sticky lg:top-24">
+            <div className="lg:col-span-1">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-dyad-accent mb-4">
                 Daniele Buatti
               </h3>
