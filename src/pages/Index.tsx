@@ -31,7 +31,7 @@ const Index = () => {
 
       {/* Hero Section - Full Width, Image Background, High Contrast */}
       <section 
-        className="relative py-32 md:py-48 overflow-hidden text-white"
+        className="relative min-h-[80vh] flex items-end overflow-hidden text-white"
         style={{ 
           backgroundImage: 'url(/daniele-buatti-hero.jpeg)', 
           backgroundSize: 'cover', 
@@ -41,7 +41,7 @@ const Index = () => {
         {/* Dark Overlay for contrast */}
         <div className="absolute inset-0 bg-dyad-dark/70"></div>
         
-        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
+        <div className="container mx-auto px-6 py-24 max-w-4xl text-center relative z-10">
           <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight">
             Embodied Clarity.
           </h1>
