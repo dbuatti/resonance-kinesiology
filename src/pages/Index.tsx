@@ -35,7 +35,7 @@ const Index = () => {
             Embodied Clarity.
           </h1>
           <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
-            Kinesiology, Somatic Awareness, and Vocal Liberation.
+            I offer Kinesiology, Somatic Awareness, and Vocal Liberation.
           </p>
           <Button 
             size="lg" 
@@ -61,10 +61,10 @@ const Index = () => {
                 The body doesn’t lie. It also doesn’t rush.
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their *felt sense* to make it comprehensible and grounded.
+                My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their <strong>felt sense</strong> to make it comprehensible and grounded.
               </p>
               <p className="text-lg text-gray-600 mb-8 border-l-4 border-dyad-accent/50 pl-4 italic">
-                "Healing comes from *being* in the body, not escaping it."
+                "Healing comes from <em>being</em> in the body, not escaping it."
               </p>
               <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
                 Read Full Profile →
@@ -90,7 +90,7 @@ const Index = () => {
       <section className="bg-dyad-dark py-32 text-dyad-background-soft">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-serif mb-6">What We Transform</h2>
+            <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Transform</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               Working with the body’s natural intelligence to shift stress patterns and liberate expression.
             </p>
