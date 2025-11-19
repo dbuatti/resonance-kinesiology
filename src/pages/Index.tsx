@@ -5,6 +5,8 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, MessageSquare, Music, Zap } from "lucide-react";
 import CommunityCard from "@/components/CommunityCard";
 
+const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
+
 const Index = () => {
   // Custom colors defined in tailwind.config.ts:
   // dyad-dark: #1E3261 (Deep Indigo)
@@ -20,12 +22,14 @@ const Index = () => {
           <h1 className="text-2xl font-serif tracking-wider text-dyad-dark font-bold">
             Resonance Kinesiology
           </h1>
-          <Button 
-            size="sm" 
-            className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
-          >
-            Book Session
-          </Button>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            <Button 
+              size="sm" 
+              className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+            >
+              Book Session
+            </Button>
+          </a>
         </nav>
       </header>
 
@@ -48,13 +52,15 @@ const Index = () => {
           <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
             I offer Kinesiology, Somatic Awareness, and Vocal Liberation.
           </p>
-          <Button 
-            size="lg" 
-            className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-xl rounded-full transition-colors"
-          >
-            Start Your Session
-            <ArrowRight className="ml-3 h-5 w-5" />
-          </Button>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            <Button 
+              size="lg" 
+              className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-xl rounded-full transition-colors"
+            >
+              Start Your Session
+              <ArrowRight className="ml-3 h-5 w-5" />
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -177,9 +183,11 @@ const Index = () => {
             Book your 90-minute session today to move through life with more ease, clarity, and internal freedom.
           </p>
           
-          <Button size="lg" className="text-xl px-12 py-8 h-16 bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-2xl w-full sm:w-auto rounded-full transition-colors">
-            Book Your 90-Minute Session
-          </Button>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="text-xl px-12 py-8 h-16 bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-2xl w-full sm:w-auto rounded-full transition-colors">
+              Book Your 90-Minute Session
+            </Button>
+          </a>
           
           <div className="mt-16 text-sm opacity-70 space-y-2">
             <p>Toorak, Melbourne Vic</p>
