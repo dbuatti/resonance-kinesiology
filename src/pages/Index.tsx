@@ -70,7 +70,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="lg:order-2">
               {/* Practitioner Photo - Increased height and object-top for better crop */}
-              <div className="w-full h-[500px] rounded-3xl shadow-2xl overflow-hidden border-8 border-white ring-4 ring-dyad-soft/50">
+              <div className="w-full h-[650px] rounded-3xl shadow-2xl overflow-hidden border-8 border-white ring-4 ring-dyad-soft/50">
                 <img 
                   src="/daniele-buatti-practitioner.jpeg" 
                   alt="Daniele Buatti, The Embodied Practitioner" 
