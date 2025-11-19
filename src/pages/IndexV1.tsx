@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 import { ArrowRight, Brain, Heart, Mic2, Play, Phone, Mail, User } from "lucide-react";
 
 const Index = () => {
@@ -155,8 +154,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <MadeWithDyad />
     </>
   );
 };

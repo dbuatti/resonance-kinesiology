@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, MessageSquare } from "lucide-react";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   // Custom colors defined in tailwind.config.ts:
@@ -79,7 +78,7 @@ const Index = () => {
                 <img 
                   src="/daniele-buatti-practitioner.jpeg" 
                   alt="Daniele Buatti, The Embodied Practitioner" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
@@ -148,7 +147,7 @@ const Index = () => {
           </Button>
           
           <div className="mt-16 text-sm opacity-70 space-y-2">
-            <p>Bayside Melbourne, VIC</p>
+            <p>Toorak, Melbourne Vic</p>
             <div className="flex justify-center space-x-6 mt-4">
               <a href="mailto:daniele.kinesiology@gmail.com" className="hover:text-dyad-soft transition-colors flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
@@ -163,8 +162,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      <MadeWithDyad />
     </div>
   );
 };
