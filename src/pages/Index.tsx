@@ -42,8 +42,8 @@ const Index = () => {
           backgroundPosition: 'center',
         }}
       >
-        {/* Overlay for contrast */}
-        <div className="absolute inset-0 bg-dyad-background-soft/90 backdrop-blur-[1px]"></div>
+        {/* Overlay for contrast - reduced opacity from /90 to /70 */}
+        <div className="absolute inset-0 bg-dyad-background-soft/70 backdrop-blur-[1px]"></div>
         
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
