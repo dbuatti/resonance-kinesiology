@@ -97,26 +97,26 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 text-center transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Brain className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
-              <CardTitle className="text-2xl font-semibold mb-3 text-dyad-background-soft">Nervous System Regulation</CardTitle>
-              <p className="opacity-70 leading-relaxed">
+            <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
+              <Brain className="h-12 w-12 text-dyad-accent mb-6" />
+              <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Nervous System Regulation</CardTitle>
+              <p className="opacity-70 leading-relaxed text-lg">
                 Understanding threat responses, vagal patterns, and moving toward grounded, internal safety.
               </p>
             </Card>
 
-            <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 text-center transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Heart className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
-              <CardTitle className="text-2xl font-semibold mb-3 text-dyad-background-soft">Emotional Clarity & Roots</CardTitle>
-              <p className="opacity-70 leading-relaxed">
+            <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
+              <Heart className="h-12 w-12 text-dyad-accent mb-6" />
+              <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Emotional Clarity & Roots</CardTitle>
+              <p className="opacity-70 leading-relaxed text-lg">
                 Tracing the root of emotional patterns, belief systems, and identity structures in the body.
               </p>
             </Card>
 
-            <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 text-center transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Mic2 className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
-              <CardTitle className="text-2xl font-semibold mb-3 text-dyad-background-soft">Vocal Liberation & Expression</CardTitle>
-              <p className="opacity-70 leading-relaxed">
+            <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
+              <Mic2 className="h-12 w-12 text-dyad-accent mb-6" />
+              <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Vocal Liberation & Expression</CardTitle>
+              <p className="opacity-70 leading-relaxed text-lg">
                 Transforming emotional suppression into vocal freedom for singers, performers, and creatives.
               </p>
             </Card>
