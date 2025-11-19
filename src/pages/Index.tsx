@@ -1,168 +1,163 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { MadeWithDyad } from "@/components/made-with-dyad";
-import { ArrowRight, Brain, Heart, Mic2, Play, Phone, Mail } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Play, Phone, Mail, User } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
-      {/* Header */}
-      <header className="container mx-auto px-6 py-8">
-        <nav className="flex flex-col lg:flex-row justify-between items-start lg:items-center max-w-4xl mx-auto gap-4 lg:gap-0">
-          <div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Daniele Buatti
+    <>
+      {/* Hero - Purple background */}
+      <section className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 flex items-center justify-center text-white relative overflow-hidden">
+        <div className="container mx-auto px-6 py-24 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+              Kinesiology &<br className="hidden lg:block"/> 
+              <span className="block text-3xl md:text-4xl font-light mt-4">Embodiment Practice</span>
             </h1>
-            <p className="text-sm text-gray-600 flex items-center gap-1">
-              <Mail className="h-4 w-4" />
-              daniele.kinesiology@gmail.com
+            <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed">
+              Melbourne-based. Nervous system regulation, emotional clarity, authentic expression.
             </p>
-            <p className="text-sm text-gray-600 flex items-center gap-1">
-              <Phone className="h-4 w-4" />
-              0424 174 067
-            </p>
-          </div>
-          <Button variant="outline" className="border-indigo-200 text-indigo-700 hover:bg-indigo-50 w-full lg:w-auto">
-            Book Session
-          </Button>
-        </nav>
-      </header>
-
-      {/* Hero */}
-      <section className="container mx-auto px-6 py-24 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-tight">
-            Kinesiology &<br/>
-            <span className="text-2xl md:text-3xl font-normal text-gray-700 mt-4 block">
-              Embodiment Practice
-            </span>
-          </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Melbourne-based. Nervous system regulation, emotional clarity, authentic expression.
-          </p>
-          <p className="text-lg text-gray-600 mb-12 max-w-xl mx-auto leading-relaxed">
-            No fluff. Just the body, the brain, and what's stored in between.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg">
-              Book 90min Session
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-gray-300">
-              Learn More
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <Separator className="my-24 bg-gray-200" />
-
-      {/* Services */}
-      <section className="container mx-auto px-6 pb-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">What I Do</h2>
-          <p className="text-xl text-center text-gray-600 mb-20 max-w-2xl mx-auto">
-            Working with the body's natural intelligence to shift stress patterns.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="group hover:shadow-xl transition-all border-indigo-100 hover:border-indigo-200 bg-white/80">
-              <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-indigo-100 group-hover:bg-indigo-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
-                  <Brain className="h-8 w-8 text-indigo-600" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
-                  Nervous System
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
-                  Threat responses, vagal patterns, system protection.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-xl transition-all border-purple-100 hover:border-purple-200 bg-white/80">
-              <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-purple-100 group-hover:bg-purple-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
-                  <Heart className="h-8 w-8 text-purple-600" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
-                  Emotional Clarity
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
-                  Root of patterns, beliefs, identity in the body.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-xl transition-all border-pink-100 hover:border-pink-200 bg-white/80">
-              <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-pink-100 group-hover:bg-pink-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
-                  <Mic2 className="h-8 w-8 text-pink-600" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors">
-                  Voice & Expression
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
-                  Tension release for singers, performers, creatives.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-xl transition-all border-blue-100 hover:border-blue-200 bg-white/80 md:col-span-2 lg:col-span-1">
-              <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-blue-100 group-hover:bg-blue-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
-                  <Play className="h-8 w-8 text-blue-600" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  Body-Mind Integration
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
-                  Physical symptoms, emotions, unconscious patterns.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="container mx-auto px-6 py-24 mb-24">
-        <Card className="max-w-2xl mx-auto border-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-2xl">
-          <CardContent className="p-12 text-center">
-            <h3 className="text-3xl font-bold mb-6">90 Minute Sessions</h3>
-            <p className="text-xl mb-10 opacity-95 leading-relaxed">
-              Time, space, and depth. Opening → activation → corrections → integration.
-            </p>
-            <div className="space-y-3 mb-8">
-              <Button variant="ghost" className="justify-start text-white hover:bg-white/20 w-full sm:w-auto">
-                <Mail className="h-5 w-5 mr-3 flex-shrink-0" />
-                daniele.kinesiology@gmail.com
-              </Button>
-              <Button variant="ghost" className="justify-start text-white hover:bg-white/20 w-full sm:w-auto">
-                <Phone className="h-5 w-5 mr-3 flex-shrink-0" />
-                0424 174 067
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" className="text-xl px-12 py-8 bg-white text-purple-600 hover:bg-gray-50 font-semibold shadow-2xl h-16">
+                Book 90min Session
+                <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </div>
-            <Button size="lg" className="text-lg px-12 py-8 bg-white text-indigo-600 hover:bg-gray-50 font-semibold shadow-lg w-full sm:w-auto">
-              Book Now
-            </Button>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
+        {/* Hero image placeholder */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white/20 to-transparent flex items-end justify-center">
+          <div className="w-full max-w-6xl h-64 bg-gradient-to-r from-purple-400/50 to-indigo-400/50 rounded-t-3xl shadow-2xl animate-pulse"></div>
+        </div>
+      </section>
+
+      {/* Contact - White background */}
+      <section className="bg-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+            <div className="lg:w-1/2">
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+                Daniele Buatti
+              </h1>
+              <div className="space-y-4 text-xl text-gray-700">
+                <p className="flex items-center gap-3">
+                  <Mail className="h-8 w-8 text-purple-600" />
+                  daniele.kinesiology@gmail.com
+                </p>
+                <p className="flex items-center gap-3">
+                  <Phone className="h-8 w-8 text-purple-600" />
+                  0424 174 067
+                </p>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              {/* Contact image placeholder */}
+              <div className="w-full h-80 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl shadow-2xl border-4 border-purple-100 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <User className="h-24 w-24 mx-auto mb-4 text-purple-400" />
+                  <p className="text-2xl font-medium">Photo</p>
+                  <p className="text-sm">300x400px recommended</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services - Purple background */}
+      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 py-32 text-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">What I Do</h2>
+            <p className="text-2xl opacity-90 max-w-2xl mx-auto">
+              Working with the body’s natural intelligence to shift stress patterns.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="bg-white/10 backdrop-blur-xl border-white/20 hover:bg-white/20 transition-all group h-64 flex flex-col">
+              <CardContent className="flex flex-col justify-between p-8 h-full group-hover:text-purple-100">
+                <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all">
+                  <Brain className="h-10 w-10" />
+                </div>
+                <div>
+                  <CardTitle className="text-2xl font-bold mb-4 group-hover:underline">Nervous System</CardTitle>
+                  <p className="opacity-90 leading-relaxed">Threat responses, vagal patterns, system protection.</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 backdrop-blur-xl border-white/20 hover:bg-white/20 transition-all group h-64 flex flex-col">
+              <CardContent className="flex flex-col justify-between p-8 h-full group-hover:text-purple-100">
+                <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all">
+                  <Heart className="h-10 w-10" />
+                </div>
+                <div>
+                  <CardTitle className="text-2xl font-bold mb-4 group-hover:underline">Emotional Clarity</CardTitle>
+                  <p className="opacity-90 leading-relaxed">Root of patterns, beliefs, identity in the body.</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="md:col-span-2 bg-white/10 backdrop-blur-xl border-white/20 hover:bg-white/20 transition-all group h-64 flex flex-col">
+              <CardContent className="flex flex-col justify-between p-8 h-full group-hover:text-purple-100">
+                <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all">
+                  <Mic2 className="h-10 w-10" />
+                </div>
+                <div>
+                  <CardTitle className="text-2xl font-bold mb-4 group-hover:underline">Voice & Expression</CardTitle>
+                  <p className="opacity-90 leading-relaxed">Tension release for singers, performers, creatives.</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="md:col-span-2 bg-white/10 backdrop-blur-xl border-white/20 hover:bg-white/20 transition-all group h-64 flex flex-col">
+              <CardContent className="flex flex-col justify-between p-8 h-full group-hover:text-purple-100">
+                <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all">
+                  <Play className="h-10 w-10" />
+                </div>
+                <div>
+                  <CardTitle className="text-2xl font-bold mb-4 group-hover:underline">Body-Mind Integration</CardTitle>
+                  <p className="opacity-90 leading-relaxed">Physical symptoms, emotions, unconscious patterns.</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA - White background */}
+      <section className="bg-white py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-12 lg:p-20 rounded-3xl shadow-2xl">
+              <h3 className="text-4xl md:text-5xl font-bold mb-8">90 Minute Sessions</h3>
+              <p className="text-xl mb-12 opacity-95 leading-relaxed max-w-2xl mx-auto">
+                Time, space, and depth. Opening → activation → corrections → integration.
+              </p>
+              <div className="space-y-4 mb-12 max-w-md mx-auto">
+                <Button variant="ghost" size="lg" className="justify-start h-14 text-white hover:bg-white/20 w-full">
+                  <Mail className="h-6 w-6 mr-4 flex-shrink-0" />
+                  daniele.kinesiology@gmail.com
+                </Button>
+                <Button variant="ghost" size="lg" className="justify-start h-14 text-white hover:bg-white/20 w-full">
+                  <Phone className="h-6 w-6 mr-4 flex-shrink-0" />
+                  0424 174 067
+                </Button>
+              </div>
+              <Button size="lg" className="text-xl px-12 py-8 h-16 bg-white text-purple-600 hover:bg-gray-50 font-semibold shadow-2xl w-full">
+                Book Now
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <MadeWithDyad />
-    </div>
+    </>
   );
 };
 
