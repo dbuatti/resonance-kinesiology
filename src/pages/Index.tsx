@@ -94,12 +94,27 @@ const Index = () => {
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             This work is for people who feel:
           </p>
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
-            <li>overwhelmed, overthinking, or shut down</li>
-            <li>stuck in emotional cycles they can’t reason their way out of</li>
-            <li>numb, tense, anxious, or disconnected from the body</li>
-            <li>unable to express how they really feel — in voice or life</li>
-            <li>tired of coping and ready to transform</li>
+          <ul className="space-y-3 text-lg text-gray-700 mb-10 max-w-md mx-auto text-left">
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>overwhelmed, overthinking, or shut down</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>stuck in emotional cycles they can’t reason their way out of</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>numb, tense, anxious, or disconnected from the body</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>unable to express how they really feel — in voice or life</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>tired of coping and ready to transform</span>
+            </li>
           </ul>
           <p className="text-xl text-gray-700 leading-relaxed">
             This is not about fixing you.
@@ -115,15 +130,39 @@ const Index = () => {
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             A balance session might include:
           </p>
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
-            <li>Emotional stress release</li>
-            <li>Muscle monitoring</li>
-            <li>Meridian and acupressure points</li>
-            <li>Survival brain pattern balancing</li>
-            <li>Somatic tracking</li>
-            <li>Breath, gentle movement, meditative stillness</li>
-            <li>Vocal release or sound work</li>
-            <li>Integration coaching and reflection</li>
+          <ul className="space-y-3 text-lg text-gray-700 mb-10 max-w-md mx-auto text-left">
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Emotional stress release</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Muscle monitoring</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Meridian and acupressure points</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Survival brain pattern balancing</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Somatic tracking</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Breath, gentle movement, meditative stillness</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Vocal release or sound work</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Integration coaching and reflection</span>
+            </li>
           </ul>
           <p className="text-xl text-gray-700 leading-relaxed">
             Sessions are gentle, safe, and collaborative.
@@ -228,13 +267,31 @@ const Index = () => {
           <p className="text-xl text-gray-700 mb-10 leading-relaxed">
             Many leave sessions with:
           </p>
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
-            <li>more space, breath, and ease</li>
-            <li>clarity on what they’re feeling and why</li>
-            <li>immediate physical shifts</li>
-            <li>reduced overwhelm and body tension</li>
-            <li>a greater sense of possibility and choice</li>
-            <li>a voice that feels freer, truer, and more alive</li>
+          <ul className="space-y-3 text-lg text-gray-700 mb-10 max-w-md mx-auto text-left">
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>more space, breath, and ease</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>clarity on what they’re feeling and why</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>immediate physical shifts</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>reduced overwhelm and body tension</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>a greater sense of possibility and choice</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>a voice that feels freer, truer, and more alive</span>
+            </li>
           </ul>
         </div>
       </section>
@@ -276,16 +333,31 @@ const Index = () => {
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             My background includes:
           </p>
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
-            <li>Professional kinesiology training</li>
-            <li>Somatic and nervous system modality certifications</li>
-            <li>Years as a performing artist, vocal coach, and facilitator</li>
-            <li>A decade of teaching voice, presence, and self-expression</li>
-            <li>Hundreds of clinical sessions supporting clients out of shutdown, tension, and emotional suppression</li>
+          <ul className="space-y-3 text-lg text-gray-700 mb-10 max-w-md mx-auto text-left">
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Professional kinesiology training</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Somatic and nervous system modality certifications</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Years as a performing artist, vocal coach, and facilitator</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>A decade of teaching voice, presence, and self-expression</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Leaf className="h-5 w-5 text-dyad-accent mt-1 flex-shrink-0" />
+              <span>Hundreds of clinical sessions supporting clients out of shutdown, tension, and emotional suppression</span>
+            </li>
           </ul>
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             I don’t diagnose, fix, or direct your journey.
-            I guide you into **relationship with your own internal intelligence** —
+            I guide you into <strong>relationship with your own internal intelligence</strong> —
             the part that already knows how to heal.
           </p>
         </div>
