@@ -4,110 +4,121 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { MadeWithDyad } from "@/components/made-with-dyad";
-import { ArrowRight, Play, Mic2, Brain, Heart, User } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Play } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-24 md:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent mb-6">
-            Kinesiology & Embodiment
-            <span className="block text-2xl md:text-3xl font-normal mt-4 text-gray-600 dark:text-gray-400">
-              with Daniele Buatti
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
+      {/* Header */}
+      <header className="container mx-auto px-6 py-8">
+        <nav className="flex justify-between items-center max-w-4xl mx-auto">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            Daniele Buatti
+          </h1>
+          <Button variant="outline" className="border-indigo-200 text-indigo-700 hover:bg-indigo-50">
+            Book Session
+          </Button>
+        </nav>
+      </header>
+
+      {/* Hero */}
+      <section className="container mx-auto px-6 py-24 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-tight">
+            Kinesiology &<br/>
+            <span className="text-2xl md:text-3xl font-normal text-gray-700 mt-4 block">
+              Embodiment Practice
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Melbourne-based kinesiologist working at the intersection of <strong>nervous system regulation</strong>,{" "}
-            <strong>emotional clarity</strong>, and <strong>authentic expression</strong>.
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Melbourne-based. Nervous system regulation, emotional clarity, authentic expression.
           </p>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            No fluff. No spiritual bypassing. Just the body, the brain, and the stories we’ve stored in between.
+          <p className="text-lg text-gray-600 mb-12 max-w-xl mx-auto leading-relaxed">
+            No fluff. Just the body, the brain, and what’s stored in between.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-xl px-8 py-6 bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 font-medium group">
-              Book a Session
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg">
+              Book 90min Session
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-xl px-8 py-6 border-gray-300 dark:border-gray-700 font-medium">
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-gray-300">
               Learn More
             </Button>
           </div>
         </div>
       </section>
 
-      <Separator className="my-24" />
+      <Separator className="my-24 bg-gray-200" />
 
-      {/* What I Do Section */}
-      <section className="container mx-auto px-4 pb-24">
+      {/* Services */}
+      <section className="container mx-auto px-6 pb-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">What I Do</h2>
-          <p className="text-xl text-center text-gray-600 dark:text-gray-400 mb-20 max-w-3xl mx-auto leading-relaxed">
-            I help people shift out of overwhelm, stress patterns, and disconnection by working with the body’s natural intelligence.
+          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">What I Do</h2>
+          <p className="text-xl text-center text-gray-600 mb-20 max-w-2xl mx-auto">
+            Working with the body’s natural intelligence to shift stress patterns.
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="group hover:shadow-xl transition-all border-0 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="group hover:shadow-xl transition-all border-indigo-100 hover:border-indigo-200 bg-white/80">
               <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Brain className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <div className="w-16 h-16 bg-indigo-100 group-hover:bg-indigo-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                  <Brain className="h-8 w-8 text-indigo-600" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  Nervous system regulation
+                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                  Nervous System
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 dark:text-gray-400">
-                  Understanding threat responses, vagal patterns, and what your system is protecting you from.
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Threat responses, vagal patterns, system protection.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all border-0 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+            <Card className="group hover:shadow-xl transition-all border-purple-100 hover:border-purple-200 bg-white/80">
               <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Heart className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+                <div className="w-16 h-16 bg-purple-100 group-hover:bg-purple-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                  <Heart className="h-8 w-8 text-purple-600" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                  Emotional clarity
+                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
+                  Emotional Clarity
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 dark:text-gray-400">
-                  Tracing the root of emotional patterns, belief systems, identity structures, and where they live in the body.
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Root of patterns, beliefs, identity in the body.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all border-0 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+            <Card className="group hover:shadow-xl transition-all border-pink-100 hover:border-pink-200 bg-white/80">
               <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Mic2 className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                <div className="w-16 h-16 bg-pink-100 group-hover:bg-pink-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                  <Mic2 className="h-8 w-8 text-pink-600" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                  Voice & expression
+                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors">
+                  Voice & Expression
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 dark:text-gray-400">
-                  Supporting singers, performers, and everyday people to release tension and access grounded expression.
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Tension release for singers, performers, creatives.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all border-0 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm md:col-span-2 lg:col-span-1">
+            <Card className="group hover:shadow-xl transition-all border-blue-100 hover:border-blue-200 bg-white/80 md:col-span-2 lg:col-span-1">
               <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Play className="h-6 w-6 text-orange-600 dark:text-orange-400" />
+                <div className="w-16 h-16 bg-blue-100 group-hover:bg-blue-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                  <Play className="h-8 w-8 text-blue-600" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
-                  Body–mind integration
+                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Body-Mind Integration
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 dark:text-gray-400">
-                  Connecting physical symptoms, emotional states, and unconscious patterns so the body can reorganise naturally.
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Physical symptoms, emotions, unconscious patterns.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -115,17 +126,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="container mx-auto px-4 py-24">
-        <Card className="max-w-2xl mx-auto border-0 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-white dark:to-gray-100 text-white dark:text-gray-900 shadow-2xl">
+      {/* CTA */}
+      <section className="container mx-auto px-6 py-24 mb-24">
+        <Card className="max-w-2xl mx-auto border-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-2xl">
           <CardContent className="p-12 text-center">
-            <h3 className="text-3xl font-bold mb-4">90-Minute Sessions</h3>
-            <p className="text-xl mb-8 leading-relaxed opacity-90">
-              The work requires time, space, and depth. Sessions move through opening, activation, corrections, and integration.
+            <h3 className="text-3xl font-bold mb-6">90 Minute Sessions</h3>
+            <p className="text-xl mb-10 opacity-95 leading-relaxed">
+              Time, space, and depth. Opening → activation → corrections → integration.
             </p>
-            <Button size="lg" className="text-xl px-12 py-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold shadow-lg">
+            <Button size="lg" className="text-lg px-12 py-8 bg-white text-indigo-600 hover:bg-gray-50 font-semibold shadow-lg w-full sm:w-auto">
               Book Now
-              <ArrowRight className="ml-3 h-5 w-5" />
             </Button>
           </CardContent>
         </Card>
