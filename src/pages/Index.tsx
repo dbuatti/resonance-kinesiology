@@ -4,18 +4,28 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { MadeWithDyad } from "@/components/made-with-dyad";
-import { ArrowRight, Brain, Heart, Mic2, Play } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Play, Phone, Mail } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
       {/* Header */}
       <header className="container mx-auto px-6 py-8">
-        <nav className="flex justify-between items-center max-w-4xl mx-auto">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            Daniele Buatti
-          </h1>
-          <Button variant="outline" className="border-indigo-200 text-indigo-700 hover:bg-indigo-50">
+        <nav className="flex flex-col lg:flex-row justify-between items-start lg:items-center max-w-4xl mx-auto gap-4 lg:gap-0">
+          <div>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              Daniele Buatti
+            </h1>
+            <p className="text-sm text-gray-600 flex items-center gap-1">
+              <Mail className="h-4 w-4" />
+              daniele.kinesiology@gmail.com
+            </p>
+            <p className="text-sm text-gray-600 flex items-center gap-1">
+              <Phone className="h-4 w-4" />
+              0424 174 067
+            </p>
+          </div>
+          <Button variant="outline" className="border-indigo-200 text-indigo-700 hover:bg-indigo-50 w-full lg:w-auto">
             Book Session
           </Button>
         </nav>
@@ -34,7 +44,7 @@ const Index = () => {
             Melbourne-based. Nervous system regulation, emotional clarity, authentic expression.
           </p>
           <p className="text-lg text-gray-600 mb-12 max-w-xl mx-auto leading-relaxed">
-            No fluff. Just the body, the brain, and what’s stored in between.
+            No fluff. Just the body, the brain, and what's stored in between.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg">
@@ -55,7 +65,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">What I Do</h2>
           <p className="text-xl text-center text-gray-600 mb-20 max-w-2xl mx-auto">
-            Working with the body’s natural intelligence to shift stress patterns.
+            Working with the body's natural intelligence to shift stress patterns.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -134,6 +144,16 @@ const Index = () => {
             <p className="text-xl mb-10 opacity-95 leading-relaxed">
               Time, space, and depth. Opening → activation → corrections → integration.
             </p>
+            <div className="space-y-3 mb-8">
+              <Button variant="ghost" className="justify-start text-white hover:bg-white/20 w-full sm:w-auto">
+                <Mail className="h-5 w-5 mr-3 flex-shrink-0" />
+                daniele.kinesiology@gmail.com
+              </Button>
+              <Button variant="ghost" className="justify-start text-white hover:bg-white/20 w-full sm:w-auto">
+                <Phone className="h-5 w-5 mr-3 flex-shrink-0" />
+                0424 174 067
+              </Button>
+            </div>
             <Button size="lg" className="text-lg px-12 py-8 bg-white text-indigo-600 hover:bg-gray-50 font-semibold shadow-lg w-full sm:w-auto">
               Book Now
             </Button>
