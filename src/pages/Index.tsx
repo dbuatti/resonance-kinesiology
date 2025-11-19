@@ -33,22 +33,9 @@ const Index = () => {
         </nav>
       </header>
 
-      {/* Practitioner Photo Section - Circular Headshot */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <div className="w-48 h-48 mx-auto rounded-full shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50">
-            <img 
-              src="/daniele-buatti-hero.jpeg" 
-              alt="Daniele Buatti, The Embodied Practitioner" 
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Hero Section - Ethereal Background, Text Focused */}
+      {/* Hero Section - Ethereal Background, Text Focused, Photo Overlay */}
       <section 
-        className="relative py-32 md:py-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
+        className="relative pt-48 pb-32 md:pt-64 md:pb-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
         style={{ 
           backgroundImage: 'url(/resonance-background-horizontal.png)', 
           backgroundSize: 'cover', 
@@ -59,6 +46,18 @@ const Index = () => {
         <div className="absolute inset-0 bg-dyad-background-soft/90 backdrop-blur-[1px]"></div>
         
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
+          
+          {/* Circular Photo Overlay */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-0 z-20">
+            <div className="w-56 h-56 mx-auto rounded-full shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50">
+              <img 
+                src="/daniele-buatti-hero.jpeg" 
+                alt="Daniele Buatti, The Embodied Practitioner" 
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+
           <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight">
             Embodied Clarity.
           </h1>
