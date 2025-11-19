@@ -35,7 +35,7 @@ const Index = () => {
 
       {/* Hero Section - Ethereal Background, Text Focused, Photo Overlay */}
       <section 
-        className="relative pt-64 pb-32 md:pt-80 md:pb-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
+        className="relative pt-80 pb-32 md:pt-96 md:pb-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
         style={{ 
           backgroundImage: 'url(/resonance-background-horizontal.png)', 
           backgroundSize: 'cover', 
@@ -47,8 +47,8 @@ const Index = () => {
         
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
-          {/* Circular Photo Overlay */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-0 z-20">
+          {/* Circular Photo Overlay - Adjusted positioning */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 -top-20 z-20">
             <div className="w-56 h-56 mx-auto rounded-full shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50">
               <img 
                 src="/daniele-buatti-hero.jpeg" 
@@ -58,7 +58,7 @@ const Index = () => {
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight">
+          <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight pt-16">
             Embodied Clarity.
           </h1>
           <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
@@ -83,7 +83,7 @@ const Index = () => {
             Daniele Buatti
           </h3>
           <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8 leading-snug">
-            The body doesn’t lie. It also doesn’t rush.
+            The body doesn't lie. It also doesn't rush.
           </h2>
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their <strong>felt sense</strong> to make it comprehensible and grounded.
@@ -132,7 +132,7 @@ const Index = () => {
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Transform</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
-              Working with the body’s natural intelligence to shift stress patterns and liberate expression.
+              Working with the body's natural intelligence to shift stress patterns and liberate expression.
             </p>
           </div>
           
