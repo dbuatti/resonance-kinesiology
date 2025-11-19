@@ -19,6 +19,14 @@ export default {
     },
     extend: {
       colors: {
+        // Custom Palette
+        'dyad-dark': '#1E3261', // Deep Indigo/Dark Blue
+        'dyad-accent': '#67447A', // Muted Violet
+        'dyad-soft': '#7A7CAC', // Soft Gray-Violet
+        'dyad-secondary-accent': '#548DC0', // Lighter Blue
+        'dyad-background-soft': '#F8F7F4', // Creamy background inspired by reference
+
+        // Existing Shadcn colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
