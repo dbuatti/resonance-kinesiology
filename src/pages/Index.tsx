@@ -86,7 +86,7 @@ const Index = () => {
             The body doesn't lie. It also doesn't rush.
           </h2>
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their <strong>felt sense</strong> to make it comprehensible and grounded.
+            My approach is simple: slow down, get present, and listen to your body. I help clients safely reconnect with their <strong>felt sense</strong> for grounded understanding.
           </p>
           <p className="text-lg text-gray-600 mb-8 italic">
             "Healing comes from <em>being</em> in the body, not escaping it."
@@ -103,20 +103,20 @@ const Index = () => {
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Community & Group Work</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Beyond one-on-one sessions, I offer group spaces for connection, movement, and vocal liberation.
+              Beyond one-on-one, I offer group spaces for connection, movement, and vocal freedom.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <CommunityCard
               title="Mindful Mondays"
-              description="Start your week with calm and connection. Join gentle Monday catch-ups designed to help you pause, breathe, and move mindfully. Available in person or online."
+              description="Start your week with calm and connection. Gentle catch-ups to pause, breathe, and move mindfully. In-person or online."
               icon={<Zap className="h-10 w-10" />}
               colorClass="bg-dyad-dark"
             />
             <CommunityCard
               title="Resonance Choir"
-              description="A welcoming space to reset your body and mind through guided breathing, slow mindful movement, and simple meditation. Find your voice and connect with others."
+              description="A welcoming space to reset body and mind with guided breathing, mindful movement, and meditation. Find your voice and connect."
               link="https://resonance-with-daniele.vercel.app/"
               linkText="Visit Choir Website"
               icon={<Music className="h-10 w-10" />}
@@ -132,7 +132,7 @@ const Index = () => {
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Transform</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
-              Working with the body's natural intelligence to shift stress patterns and liberate expression.
+              Using the body's wisdom to release stress and free your expression.
             </p>
           </div>
           
@@ -142,7 +142,7 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Nervous System Regulation</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Understanding threat responses, vagal patterns, and moving toward grounded, internal safety.
+                  Release threat responses, find calm, and feel safe within.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -155,7 +155,7 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Emotional Clarity & Roots</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Tracing the root of emotional patterns, belief systems, and identity structures in the body.
+                  Uncover and shift emotional patterns, beliefs, and identity held in the body.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -168,7 +168,7 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Vocal Freedom & Expression</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Transforming emotional suppression into vocal freedom for singers, performers, and creatives.
+                  Turn emotional blocks into free vocal expression for singers, performers, and creatives.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -194,7 +194,7 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h3 className="text-4xl font-serif mb-8">Ready to find your resonance?</h3>
           <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
-            Book your 90-minute session today to move through life with more ease, clarity, and internal freedom.
+            Book your 90-minute session for more ease, clarity, and inner freedom.
           </p>
           
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
