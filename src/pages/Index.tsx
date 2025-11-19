@@ -29,9 +29,19 @@ const Index = () => {
         </nav>
       </header>
 
-      {/* Hero Section - Full Width, Dark, High Contrast */}
-      <section className="bg-dyad-dark text-dyad-background-soft py-32 md:py-48">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
+      {/* Hero Section - Full Width, Image Background, High Contrast */}
+      <section 
+        className="relative py-32 md:py-48 overflow-hidden text-white"
+        style={{ 
+          backgroundImage: 'url(/daniele-buatti-hero.jpeg)', 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Dark Overlay for contrast */}
+        <div className="absolute inset-0 bg-dyad-dark/70"></div>
+        
+        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight">
             Embodied Clarity.
           </h1>
@@ -136,7 +146,7 @@ const Index = () => {
             </Card>
 
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Heart className="h-12 w-12 text-dyad-accent mb-6" />
+              <Heart className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Emotional Clarity & Roots</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Tracing the root of emotional patterns, belief systems, and identity structures in the body.
@@ -144,7 +154,7 @@ const Index = () => {
             </Card>
 
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Mic2 className="h-12 w-12 text-dyad-accent mb-6" />
+              <Mic2 className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Vocal Liberation & Expression</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Transforming emotional suppression into vocal freedom for singers, performers, and creatives.
