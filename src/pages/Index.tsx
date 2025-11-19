@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf } from "lucide-react";
 
-const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
+const BOOKING_URL = "https://danielebuatti.as-me/kinesiology";
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
 const Index = () => {
@@ -21,7 +21,7 @@ const Index = () => {
             <a href={MUSIC_WORK_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="sm" 
-                className="bg-blue-600 hover:bg-blue-700 text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
               >
                 My Music Work
               </Button>
@@ -45,6 +45,7 @@ const Index = () => {
           backgroundImage: 'url(/resonance-background-horizontal.png)', 
           backgroundSize: 'cover', 
           backgroundPosition: 'center',
+          backgroundColor: '#F8F7F4', // Fallback background color
         }}
       >
         {/* Overlay for contrast */}
