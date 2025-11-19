@@ -73,12 +73,12 @@ const Index = () => {
 
             {/* Image Column */}
             <div className="lg:col-span-2">
-              {/* Practitioner Photo - Large, full-height container, object-top for face focus */}
-              <div className="w-full h-[800px] rounded-3xl shadow-2xl overflow-hidden border-8 border-white ring-4 ring-dyad-soft/50">
+              {/* Practitioner Photo - Adjusted height and object-top for chest crop */}
+              <div className="w-full h-[450px] rounded-3xl shadow-2xl overflow-hidden border-8 border-white ring-4 ring-dyad-soft/50">
                 <img 
                   src="/daniele-buatti-practitioner.jpeg" 
                   alt="Daniele Buatti, The Embodied Practitioner" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
