@@ -35,7 +35,7 @@ const Index = () => {
 
       {/* Hero Section - Ethereal Background, Text Focused, Photo Overlay */}
       <section 
-        className="relative pt-48 pb-32 md:pt-64 md:pb-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
+        className="relative pt-64 pb-32 md:pt-80 md:pb-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
         style={{ 
           backgroundImage: 'url(/resonance-background-horizontal.png)', 
           backgroundSize: 'cover', 
