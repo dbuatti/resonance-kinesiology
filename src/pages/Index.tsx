@@ -138,7 +138,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Brain className="h-12 w-12 text-dyad-accent mb-6" />
+              <Brain className="h-12 w-12 text-dyad-accent mx-auto mb-6" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Nervous System Regulation</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Understanding threat responses, vagal patterns, and moving toward grounded, internal safety.
