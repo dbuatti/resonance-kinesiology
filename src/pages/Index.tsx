@@ -49,7 +49,7 @@ const Index = () => {
                 <img 
                   src="/daniele-buatti-practitioner.jpeg" 
                   alt="Daniele Buatti, The Embodied Practitioner" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
