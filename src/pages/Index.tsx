@@ -29,19 +29,19 @@ const Index = () => {
         </nav>
       </header>
 
-      {/* Hero Section - Full Width, Image Background, High Contrast */}
+      {/* Hero Section - Ethereal Background, Text Focused */}
       <section 
-        className="relative min-h-[80vh] flex items-end overflow-hidden text-white"
+        className="relative py-32 md:py-48 border-b border-dyad-soft/30 overflow-hidden text-dyad-dark"
         style={{ 
-          backgroundImage: 'url(/daniele-buatti-hero.jpeg)', 
+          backgroundImage: 'url(/resonance-background-horizontal.png)', 
           backgroundSize: 'cover', 
           backgroundPosition: 'center',
         }}
       >
-        {/* Dark Overlay for contrast */}
-        <div className="absolute inset-0 bg-dyad-dark/70"></div>
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-dyad-background-soft/90 backdrop-blur-[1px]"></div>
         
-        <div className="container mx-auto px-6 py-24 max-w-4xl text-center relative z-10">
+        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight">
             Embodied Clarity.
           </h1>
@@ -50,7 +50,7 @@ const Index = () => {
           </p>
           <Button 
             size="lg" 
-            className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-soft text-white font-semibold shadow-xl rounded-full transition-colors"
+            className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-xl rounded-full transition-colors"
           >
             Start Your Session
             <ArrowRight className="ml-3 h-5 w-5" />
@@ -58,42 +58,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About/Philosophy - Image Focused, Split Layout */}
-      <section className="bg-white py-32">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid lg:grid-cols-3 gap-16 items-start">
-            
-            {/* Text Column */}
-            <div className="lg:col-span-1">
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-dyad-accent mb-4">
-                Daniele Buatti
-              </h3>
-              <h2 className="text-4xl font-serif text-dyad-dark mb-8 leading-snug">
-                The body doesn’t lie. It also doesn’t rush.
-              </h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their <strong>felt sense</strong> to make it comprehensible and grounded.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 border-l-4 border-dyad-accent/50 pl-4 italic">
-                "Healing comes from <em>being</em> in the body, not escaping it."
-              </p>
-              <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
-                Read Full Profile →
-              </Button>
-            </div>
-
-            {/* Image Column */}
-            <div className="lg:col-span-2">
-              {/* Ethereal Image - Vertical aspect ratio */}
-              <div className="w-full h-[600px] rounded-3xl shadow-2xl overflow-hidden border-8 border-white ring-4 ring-dyad-soft/50">
-                <img 
-                  src="/resonance-background-vertical.png" 
-                  alt="Ethereal background image representing resonance" 
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-            </div>
+      {/* Practitioner Photo Section - Dark Background for High Contrast */}
+      <section className="bg-dyad-dark py-20">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="w-full h-[450px] rounded-3xl shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50 mx-auto">
+            <img 
+              src="/daniele-buatti-hero.jpeg" 
+              alt="Daniele Buatti, The Embodied Practitioner" 
+              className="w-full h-full object-cover object-top scale-[1.8]"
+            />
           </div>
+        </div>
+      </section>
+
+      {/* About/Philosophy - Text Block Only */}
+      <section className="bg-white py-32">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-dyad-accent mb-4">
+            Daniele Buatti
+          </h3>
+          <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8 leading-snug">
+            The body doesn’t lie. It also doesn’t rush.
+          </h2>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their <strong>felt sense</strong> to make it comprehensible and grounded.
+          </p>
+          <p className="text-lg text-gray-600 mb-8 border-l-4 border-dyad-accent/50 pl-4 italic">
+            "Healing comes from <em>being</em> in the body, not escaping it."
+          </p>
+          <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
+            Read Full Profile →
+          </Button>
         </div>
       </section>
 
