@@ -35,57 +35,62 @@ const Index = () => {
         </nav>
       </header>
 
-      {/* Hero Section - Image and Dark Overlay CTA */}
-      <section className="relative">
-        {/* Image Area */}
-        <div className="w-full h-[60vh] overflow-hidden">
-          <img 
-            src="/daniele-buatti-practitioner.jpeg" 
-            alt="Daniele Buatti, The Embodied Practitioner" 
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
-
-        {/* Dark CTA Overlay */}
-        <div className="bg-dyad-dark text-dyad-background-soft py-20 md:py-24">
-          <div className="container mx-auto px-6 max-w-4xl text-center">
-            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-snug">
-              Come home to yourself — body, mind, heart, and spirit.
-            </h2>
-            <p className="text-xl italic opacity-80 max-w-3xl mx-auto">
-              Offering integrative sessions for nervous system regulation, emotional clarity, and authentic expression.
-            </p>
-            <Button 
-              size="lg" 
-              className="absolute top-4 right-4 bg-dyad-accent hover:bg-dyad-soft text-white shadow-lg transition-colors hidden md:inline-flex"
-            >
-              <MessageSquare className="h-5 w-5 mr-2" />
-              Let's Chat!
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* About/Philosophy - Clean Text Block */}
-      <section className="py-32">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h3 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-10">
-            Embark on your healing journey
-          </h3>
-          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their *felt sense* to make it comprehensible and grounded.
+      {/* Hero Section - Text Focused (like inspiration site) */}
+      <section className="bg-dyad-background-soft py-24 md:py-32 border-b border-dyad-soft/30">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h1 className="text-5xl md:text-7xl font-serif text-dyad-dark mb-8 leading-tight">
+            The Embodied Practitioner
+          </h1>
+          <p className="text-xl md:text-2xl font-light mb-12 max-w-3xl mx-auto text-dyad-dark/80 leading-relaxed">
+            Kinesiology, Somatic Awareness, and Vocal Liberation.
           </p>
-          <p className="text-lg text-gray-600 mb-8 italic">
-            I help people move from chaos to clarity, and from performance to presence.
-          </p>
-          <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
-            Read Daniele's Full Profile →
+          <Button 
+            size="lg" 
+            className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-xl rounded-full transition-colors"
+          >
+            Book 90min Session
+            <ArrowRight className="ml-3 h-5 w-5" />
           </Button>
         </div>
       </section>
 
-      {/* Services - Minimalist Grid */}
+      {/* About/Philosophy - White Block with Image */}
       <section className="bg-white py-32">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="lg:order-2">
+              {/* Practitioner Photo - Increased height and object-top for better crop */}
+              <div className="w-full h-[500px] rounded-3xl shadow-2xl overflow-hidden border-8 border-white ring-4 ring-dyad-soft/50">
+                <img 
+                  src="/daniele-buatti-practitioner.jpeg" 
+                  alt="Daniele Buatti, The Embodied Practitioner" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <div className="lg:order-1">
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-dyad-accent mb-4">
+                Core Philosophy
+              </h3>
+              <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8 leading-snug">
+                The body doesn’t lie. It also doesn’t rush.
+              </h2>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                My approach is simple: slow down, get present, and listen to what the body is actually saying. I facilitate awareness, helping clients safely reconnect with their *felt sense* to make it comprehensible and grounded.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 border-l-4 border-dyad-accent/50 pl-4 italic">
+                "Healing comes from *being* in the body, not escaping it."
+              </p>
+              <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
+                Read Daniele's Full Profile →
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services - Minimalist Grid */}
+      <section className="bg-dyad-background-soft py-32">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Kinesiology & Somatics</h2>
@@ -123,7 +128,7 @@ const Index = () => {
       </section>
 
       {/* Testimonial/Quote Section */}
-      <section className="bg-dyad-background-soft py-24">
+      <section className="bg-white py-24">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <p className="text-3xl font-light italic text-dyad-dark leading-relaxed mb-6">
             "During my visit to Australia, Daniele's kindness and depth of knowledge immensely lightened my emotional burden. Highly recommend her uplifting and healing sessions."
