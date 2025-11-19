@@ -1,14 +1,29 @@
-User-agent: Googlebot
-Allow: /
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-User-agent: Bingbot
-Allow: /
+node_modules
+dist
+dist-ssr
+*.local
 
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 User-agent: *
 Allow: /
+
+Sitemap: https://resonance-kinesiology.vercel.app/sitemap.xml
