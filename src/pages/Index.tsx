@@ -35,9 +35,19 @@ const Index = () => {
         </nav>
       </header>
 
-      {/* Hero Section - Text Focused (like inspiration site) */}
-      <section className="bg-dyad-background-soft py-24 md:py-32 border-b border-dyad-soft/30">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
+      {/* Hero Section - Text Focused with Ethereal Background */}
+      <section 
+        className="relative py-24 md:py-32 border-b border-dyad-soft/30 overflow-hidden"
+        style={{ 
+          backgroundImage: 'url(/resonance-background-horizontal.png)', 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-dyad-background-soft/90 backdrop-blur-[1px]"></div>
+        
+        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-serif text-dyad-dark mb-8 leading-tight">
             The Embodied Practitioner
           </h1>
