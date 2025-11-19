@@ -12,7 +12,7 @@ const Index = () => {
       <header className="container mx-auto px-6 py-6 max-w-6xl">
         <nav className="flex justify-between items-center">
           <h1 className="text-3xl font-bold tracking-wider text-gray-800">
-            Daniele Buatti
+            Resonance Kinesiology
           </h1>
           <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 shadow-md text-lg px-6 py-3 rounded-full">
             Book Session
