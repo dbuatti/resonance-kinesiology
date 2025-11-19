@@ -98,7 +98,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Brain className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
+              <Brain className="h-12 w-12 text-dyad-accent mb-6" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Nervous System Regulation</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Understanding threat responses, vagal patterns, and moving toward grounded, internal safety.
@@ -106,7 +106,7 @@ const Index = () => {
             </Card>
 
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Heart className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
+              <Heart className="h-12 w-12 text-dyad-accent mb-6" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Emotional Clarity & Roots</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Tracing the root of emotional patterns, belief systems, and identity structures in the body.
@@ -114,7 +114,7 @@ const Index = () => {
             </Card>
 
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Mic2 className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
+              <Mic2 className="h-12 w-12 text-dyad-accent mb-6" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Vocal Liberation & Expression</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Transforming emotional suppression into vocal freedom for singers, performers, and creatives.
@@ -128,7 +128,7 @@ const Index = () => {
       <section className="bg-dyad-background-soft py-24">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <p className="text-3xl font-light italic text-dyad-dark leading-relaxed mb-6">
-            "During my visit to Australia, Daniele's kindness and depth of knowledge immensely lightened my emotional burden. Highly recommend her uplifting and healing sessions."
+            "During my visit to Australia, Daniele's kindness and depth of knowledge immensely lightened my emotional burden. Highly recommend his uplifting and healing sessions."
           </p>
           <p className="text-lg font-medium text-gray-600">— Eleanor, Business Owner, Canada</p>
         </div>
@@ -137,10 +137,21 @@ const Index = () => {
       {/* Footer / CTA - Accent Color Block */}
       <footer className="bg-dyad-accent text-white py-20">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h3 className="text-4xl font-serif mb-8">Ready to find your resonance?</h3>
+          <h3 className="text-4xl font-serif mb-8">Contact Daniele</h3>
           <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
-            Book your 90-minute session today to move through life with more ease, clarity, and internal freedom.
+            Ready to move through life with more ease, clarity, and internal freedom?
           </p>
+          
+          <div className="space-y-4 mb-12 max-w-xs mx-auto">
+            <a href="mailto:daniele.kinesiology@gmail.com" className="flex items-center justify-center h-12 text-lg text-dyad-background-soft hover:text-dyad-soft transition-colors">
+              <Mail className="h-6 w-6 mr-4 flex-shrink-0" />
+              daniele.kinesiology@gmail.com
+            </a>
+            <a href="tel:+61424174067" className="flex items-center justify-center h-12 text-lg text-dyad-background-soft hover:text-dyad-soft transition-colors">
+              <Phone className="h-6 w-6 mr-4 flex-shrink-0" />
+              0424 174 067
+            </a>
+          </div>
           
           <Button size="lg" className="text-xl px-12 py-8 h-16 bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-2xl w-full sm:w-auto rounded-full transition-colors">
             Book Your 90-Minute Session
