@@ -18,6 +18,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ['"Playfair Display"', 'serif'],
+      },
       colors: {
         // Custom Palette
         'dyad-dark': '#1E3261', // Deep Indigo/Dark Blue
