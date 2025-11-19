@@ -20,7 +20,7 @@ const Index = () => {
       <header className="sticky top-0 z-20 bg-dyad-background-soft/95 backdrop-blur-sm border-b border-dyad-soft/30">
         <nav className="container mx-auto px-6 py-4 max-w-6xl flex justify-between items-center">
           <h1 className="text-2xl font-serif tracking-wider text-dyad-dark font-bold">
-            Resonance Kinesiology
+            ✦ Resonance Kinesiology
           </h1>
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             <Button 
@@ -42,12 +42,12 @@ const Index = () => {
           backgroundPosition: 'center',
         }}
       >
-        {/* Overlay for contrast - reduced opacity from /90 to /70 */}
+        {/* Overlay for contrast */}
         <div className="absolute inset-0 bg-dyad-background-soft/70 backdrop-blur-[1px]"></div>
         
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
-          {/* Circular Photo Overlay - Adjusted positioning */}
+          {/* Circular Photo Overlay */}
           <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 -top-20 z-20">
             <div className="w-56 h-56 mx-auto rounded-full shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50">
               <img 
@@ -59,80 +59,86 @@ const Index = () => {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight pt-16">
-            Embodied Clarity.
+            Come Home to Your Body
           </h1>
-          <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
-            I offer Kinesiology, Somatic Awareness, and Vocal Freedom.
+          <p className="text-2xl font-light mb-6 max-w-3xl mx-auto opacity-90">
+            The body speaks in sensation, impulse, emotion, tension, and subtle knowing.
+            It never lies — and it never rushes.
+          </p>
+          <p className="text-xl font-light mb-6 max-w-3xl mx-auto opacity-90">
+            My work meets you at the pace of your nervous system.
+            I slow down, listen, track, and make sense of what your body is trying to communicate.
+          </p>
+          <p className="text-xl font-light mb-12 max-w-3xl mx-auto opacity-90">
+            Together I unwind survival patterns, dissolve old emotional imprints, and rebuild safety from the inside out — so expression, clarity, and presence become natural again.
           </p>
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             <Button 
               size="lg" 
               className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-xl rounded-full transition-colors"
             >
-              Start Your Session
+              Book Your Session
               <ArrowRight className="ml-3 h-5 w-5" />
             </Button>
           </a>
         </div>
       </section>
 
-      {/* About/Philosophy - Text Block Only, Centered */}
+      {/* What I Offer Section */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-dyad-accent mb-4">
-            Daniele Buatti
+          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">What I Offer</h2>
+          <h3 className="text-xl font-semibold uppercase tracking-widest text-dyad-accent mb-8">
+            Kinesiology • Somatic Awareness • Vocal Freedom
           </h3>
-          <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8 leading-snug">
-            The body doesn't lie. It also doesn't rush.
-          </h2>
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            My approach is simple: slow down, get present, and listen to your body. I help clients safely reconnect with their <strong>felt sense</strong> for grounded understanding.
+            This work is for people who feel:
           </p>
-          <p className="text-lg text-gray-600 mb-8 italic">
-            "Healing comes from <em>being</em> in the body, not escaping it."
+          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
+            <li>overwhelmed, overthinking, or shut down</li>
+            <li>stuck in emotional cycles they can’t reason their way out of</li>
+            <li>numb, tense, anxious, or disconnected from the body</li>
+            <li>unable to express how they really feel — in voice or life</li>
+            <li>tired of coping and ready to transform</li>
+          </ul>
+          <p className="text-xl text-gray-700 leading-relaxed">
+            This is not about fixing you.
+            It’s about restoring connection to the intelligence already in you.
           </p>
-          <Button variant="link" className="text-dyad-accent text-lg p-0 hover:text-dyad-dark">
-            Read Full Profile →
-          </Button>
         </div>
       </section>
 
-      {/* Community Offerings Section */}
+      {/* How Sessions Work Section */}
       <section className="bg-dyad-background-soft py-32">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Community & Group Work</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Beyond one-on-one, I offer group spaces for connection, movement, and vocal freedom.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <CommunityCard
-              title="Mindful Mondays"
-              description="Start your week with calm and connection. Gentle catch-ups to pause, breathe, and move mindfully. In-person or online."
-              icon={<Zap className="h-10 w-10" />}
-              colorClass="bg-dyad-dark"
-            />
-            <CommunityCard
-              title="Resonance Choir"
-              description="A welcoming space to reset body and mind with guided breathing, mindful movement, and meditation. Find your voice and connect."
-              link="https://resonance-with-daniele.vercel.app/"
-              linkText="Visit Choir Website"
-              icon={<Music className="h-10 w-10" />}
-              colorClass="bg-dyad-accent"
-            />
-          </div>
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">How Sessions Work</h2>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            A balance session might include:
+          </p>
+          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
+            <li>Emotional stress release</li>
+            <li>Muscle monitoring</li>
+            <li>Meridian and acupressure points</li>
+            <li>Survival brain pattern balancing</li>
+            <li>Somatic tracking</li>
+            <li>Breath, gentle movement, meditative stillness</li>
+            <li>Vocal release or sound work</li>
+            <li>Integration coaching and reflection</li>
+          </ul>
+          <p className="text-xl text-gray-700 leading-relaxed">
+            Sessions are gentle, safe, and collaborative.
+            I follow the body, not the mind — and the body always knows the way.
+          </p>
         </div>
       </section>
 
-      {/* Services - Minimalist Grid (using dyad-dark background for contrast) */}
+      {/* What I Work With (formerly What I Transform) */}
       <section className="bg-dyad-dark py-32 text-dyad-background-soft">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Transform</h2>
+            <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Work With</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
-              Using the body's wisdom to release stress and free your expression.
+              Working with the body's natural intelligence to shift stress patterns and free your expression.
             </p>
           </div>
           
@@ -142,7 +148,7 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Nervous System Regulation</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Release threat responses, find calm, and feel safe within.
+                  Understanding and resolving fight, flight, freeze, fawn and dorsal shutdown patterns so the body can return to grounded internal safety.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -150,12 +156,12 @@ const Index = () => {
               </div>
             </Card>
 
-            {/* Emotional Clarity & Roots Card */}
+            {/* Emotional Clarity & Meaning Card */}
             <Card className="relative bg-dyad-soft border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg overflow-hidden">
               <div className="relative z-10">
-                <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Emotional Clarity & Roots</CardTitle>
+                <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Emotional Clarity & Meaning</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Uncover and shift emotional patterns, beliefs, and identity held in the body.
+                  Tracing emotional patterns, root beliefs, and identity structures held in the body — and transforming them into wisdom.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -168,7 +174,8 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Vocal Freedom & Expression</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Turn emotional blocks into free vocal expression for singers, performers, and creatives.
+                  For singers, creatives, leaders, and anyone who has swallowed their voice.
+                  I repattern the emotional blocks held in the throat, diaphragm, and breath so your voice can emerge naturally, powerfully, and without force.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -176,30 +183,168 @@ const Index = () => {
               </div>
             </Card>
           </div>
+
+          {/* Reconnection to Self Sub-section */}
+          <div className="max-w-3xl mx-auto mt-20 text-center">
+            <h3 className="text-4xl font-serif mb-6">Reconnection to Self</h3>
+            <p className="text-xl opacity-80 mb-6">
+              Sessions often support people moving through:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-lg text-dyad-background-soft max-w-2xl mx-auto">
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">burnout</p>
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">grief</p>
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">boundaries and self-worth</p>
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">perfectionism and people-pleasing</p>
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">performance anxiety</p>
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">identity shifts</p>
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">creative blocks</p>
+              <p className="bg-dyad-accent/20 text-dyad-background-soft px-4 py-2 rounded-full">transitions and life pivots</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Testimonial/Quote Section - Soft Background */}
+      {/* What It Feels Like Section */}
+      <section className="bg-dyad-background-soft py-32">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-12">What It Feels Like</h2>
+          <p className="text-xl text-gray-700 mb-10 leading-relaxed">
+            Clients describe this work as:
+          </p>
+          <div className="space-y-8 mb-12">
+            <blockquote className="text-3xl font-light italic text-dyad-dark leading-relaxed">
+              “quietly transformative,”
+            </blockquote>
+            <blockquote className="text-3xl font-light italic text-dyad-dark leading-relaxed">
+              “profound but grounded,”
+            </blockquote>
+            <blockquote className="text-3xl font-light italic text-dyad-dark leading-relaxed">
+              “deep emotional clarity without overwhelm,”
+            </blockquote>
+            <blockquote className="text-3xl font-light italic text-dyad-dark leading-relaxed">
+              “finally feeling at home in my body.”
+            </blockquote>
+          </div>
+          <p className="text-xl text-gray-700 mb-10 leading-relaxed">
+            Many leave sessions with:
+          </p>
+          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
+            <li>more space, breath, and ease</li>
+            <li>clarity on what they’re feeling and why</li>
+            <li>immediate physical shifts</li>
+            <li>reduced overwhelm and body tension</li>
+            <li>a greater sense of possibility and choice</li>
+            <li>a voice that feels freer, truer, and more alive</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* A Note on Philosophy Section */}
+      <section className="bg-white py-32">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-12">A Note on Philosophy</h2>
+          <p className="text-3xl font-light italic text-dyad-dark leading-relaxed mb-8">
+            “Healing comes from being in the body, not escaping it.”
+          </p>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            In a world that values speed, output, and constant doing, I reclaim something revolutionary:
+          </p>
+          <h3 className="text-5xl font-serif text-dyad-accent mb-8">
+            Presence.
+          </h3>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            I go slow enough that the nervous system can stop bracing…
+            slow enough that emotion can complete…
+            slow enough that the body can speak, and be heard.
+          </p>
+          <p className="text-xl text-gray-700 leading-relaxed font-semibold">
+            This is where transformation happens.
+          </p>
+        </div>
+      </section>
+
+      {/* About Daniele Section */}
+      <section className="bg-dyad-background-soft py-32">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">About Daniele</h2>
+          <h3 className="text-xl font-semibold uppercase tracking-widest text-dyad-accent mb-8">
+            Kinesiologist • Somatic Practitioner • Vocal Coach
+          </h3>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            I work at the crossroads of the body, emotion, voice, and identity.
+          </p>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            My background includes:
+          </p>
+          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-10 max-w-md mx-auto text-left">
+            <li>Professional kinesiology training</li>
+            <li>Somatic and nervous system modality certifications</li>
+            <li>Years as a performing artist, vocal coach, and facilitator</li>
+            <li>A decade of teaching voice, presence, and self-expression</li>
+            <li>Hundreds of clinical sessions supporting clients out of shutdown, tension, and emotional suppression</li>
+          </ul>
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+            I don’t diagnose, fix, or direct your journey.
+            I guide you into **relationship with your own internal intelligence** —
+            the part that already knows how to heal.
+          </p>
+        </div>
+      </section>
+
+      {/* Community & Group Work Section (Revised) */}
+      <section className="bg-white py-32">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Community & Group Work</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Beyond one-on-one, I offer group spaces for connection, movement, and vocal freedom.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <CommunityCard
+              title="Mindful Mondays"
+              description="A gentle weekly space to breathe, connect, and drop back into your body. Online and in-person."
+              icon={<Zap className="h-10 w-10" />}
+              colorClass="bg-dyad-dark"
+            />
+            <CommunityCard
+              title="Resonance Choir"
+              description="A slow, somatic choir experience combining breath, mindful movement, sound, and group resonance. You don’t need to “be a singer.” Just a body and a voice."
+              link="https://resonance-with-daniele.vercel.app/"
+              linkText="Visit Choir Website"
+              icon={<Music className="h-10 w-10" />}
+              colorClass="bg-dyad-accent"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Client Words (Testimonial) Section (Revised) */}
       <section className="bg-dyad-background-soft py-24">
         <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-12">Client Words</h2>
           <p className="text-3xl font-light italic text-dyad-dark leading-relaxed mb-6">
-            "Daniele's sessions were profoundly grounding. His depth of knowledge and gentle approach helped me find clarity and ease I hadn't felt in years. Highly recommend his uplifting and healing work."
+            “Daniele’s sessions were profoundly grounding. His depth of knowledge and gentle approach helped me find clarity and ease I hadn’t felt in years.”
           </p>
           <p className="text-lg font-medium text-gray-600">— Deborah, Creative Director, Melbourne</p>
         </div>
       </section>
 
-      {/* Footer / CTA - Accent Color Block */}
+      {/* Footer / CTA - Accent Color Block (Ready to Begin) */}
       <footer className="bg-dyad-accent text-white py-20">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h3 className="text-4xl font-serif mb-8">Ready to find your resonance?</h3>
+          <h3 className="text-4xl font-serif mb-8">Ready to Begin</h3>
           <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
-            Book your 90-minute session for more ease, clarity, and inner freedom.
+            If you’re ready to meet your body — with honesty, safety, and respect — I’d be honoured to work with you.
+          </p>
+          <p className="text-2xl font-semibold mb-10">
+            90-minute Balance Sessions available in Toorak, Melbourne & online.
           </p>
           
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="text-xl px-12 py-8 h-16 bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-2xl w-full sm:w-auto rounded-full transition-colors">
-              Book Your 90-Minute Session
+              Book Your Session
             </Button>
           </a>
           
@@ -212,7 +357,7 @@ const Index = () => {
               </a>
               <a href="tel:+61424174067" className="hover:text-dyad-soft transition-colors flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call
+                Phone
               </a>
             </div>
             <p className="pt-4">© {new Date().getFullYear()} Resonance Kinesiology. All rights reserved.</p>
