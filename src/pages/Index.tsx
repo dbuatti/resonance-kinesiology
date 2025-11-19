@@ -101,8 +101,6 @@ const Index = () => {
             <CommunityCard
               title="Mindful Mondays"
               description="Start your week with calm and connection. Join gentle Monday catch-ups designed to help you pause, breathe, and move mindfully. Available in person or online."
-              link="#"
-              linkText="See Upcoming Dates"
               icon={<Zap className="h-10 w-10" />}
               colorClass="bg-dyad-dark"
             />
