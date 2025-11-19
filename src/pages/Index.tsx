@@ -2,7 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, MessageSquare } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, MessageSquare, Music, Zap } from "lucide-react";
+import CommunityCard from "@/components/CommunityCard";
 
 const Index = () => {
   // Custom colors defined in tailwind.config.ts:
@@ -86,6 +87,37 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Community Offerings Section */}
+      <section className="bg-dyad-background-soft py-32">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Community & Group Work</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Beyond one-on-one sessions, I offer group spaces for connection, movement, and vocal liberation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <CommunityCard
+              title="Mindful Mondays"
+              description="Start your week with calm and connection. Join gentle Monday catch-ups designed to help you pause, breathe, and move mindfully. Available in person or online."
+              link="#"
+              linkText="See Upcoming Dates"
+              icon={<Zap className="h-10 w-10" />}
+              colorClass="bg-dyad-dark"
+            />
+            <CommunityCard
+              title="Resonance Choir"
+              description="A welcoming space to reset your body and mind through guided breathing, slow mindful movement, and simple meditation. Find your voice and connect with others."
+              link="https://resonance-with-daniele.vercel.app/"
+              linkText="Visit Choir Website"
+              icon={<Music className="h-10 w-10" />}
+              colorClass="bg-dyad-accent"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Services - Minimalist Grid (using dyad-dark background for contrast) */}
       <section className="bg-dyad-dark py-32 text-dyad-background-soft">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -98,7 +130,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Brain className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
+              <Brain className="h-12 w-12 text-dyad-accent mb-6" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Nervous System Regulation</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Understanding threat responses, vagal patterns, and moving toward grounded, internal safety.
@@ -106,7 +138,7 @@ const Index = () => {
             </Card>
 
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Heart className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
+              <Heart className="h-12 w-12 text-dyad-accent mb-6" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Emotional Clarity & Roots</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Tracing the root of emotional patterns, belief systems, and identity structures in the body.
@@ -114,7 +146,7 @@ const Index = () => {
             </Card>
 
             <Card className="bg-dyad-dark border border-dyad-soft/30 p-8 transition-all hover:border-dyad-accent/50 hover:shadow-lg">
-              <Mic2 className="h-12 w-12 text-dyad-accent mx-auto mb-4" />
+              <Mic2 className="h-12 w-12 text-dyad-accent mb-6" />
               <CardTitle className="text-3xl font-bold mb-4 text-dyad-background-soft leading-snug">Vocal Liberation & Expression</CardTitle>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Transforming emotional suppression into vocal freedom for singers, performers, and creatives.
