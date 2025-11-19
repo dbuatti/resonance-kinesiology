@@ -62,7 +62,7 @@ const Index = () => {
             Embodied Clarity.
           </h1>
           <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
-            I offer Kinesiology, Somatic Awareness, and Vocal Liberation.
+            I offer Kinesiology, Somatic Awareness, and Vocal Freedom.
           </p>
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             <Button 
