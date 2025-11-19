@@ -65,10 +65,10 @@ const Index = () => {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight pt-16">
-            Come Home to Your Body
+            Resonance Kinesiology
           </h1>
           <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
-            Kinesiology, Somatic Awareness, and Vocal Freedom to unwind stress, find emotional clarity, and express your authentic self.
+            Guiding you to unwind stress, find emotional clarity, and express your authentic self through Kinesiology, Somatic Awareness, and Vocal Freedom.
           </p>
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             <Button 
@@ -149,7 +149,7 @@ const Index = () => {
       {/* About Daniele Section (Simplified) */}
       <section className="bg-white py-32">
         <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">About Daniele</h2>
+          <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">About Me</h2>
           <h3 className="text-xl font-semibold uppercase tracking-widest text-dyad-accent mb-8">
             Kinesiologist • Somatic Practitioner • Vocal Coach
           </h3>
