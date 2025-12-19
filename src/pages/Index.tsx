@@ -14,10 +14,10 @@ const Index = () => {
       {/* Header - Fixed and Minimal */}
       <header className="sticky top-0 z-20 bg-dyad-background-soft/95 backdrop-blur-sm border-b border-dyad-soft/30">
         <nav className="container mx-auto px-6 py-4 max-w-6xl flex justify-between items-center">
-          <h1 className="text-2xl font-serif tracking-wider text-dyad-dark font-bold">
+          <a href="/" className="text-2xl font-serif tracking-wider text-dyad-dark font-bold hover:text-dyad-accent transition-colors">
             ✦ Resonance Kinesiology
-          </h1>
-          <div className="flex items-center space-x-4"> {/* Added a div for spacing */}
+          </a>
+          <div className="flex items-center space-x-4">
             <a href="/book-session">
               <Button 
                 size="sm" 
@@ -68,6 +68,7 @@ const Index = () => {
                 src="/daniele-buatti-hero.jpeg" 
                 alt="Daniele Buatti, The Embodied Practitioner" 
                 className="w-full h-full object-cover object-center"
+                loading="lazy" // Added lazy loading
               />
             </div>
           </div>
@@ -91,7 +92,7 @@ const Index = () => {
       </section>
 
       {/* What I Work With Section - Core Offerings */}
-      <section className="bg-dyad-dark py-32 text-dyad-background-soft">
+      <section className="bg-dyad-dark py-24 md:py-32 text-dyad-background-soft">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Work With</h2>
@@ -144,7 +145,7 @@ const Index = () => {
       </section>
 
       {/* Client Words (Testimonial) Section */}
-      <section className="bg-dyad-background-soft py-24">
+      <section className="bg-dyad-background-soft py-20 md:py-24">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-12">Client Words</h2>
           <p className="text-3xl font-light italic text-dyad-dark leading-relaxed mb-6">
@@ -155,7 +156,7 @@ const Index = () => {
       </section>
 
       {/* About Daniele Section (Simplified) */}
-      <section className="bg-white py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">About Me</h2>
           <h3 className="text-xl font-semibold uppercase tracking-widest text-dyad-accent mb-8">

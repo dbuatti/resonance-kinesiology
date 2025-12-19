@@ -6,6 +6,7 @@ import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, MessageSquare, Music
 import CommunityCard from "@/components/CommunityCard";
 
 const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
+const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
 const Index = () => {
   // Custom colors defined in tailwind.config.ts:
@@ -19,17 +20,35 @@ const Index = () => {
       {/* Header - Fixed and Minimal */}
       <header className="sticky top-0 z-20 bg-dyad-background-soft/95 backdrop-blur-sm border-b border-dyad-soft/30">
         <nav className="container mx-auto px-6 py-4 max-w-6xl flex justify-between items-center">
-          <h1 className="text-2xl font-serif tracking-wider text-dyad-dark font-bold">
+          <a href="/" className="text-2xl font-serif tracking-wider text-dyad-dark font-bold hover:text-dyad-accent transition-colors">
             ✦ Resonance Kinesiology
-          </h1>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            <Button 
-              size="sm" 
-              className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
-            >
-              Book Session
-            </Button>
           </a>
+          <div className="flex items-center space-x-4">
+            <a href="/book-session">
+              <Button 
+                size="sm" 
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Session Options
+              </Button>
+            </a>
+            <a href={MUSIC_WORK_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                My Music Work
+              </Button>
+            </a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Book Session
+              </Button>
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -54,6 +73,7 @@ const Index = () => {
                 src="/daniele-buatti-hero.jpeg" 
                 alt="Daniele Buatti, The Embodied Practitioner" 
                 className="w-full h-full object-cover object-center"
+                loading="lazy"
               />
             </div>
           </div>
@@ -85,7 +105,7 @@ const Index = () => {
       </section>
 
       {/* What I Offer Section */}
-      <section className="py-32 bg-white">
+      <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">What I Offer</h2>
           <h3 className="text-xl font-semibold uppercase tracking-widest text-dyad-accent mb-8">
@@ -124,7 +144,7 @@ const Index = () => {
       </section>
 
       {/* How Sessions Work Section */}
-      <section className="bg-dyad-background-soft py-32">
+      <section className="bg-dyad-background-soft py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">How Sessions Work</h2>
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
@@ -172,7 +192,7 @@ const Index = () => {
       </section>
 
       {/* What I Work With (formerly What I Transform) */}
-      <section className="bg-dyad-dark py-32 text-dyad-background-soft">
+      <section className="bg-dyad-dark py-24 md:py-32 text-dyad-background-soft">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Work With</h2>
@@ -244,7 +264,7 @@ const Index = () => {
       </section>
 
       {/* What It Feels Like Section */}
-      <section className="bg-dyad-background-soft py-32">
+      <section className="bg-dyad-background-soft py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-12">What It Feels Like</h2>
           <p className="text-xl text-gray-700 mb-10 leading-relaxed">
@@ -297,7 +317,7 @@ const Index = () => {
       </section>
 
       {/* A Note on Philosophy Section */}
-      <section className="bg-white py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-12">A Note on Philosophy</h2>
           <p className="text-3xl font-light italic text-dyad-dark leading-relaxed mb-8">
@@ -321,7 +341,7 @@ const Index = () => {
       </section>
 
       {/* About Daniele Section */}
-      <section className="bg-dyad-background-soft py-32">
+      <section className="bg-dyad-background-soft py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">About Daniele</h2>
           <h3 className="text-xl font-semibold uppercase tracking-widest text-dyad-accent mb-8">
@@ -364,7 +384,7 @@ const Index = () => {
       </section>
 
       {/* Community & Group Work Section (Revised) */}
-      <section className="bg-white py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Community & Group Work</h2>
@@ -393,7 +413,7 @@ const Index = () => {
       </section>
 
       {/* Client Words (Testimonial) Section (Revised) */}
-      <section className="bg-dyad-background-soft py-24">
+      <section className="bg-dyad-background-soft py-20 md:py-24">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-12">Client Words</h2>
           <p className="text-3xl font-light italic text-dyad-dark leading-relaxed mb-6">

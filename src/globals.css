@@ -100,4 +100,47 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Improved mobile responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      @apply px-4;
+    }
+
+    .text-5xl {
+      @apply text-4xl;
+    }
+
+    .text-6xl {
+      @apply text-5xl;
+    }
+
+    .text-7xl {
+      @apply text-6xl;
+    }
+
+    .text-8xl {
+      @apply text-7xl;
+    }
+  }
+
+  /* Better focus states for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-dyad-accent;
+  }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Improved button transitions */
+  button, a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Better image handling */
+  img {
+    @apply max-w-full h-auto;
+  }
 }

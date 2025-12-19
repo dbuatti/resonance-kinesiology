@@ -1,13 +1,50 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Brain, Heart, Mic2, Play, Phone, Mail, User } from "lucide-react";
+
+const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
+const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
 const Index = () => {
   return (
     <>
+      {/* Header - Added consistent navigation */}
+      <header className="sticky top-0 z-20 bg-dyad-background-soft/95 backdrop-blur-sm border-b border-dyad-soft/30">
+        <nav className="container mx-auto px-6 py-4 max-w-6xl flex justify-between items-center">
+          <a href="/" className="text-2xl font-serif tracking-wider text-dyad-dark font-bold hover:text-dyad-accent transition-colors">
+            ✦ Resonance Kinesiology
+          </a>
+          <div className="flex items-center space-x-4">
+            <a href="/book-session">
+              <Button 
+                size="sm" 
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Session Options
+              </Button>
+            </a>
+            <a href={MUSIC_WORK_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                My Music Work
+              </Button>
+            </a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Book Session
+              </Button>
+            </a>
+          </div>
+        </nav>
+      </header>
+
       {/* Hero - Purple background */}
       <section className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 flex items-center justify-center text-white relative overflow-hidden">
         <div className="container mx-auto px-6 py-24 text-center relative z-10">
