@@ -86,7 +86,7 @@ const Schedule = () => {
                 height="1200" // Make taller to account for cropping
                 frameBorder="0"
                 allow="payment"
-                className="w-full absolute top-[-200px] left-0" // Position iframe higher to crop the top
+                className="w-full absolute top-[-200px] left-0" // Changed to -200px for more cropping
                 style={{ transform: 'scale(1.0)' }} // Ensure proper scaling
               ></iframe>
             </div>
