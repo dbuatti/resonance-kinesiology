@@ -2,8 +2,52 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 
 const Schedule = () => {
+  const [searchParams] = useSearchParams();
+  const appointmentType = searchParams.get('type');
+
+  // Get the appropriate iframe URL based on the appointment type
+  const getIframeUrl = () => {
+    switch(appointmentType) {
+      case 'community-discounted':
+        return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=23329090";
+      case 'free-access':
+        return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=86951880";
+      case 'full-fee':
+      default:
+        return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=83873258";
+    }
+  };
+
+  // Get the session description based on the appointment type
+  const getSessionDescription = () => {
+    switch(appointmentType) {
+      case 'community-discounted':
+        return {
+          title: "Community Kinesiology – Discounted",
+          description: "90-minute session at a reduced rate of $30 for those who cannot currently afford standard rates.",
+          price: "$30"
+        };
+      case 'free-access':
+        return {
+          title: "Community Kinesiology – Free Access",
+          description: "90-minute free session for those who would otherwise not be able to access this work.",
+          price: "Free"
+        };
+      case 'full-fee':
+      default:
+        return {
+          title: "Kinesiology & Energy Balancing",
+          description: "90-minute full fee session at $100, the standard rate that sustains this work.",
+          price: "$100"
+        };
+    }
+  };
+
+  const { title, description, price } = getSessionDescription();
+
   return (
     <div className="bg-dyad-background-soft min-h-screen text-dyad-dark">
       {/* Header */}
@@ -24,16 +68,18 @@ const Schedule = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-6">Book Your Session</h1>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              Select a time that works for you. All sessions are 90 minutes and held with the same depth of care and presence.
+            <h1 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Book Your Session</h1>
+            <h2 className="text-2xl md:text-3xl font-serif text-dyad-accent mb-4">{title}</h2>
+            <p className="text-xl text-gray-700 mb-2">{price} · 90 minutes</p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {description}
             </p>
           </div>
 
-          {/* Acuity Scheduling Embed */}
+          {/* Acuity Scheduling Embed - Dynamic based on appointment type */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <iframe
-              src="https://app.acuityscheduling.com/schedule.php?owner=22925011"
+              src={getIframeUrl()}
               width="100%"
               height="1000"
               frameBorder="0"
