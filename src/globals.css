@@ -155,8 +155,8 @@
   .acuity-iframe-container iframe {
     position: absolute;
     width: 100%;
-    height: 1200px; /* Iframe is taller than container */
-    top: -200px; /* Position iframe higher to crop the top */
+    height: 1800px; /* Iframe is much taller than container */
+    top: -800px; /* Position iframe much higher to crop significantly */
     left: 0;
     border: none;
     min-width: 100%; /* Ensure iframe fills width */
