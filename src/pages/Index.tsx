@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf } from "lucide-react";
 
-const BOOKING_URL = "https://danielebuatti.as-me/kinesiology";
+const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
 const Index = () => {
