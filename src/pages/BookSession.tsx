@@ -19,15 +19,15 @@ const BookSession = () => {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-24 md:py-32">
+      {/* Hero Section - Reduced padding */}
+      <section className="py-16 md:py-20"> {/* Reduced from py-24 md:py-32 */}
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Kinesiology Sessions</h1>
-          <p className="text-xl text-gray-700 mb-4">Friday mornings · 90-minute sessions · Melbourne</p>
-          <p className="text-lg text-gray-600 mb-8">Toorak, Melbourne & online</p>
+          <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4">Kinesiology Sessions</h1> {/* Reduced margin */}
+          <p className="text-xl text-gray-700 mb-2">Friday mornings · 90-minute sessions · Melbourne</p> {/* Reduced margin */}
+          <p className="text-lg text-gray-600 mb-6">Toorak, Melbourne & online</p> {/* Reduced margin */}
 
           <div className="bg-dyad-soft p-8 rounded-3xl mb-4 max-w-3xl mx-auto">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-700 mb-4 leading-relaxed"> {/* Reduced margin */}
               I currently offer kinesiology sessions on Friday mornings, with three access options depending on your capacity to pay.
               All sessions are 90 minutes and held with the same depth of care, professionalism, and presence.
             </p>
@@ -48,7 +48,7 @@ const BookSession = () => {
               <div className="grid md:grid-cols-2">
                 <div className="p-12 flex flex-col justify-center">
                   <div className="mb-6">
-                    <span className="text-sm font-semibold uppercase tracking-widest text-dyad-background-soft/80">Option 1</span> {/* Changed to white for better readability */}
+                    <span className="text-sm font-semibold uppercase tracking-widest text-dyad-background-soft/80">Option 1</span>
                   </div>
                   <CardTitle className="text-4xl font-serif mb-6">Full Fee — Kinesiology & Energy Balancing</CardTitle>
                   <p className="text-2xl font-semibold mb-8">$100 · 90 minutes</p>
