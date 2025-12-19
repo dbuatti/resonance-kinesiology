@@ -78,16 +78,16 @@ const Schedule = () => {
 
           {/* Acuity Scheduling Embed - Dynamic based on appointment type */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            {/* Iframe container with custom styling to crop the top */}
+            {/* Iframe container with custom styling to crop top and bottom */}
             <div className="acuity-iframe-container relative h-[1000px] overflow-hidden">
               <iframe
                 src={getIframeUrl()}
                 width="100%"
-                height="1400" // Adjusted height to accommodate -400px cropping
+                height="1550" // Increased height to accommodate both top and bottom cropping
                 frameBorder="0"
                 allow="payment"
-                className="w-full absolute top-[-400px] left-0" // Changed to -400px for balanced cropping
-                style={{ transform: 'scale(1.0)' }} // Ensure proper scaling
+                className="w-full absolute top-[-400px] left-0" // Crops 400px from top
+                style={{ transform: 'scale(1.0)', bottom: '-150px' }} // Crops 150px from bottom
               ></iframe>
             </div>
           </div>
