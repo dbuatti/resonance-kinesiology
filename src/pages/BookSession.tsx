@@ -54,14 +54,14 @@ const BookSession = () => {
         </div>
       </section>
 
-      {/* Location Info Section */}
+      {/* Location Info Section - Updated to be more personal */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-serif text-dyad-dark mb-6">Find Us in Toorak</h2>
+              <h2 className="text-4xl font-serif text-dyad-dark mb-6">My Toorak Practice</h2>
               <p className="text-xl text-gray-700 mb-6">
-                Conveniently located in Toorak, Victoria (3142), our practice serves Melbourne and surrounding suburbs.
+                I offer kinesiology sessions in Toorak, Victoria (3142), serving Melbourne and surrounding areas.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -79,15 +79,15 @@ const BookSession = () => {
               </div>
             </div>
             <div className="bg-dyad-soft p-8 rounded-2xl">
-              <h3 className="text-2xl font-serif text-dyad-dark mb-4">Why Choose Kinesiology in Toorak?</h3>
+              <h3 className="text-2xl font-serif text-dyad-dark mb-4">Why Work With Me in Toorak?</h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
-                  <span>Convenient Toorak location</span>
+                  <span>Personalized one-on-one sessions</span>
                 </li>
                 <li className="flex items-start">
                   <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
-                  <span>Personalized 90-minute sessions</span>
+                  <span>Convenient Toorak location</span>
                 </li>
                 <li className="flex items-start">
                   <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
@@ -95,7 +95,7 @@ const BookSession = () => {
                 </li>
                 <li className="flex items-start">
                   <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
-                  <span>Experienced practitioner</span>
+                  <span>Years of professional experience</span>
                 </li>
               </ul>
             </div>
@@ -118,10 +118,10 @@ const BookSession = () => {
                   <h3 className="text-4xl font-serif mb-6">Full Fee — Kinesiology & Energy Balancing in Toorak</h3>
                   <p className="text-2xl font-semibold mb-8">$100 · 90 minutes · Toorak, Victoria</p>
                   <p className="text-lg opacity-90 mb-6 leading-relaxed">
-                    This is the standard full-fee session and the primary way this work is sustained.
+                    This is the standard full-fee session and the primary way my work is sustained.
                   </p>
                   <p className="text-lg opacity-90 mb-6 leading-relaxed">
-                    A deep, one-to-one kinesiology session in Toorak supporting regulation, clarity, and integration within the body and nervous system. Sessions are guided by your body's innate intelligence and may work with stress patterns, emotional load, nervous system responses, and held tension.
+                    A deep, one-to-one kinesiology session in Toorak supporting regulation, clarity, and integration within your body and nervous system. Sessions are guided by your body's innate intelligence and may work with stress patterns, emotional load, nervous system responses, and held tension.
                   </p>
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
                     This option is best if you are financially able to pay the full rate and wish to support the ongoing availability of this work.
@@ -154,7 +154,7 @@ const BookSession = () => {
                     This session offers the same depth of care and attention as the full-fee session, at a reduced contribution for those who cannot currently afford standard rates.
                   </p>
                   <p className="text-lg opacity-90 mb-6 leading-relaxed">
-                    These sessions are limited and offered as part of a community-care model that balances accessibility with sustainability.
+                    These sessions are limited and offered as part of my community-care model that balances accessibility with sustainability.
                   </p>
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
                     Please choose this option only if the full fee is genuinely out of reach for you at this time.
@@ -214,7 +214,7 @@ const BookSession = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-serif text-dyad-dark mb-8">A note on integrity & access</h2>
             <p className="text-xl text-gray-700 leading-relaxed">
-              These options exist to support access while respecting the energetic and practical sustainability of the work. Thank you for choosing the option that aligns honestly with your current capacity.
+              These options exist to support access while respecting the energetic and practical sustainability of my work. Thank you for choosing the option that aligns honestly with your current capacity.
             </p>
             <p className="text-lg text-gray-600 mt-6 leading-relaxed">
               If you're unsure which option is right for you, you're welcome to reach out before booking.
