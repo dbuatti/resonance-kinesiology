@@ -26,7 +26,7 @@ const BookSession = () => {
           <p className="text-xl text-gray-700 mb-4">Friday mornings · 90-minute sessions · Melbourne</p>
           <p className="text-lg text-gray-600 mb-8">Toorak, Melbourne & online</p>
 
-          <div className="bg-dyad-soft p-8 rounded-3xl mb-12 max-w-3xl mx-auto">
+          <div className="bg-dyad-soft p-8 rounded-3xl mb-8 max-w-3xl mx-auto">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               I currently offer kinesiology sessions on Friday mornings, with three access options depending on your capacity to pay.
               All sessions are 90 minutes and held with the same depth of care, professionalism, and presence.
@@ -39,7 +39,7 @@ const BookSession = () => {
       </section>
 
       {/* Session Options */}
-      <section className="py-16">
+      <section className="py-0"> {/* Removed py-16 to reduce space */}
         <div className="container mx-auto px-6 max-w-6xl space-y-12">
 
           {/* Full Fee Session */}
