@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Leaf, Users, Mail } from "lucide-react";
+import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone } from "lucide-react";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
@@ -50,6 +50,55 @@ const BookSession = () => {
             <p className="text-lg text-dyad-dark leading-relaxed">
               Please choose the option that genuinely reflects your current circumstances.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Info Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-serif text-dyad-dark mb-6">Find Us in Toorak</h2>
+              <p className="text-xl text-gray-700 mb-6">
+                Conveniently located in Toorak, Victoria (3142), our practice serves Melbourne and surrounding suburbs.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <MapPin className="h-6 w-6 mr-3 text-dyad-accent" />
+                  <span className="text-lg">Toorak, Victoria 3142</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="h-6 w-6 mr-3 text-dyad-accent" />
+                  <span className="text-lg">Friday mornings by appointment</span>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="h-6 w-6 mr-3 text-dyad-accent" />
+                  <span className="text-lg">0424 174 067</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-dyad-soft p-8 rounded-2xl">
+              <h3 className="text-2xl font-serif text-dyad-dark mb-4">Why Choose Kinesiology in Toorak?</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
+                  <span>Convenient Toorak location</span>
+                </li>
+                <li className="flex items-start">
+                  <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
+                  <span>Personalized 90-minute sessions</span>
+                </li>
+                <li className="flex items-start">
+                  <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
+                  <span>Accessible pricing options</span>
+                </li>
+                <li className="flex items-start">
+                  <Leaf className="h-5 w-5 mr-2 text-dyad-accent mt-1 flex-shrink-0" />
+                  <span>Experienced practitioner</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

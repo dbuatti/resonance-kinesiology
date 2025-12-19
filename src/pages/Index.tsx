@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, MapPin, Clock } from "lucide-react";
 
 const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
@@ -183,6 +183,46 @@ const Index = () => {
           <p className="text-lg text-gray-600 mt-4">
             Based in Toorak, Victoria, serving Melbourne and surrounding areas.
           </p>
+        </div>
+      </section>
+
+      {/* FAQ Section - Added for SEO */}
+      <section className="bg-dyad-background-soft py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-700">About Kinesiology in Toorak</p>
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h3 className="text-2xl font-serif text-dyad-dark mb-4">What is kinesiology and how can it help me?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Kinesiology is a holistic approach that combines muscle monitoring with traditional Chinese medicine principles to identify and resolve imbalances in the body's energy systems. It can help with stress reduction, emotional clarity, nervous system regulation, and overall well-being.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h3 className="text-2xl font-serif text-dyad-dark mb-4">Where are you located in Toorak?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                My practice is conveniently located in Toorak, Victoria (3142), easily accessible from Melbourne and surrounding suburbs. Sessions are available on Friday mornings.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h3 className="text-2xl font-serif text-dyad-dark mb-4">What can I expect from a kinesiology session in Toorak?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Each 90-minute session is tailored to your needs and may include muscle monitoring, emotional stress release, meridian balancing, nervous system regulation techniques, and somatic awareness practices.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h3 className="text-2xl font-serif text-dyad-dark mb-4">How do I book a kinesiology session in Toorak?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                You can easily book your session online through our booking system. We offer three access options depending on your capacity to pay, ensuring kinesiology is accessible to everyone in the Toorak community.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
