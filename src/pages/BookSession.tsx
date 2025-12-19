@@ -86,7 +86,7 @@ const BookSession = () => {
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
                     This option is best if you are financially able to pay the full rate and wish to support the ongoing availability of this work.
                   </p>
-                  <a href="https://danielebuatti.as.me/kinesiology90" target="_blank" rel="noopener noreferrer">
+                  <a href="/schedule?type=full-fee">
                     <Button size="lg" className="bg-dyad-accent hover:bg-dyad-soft text-white font-semibold shadow-lg h-14">
                       Book a Full Fee Session
                       <ArrowRight className="ml-3 h-5 w-5" />
@@ -119,7 +119,7 @@ const BookSession = () => {
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
                     Please choose this option only if the full fee is genuinely out of reach for you at this time.
                   </p>
-                  <a href="https://danielebuatti.as.me/kinesiology90disc" target="_blank" rel="noopener noreferrer">
+                  <a href="/schedule?type=community-discounted">
                     <Button size="lg" className="bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-lg h-14">
                       Book a Community Session ($30)
                       <ArrowRight className="ml-3 h-5 w-5" />
@@ -152,7 +152,7 @@ const BookSession = () => {
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                     Please book this option only if payment of any kind is not currently possible for you. If you are able to contribute financially, I invite you to choose one of the paid options so this space can remain available to those most in need.
                   </p>
-                  <a href="https://danielebuatti.as.me/kinesiology90free" target="_blank" rel="noopener noreferrer">
+                  <a href="/schedule?type=free-access">
                     <Button size="lg" className="bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-lg h-14">
                       Book a Free Access Session
                       <ArrowRight className="ml-3 h-5 w-5" />

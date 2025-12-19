@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import IndexV1 from "./pages/IndexV1";
 import IndexV2 from "./pages/IndexV2";
 import BookSession from "./pages/BookSession";
+import Schedule from "./pages/Schedule";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/book-session" element={<BookSession />} />
+          <Route path="/schedule" element={<Schedule />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/v1" element={<IndexV1 />} />
           <Route path="/v2" element={<IndexV2 />} /> {/* New route for the original Index */}
