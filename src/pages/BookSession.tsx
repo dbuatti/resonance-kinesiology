@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Leaf, Users, Mail } from "lucide-react";
 
-const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
 const BookSession = () => {
@@ -30,14 +29,6 @@ const BookSession = () => {
                 className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
               >
                 My Music Work
-              </Button>
-            </a>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="sm" 
-                className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
-              >
-                Book Session
               </Button>
             </a>
           </div>

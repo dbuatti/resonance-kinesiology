@@ -34,14 +34,6 @@ const Index = () => {
                 My Music Work
               </Button>
             </a>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="sm" 
-                className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
-              >
-                Book Session
-              </Button>
-            </a>
           </div>
         </nav>
       </header>
@@ -79,12 +71,12 @@ const Index = () => {
           <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
             Guiding you to unwind stress, find emotional clarity, and express your authentic self through Kinesiology, Somatic Awareness, and Vocal Freedom.
           </p>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+          <a href="/book-session">
             <Button 
               size="lg" 
               className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-xl rounded-full transition-colors"
             >
-              Book Your Session
+              View Session Options
               <ArrowRight className="ml-3 h-5 w-5" />
             </Button>
           </a>
