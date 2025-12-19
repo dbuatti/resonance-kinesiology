@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Heart, Leaf, Users, Mail } from "lucide-react";
 
 const BookSession = () => {
@@ -20,14 +19,14 @@ const BookSession = () => {
       </header>
 
       {/* Hero Section - Reduced padding */}
-      <section className="py-16 md:py-20"> {/* Reduced from py-24 md:py-32 */}
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4">Kinesiology Sessions</h1> {/* Reduced margin */}
-          <p className="text-xl text-gray-700 mb-2">Friday mornings · 90-minute sessions · Melbourne</p> {/* Reduced margin */}
-          <p className="text-lg text-gray-600 mb-6">Toorak, Melbourne & online</p> {/* Reduced margin */}
+          <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4">Kinesiology Sessions</h1>
+          <p className="text-xl text-gray-700 mb-2">Friday mornings · 90-minute sessions · Melbourne</p>
+          <p className="text-lg text-gray-600 mb-6">Toorak, Melbourne & online</p>
 
           <div className="bg-dyad-soft p-8 rounded-3xl mb-4 max-w-3xl mx-auto">
-            <p className="text-lg text-gray-700 mb-4 leading-relaxed"> {/* Reduced margin */}
+            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               I currently offer kinesiology sessions on Friday mornings, with three access options depending on your capacity to pay.
               All sessions are 90 minutes and held with the same depth of care, professionalism, and presence.
             </p>
@@ -38,24 +37,24 @@ const BookSession = () => {
         </div>
       </section>
 
-      {/* Session Options */}
-      <section className="py-0 -mt-8"> {/* Added negative margin to pull cards up */}
-        <div className="container mx-auto px-6 max-w-6xl space-y-8"> {/* Reduced space between cards */}
+      {/* Session Options - Full width */}
+      <section className="py-0 -mt-8">
+        <div className="space-y-0"> {/* Removed container to allow full width */}
 
-          {/* Full Fee Session */}
-          <Card className="bg-dyad-dark text-dyad-background-soft overflow-hidden">
-            <CardContent className="p-0">
-              <div className="grid md:grid-cols-2">
-                <div className="p-12 flex flex-col justify-center">
+          {/* Full Fee Session - Full width */}
+          <div className="bg-dyad-dark text-dyad-background-soft">
+            <div className="container mx-auto px-6 max-w-6xl py-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="flex flex-col justify-center">
                   <div className="mb-6">
                     <span className="text-sm font-semibold uppercase tracking-widest text-dyad-background-soft/80">Option 1</span>
                   </div>
-                  <CardTitle className="text-4xl font-serif mb-6">Full Fee — Kinesiology & Energy Balancing</CardTitle>
+                  <h3 className="text-4xl font-serif mb-6">Full Fee — Kinesiology & Energy Balancing</h3>
                   <p className="text-2xl font-semibold mb-8">$100 · 90 minutes</p>
-                  <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
                     This is the standard full-fee session and the primary way this work is sustained.
                   </p>
-                  <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
                     A deep, one-to-one kinesiology session supporting regulation, clarity, and integration within the body and nervous system. Sessions are guided by your body's innate intelligence and may work with stress patterns, emotional load, nervous system responses, and held tension.
                   </p>
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
@@ -68,27 +67,27 @@ const BookSession = () => {
                     </Button>
                   </a>
                 </div>
-                <div className="bg-gradient-to-br from-dyad-dark to-dyad-accent/30 p-12 flex items-center justify-center">
+                <div className="hidden md:flex justify-center">
                   <Leaf className="h-48 w-48 text-white/20" />
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
-          {/* Community Discounted Session */}
-          <Card className="bg-dyad-accent text-dyad-background-soft overflow-hidden">
-            <CardContent className="p-0">
-              <div className="grid md:grid-cols-2">
-                <div className="p-12 flex flex-col justify-center">
+          {/* Community Discounted Session - Full width */}
+          <div className="bg-dyad-accent text-dyad-background-soft">
+            <div className="container mx-auto px-6 max-w-6xl py-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="flex flex-col justify-center">
                   <div className="mb-6">
                     <span className="text-sm font-semibold uppercase tracking-widest text-dyad-dark/80">Option 2</span>
                   </div>
-                  <CardTitle className="text-4xl font-serif mb-6">Community — Discounted Access</CardTitle>
+                  <h3 className="text-4xl font-serif mb-6">Community — Discounted Access</h3>
                   <p className="text-2xl font-semibold mb-8">$30 · 90 minutes</p>
-                  <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
                     This session offers the same depth of care and attention as the full-fee session, at a reduced contribution for those who cannot currently afford standard rates.
                   </p>
-                  <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
                     These sessions are limited and offered as part of a community-care model that balances accessibility with sustainability.
                   </p>
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
@@ -101,27 +100,27 @@ const BookSession = () => {
                     </Button>
                   </a>
                 </div>
-                <div className="bg-gradient-to-br from-dyad-accent to-dyad-dark/30 p-12 flex items-center justify-center">
+                <div className="hidden md:flex justify-center">
                   <Heart className="h-48 w-48 text-white/20" />
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
-          {/* Community Free Session */}
-          <Card className="bg-dyad-soft border border-dyad-soft/30 overflow-hidden">
-            <CardContent className="p-0">
-              <div className="grid md:grid-cols-2">
-                <div className="p-12 flex flex-col justify-center">
+          {/* Community Free Session - Full width */}
+          <div className="bg-dyad-soft border-t border-b border-dyad-soft/30">
+            <div className="container mx-auto px-6 max-w-6xl py-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="flex flex-col justify-center">
                   <div className="mb-6">
                     <span className="text-sm font-semibold uppercase tracking-widest text-dyad-accent">Option 3</span>
                   </div>
-                  <CardTitle className="text-4xl font-serif mb-6">Community — Free Access (Limited)</CardTitle>
+                  <h3 className="text-4xl font-serif mb-6">Community — Free Access (Limited)</h3>
                   <p className="text-2xl font-semibold mb-8">Free · 90 minutes · one session per week</p>
-                  <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                     Once per week, I offer a fully free kinesiology session for someone who would otherwise not be able to access this work.
                   </p>
-                  <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                     This session is identical in structure and care to the paid offerings and is available by direct booking when released.
                   </p>
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -134,12 +133,12 @@ const BookSession = () => {
                     </Button>
                   </a>
                 </div>
-                <div className="bg-gradient-to-br from-dyad-soft to-dyad-accent/10 p-12 flex items-center justify-center">
+                <div className="hidden md:flex justify-center">
                   <Users className="h-48 w-48 text-dyad-dark/20" />
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
