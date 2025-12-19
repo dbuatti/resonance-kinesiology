@@ -18,6 +18,14 @@ const Index = () => {
             ✦ Resonance Kinesiology
           </h1>
           <div className="flex items-center space-x-4"> {/* Added a div for spacing */}
+            <a href="/book-session">
+              <Button 
+                size="sm" 
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Session Options
+              </Button>
+            </a>
             <a href={MUSIC_WORK_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="sm" 
@@ -170,9 +178,9 @@ const Index = () => {
             90-minute Balance Sessions available in Toorak, Melbourne & online.
           </p>
           
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+          <a href="/book-session">
             <Button size="lg" className="text-xl px-12 py-8 h-16 bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-2xl w-full sm:w-auto rounded-full transition-colors">
-              Book Your Session
+              View Session Options
             </Button>
           </a>
           
