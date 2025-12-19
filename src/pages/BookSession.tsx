@@ -3,18 +3,44 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Leaf, Users, Mail } from "lucide-react";
 
+const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
+const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
+
 const BookSession = () => {
   return (
     <div className="bg-dyad-background-soft min-h-screen text-dyad-dark">
       {/* Header */}
       <header className="sticky top-0 z-20 bg-dyad-background-soft/95 backdrop-blur-sm border-b border-dyad-soft/30">
         <nav className="container mx-auto px-6 py-4 max-w-6xl flex justify-between items-center">
-          <h1 className="text-2xl font-serif tracking-wider text-dyad-dark font-bold">
+          <a href="/" className="text-2xl font-serif tracking-wider text-dyad-dark font-bold hover:text-dyad-accent transition-colors">
             ✦ Resonance Kinesiology
-          </h1>
-          <a href="/" className="text-dyad-accent hover:text-dyad-dark transition-colors">
-            ← Back to Home
           </a>
+          <div className="flex items-center space-x-4">
+            <a href="/book-session">
+              <Button 
+                size="sm" 
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Session Options
+              </Button>
+            </a>
+            <a href={MUSIC_WORK_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                My Music Work
+              </Button>
+            </a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                className="bg-dyad-accent hover:bg-dyad-dark text-dyad-background-soft shadow-md text-sm px-4 py-2 rounded-full transition-colors"
+              >
+                Book Session
+              </Button>
+            </a>
+          </div>
         </nav>
       </header>
 
