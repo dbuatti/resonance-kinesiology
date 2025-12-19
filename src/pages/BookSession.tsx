@@ -43,11 +43,11 @@ const BookSession = () => {
           <p className="text-lg text-gray-600 mb-6">Toorak, Melbourne & online</p>
 
           <div className="bg-dyad-soft p-8 rounded-3xl mb-4 max-w-3xl mx-auto">
-            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+            <p className="text-lg text-dyad-dark mb-4 leading-relaxed">
               I currently offer kinesiology sessions on Friday mornings, with three access options depending on your capacity to pay.
               All sessions are 90 minutes and held with the same depth of care, professionalism, and presence.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-dyad-dark leading-relaxed">
               Please choose the option that genuinely reflects your current circumstances.
             </p>
           </div>
