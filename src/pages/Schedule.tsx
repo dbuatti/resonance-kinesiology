@@ -78,14 +78,18 @@ const Schedule = () => {
 
           {/* Acuity Scheduling Embed - Dynamic based on appointment type */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <iframe
-              src={getIframeUrl()}
-              width="100%"
-              height="1000"
-              frameBorder="0"
-              allow="payment"
-              className="w-full"
-            ></iframe>
+            {/* Iframe container with custom styling to crop the top */}
+            <div className="acuity-iframe-container relative h-[1000px] overflow-hidden">
+              <iframe
+                src={getIframeUrl()}
+                width="100%"
+                height="1200" // Make taller to account for cropping
+                frameBorder="0"
+                allow="payment"
+                className="w-full absolute top-[-120px] left-0" // Position iframe higher to crop the top
+                style={{ transform: 'scale(1.0)' }} // Ensure proper scaling
+              ></iframe>
+            </div>
           </div>
 
           {/* Help Section */}

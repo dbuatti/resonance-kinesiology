@@ -143,4 +143,19 @@
   img {
     @apply max-w-full h-auto;
   }
+
+  /* Custom styles for Acuity iframe */
+  .acuity-iframe-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .acuity-iframe-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    top: -120px;
+    left: 0;
+    border: none;
+  }
 }
