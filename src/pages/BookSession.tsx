@@ -117,13 +117,13 @@ const BookSession = () => {
                   </div>
                   <h3 className="text-4xl font-serif mb-6">Full Fee — Kinesiology & Energy Balancing in Toorak</h3>
                   <p className="text-2xl font-semibold mb-8">$100 · 90 minutes · Toorak, Victoria</p>
-                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                  <p className="text-lg text-white/90 mb-6 leading-relaxed">
                     This is the standard full-fee session and the primary way my work is sustained.
                   </p>
-                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                  <p className="text-lg text-white/90 mb-6 leading-relaxed">
                     A deep, one-to-one kinesiology session in Toorak supporting regulation, clarity, and integration within your body and nervous system. Sessions are guided by your body's innate intelligence and may work with stress patterns, emotional load, nervous system responses, and held tension.
                   </p>
-                  <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                  <p className="text-lg text-white/90 mb-8 leading-relaxed">
                     This option is best if you are financially able to pay the full rate and wish to support the ongoing availability of this work.
                   </p>
                   <a href="/schedule?type=full-fee">
@@ -150,13 +150,13 @@ const BookSession = () => {
                   </div>
                   <h3 className="text-4xl font-serif mb-6">Community — Discounted Access in Toorak</h3>
                   <p className="text-2xl font-semibold mb-8">$30 · 90 minutes · Toorak, Victoria</p>
-                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                  <p className="text-lg text-dyad-dark/90 mb-6 leading-relaxed">
                     This session offers the same depth of care and attention as the full-fee session, at a reduced contribution for those who cannot currently afford standard rates.
                   </p>
-                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                  <p className="text-lg text-dyad-dark/90 mb-6 leading-relaxed">
                     These sessions are limited and offered as part of my community-care model that balances accessibility with sustainability.
                   </p>
-                  <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                  <p className="text-lg text-dyad-dark/90 mb-8 leading-relaxed">
                     Please choose this option only if the full fee is genuinely out of reach for you at this time.
                   </p>
                   <a href="/schedule?type=community-discounted">
@@ -183,13 +183,13 @@ const BookSession = () => {
                   </div>
                   <h3 className="text-4xl font-serif mb-6">Community — Free Access in Toorak (Limited)</h3>
                   <p className="text-2xl font-semibold mb-8">Free · 90 minutes · one session per week · Toorak, Victoria</p>
-                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-lg text-dyad-dark mb-6 leading-relaxed">
                     Once per week, I offer a fully free kinesiology session in Toorak for someone who would otherwise not be able to access this work.
                   </p>
-                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-lg text-dyad-dark mb-6 leading-relaxed">
                     This session is identical in structure and care to the paid offerings and is available by direct booking when released.
                   </p>
-                  <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  <p className="text-lg text-dyad-dark mb-8 leading-relaxed">
                     Please book this option only if payment of any kind is not currently possible for you. If you are able to contribute financially, I invite you to choose one of the paid options so this space can remain available to those most in need.
                   </p>
                   <a href="/schedule?type=free-access">
