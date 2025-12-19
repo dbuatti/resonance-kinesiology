@@ -38,13 +38,13 @@ const BookSession = () => {
       {/* Hero Section - Reduced padding */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4">Kinesiology Sessions</h1>
-          <p className="text-xl text-gray-700 mb-2">Friday mornings · 90-minute sessions · Melbourne</p>
-          <p className="text-lg text-gray-600 mb-6">Toorak, Melbourne & online</p>
+          <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4">Kinesiology Sessions in Toorak</h1>
+          <p className="text-xl text-gray-700 mb-2">Friday mornings · 90-minute sessions · Toorak, Victoria</p>
+          <p className="text-lg text-gray-600 mb-6">Conveniently located in Toorak, serving Melbourne and surrounding areas</p>
 
           <div className="bg-dyad-soft p-8 rounded-3xl mb-4 max-w-3xl mx-auto">
             <p className="text-lg text-dyad-dark mb-4 leading-relaxed">
-              I currently offer kinesiology sessions on Friday mornings, with three access options depending on your capacity to pay.
+              I currently offer kinesiology sessions on Friday mornings in Toorak, Victoria, with three access options depending on your capacity to pay.
               All sessions are 90 minutes and held with the same depth of care, professionalism, and presence.
             </p>
             <p className="text-lg text-dyad-dark leading-relaxed">
@@ -66,20 +66,20 @@ const BookSession = () => {
                   <div className="mb-6">
                     <span className="text-sm font-semibold uppercase tracking-widest text-dyad-background-soft/80">Option 1</span>
                   </div>
-                  <h3 className="text-4xl font-serif mb-6">Full Fee — Kinesiology & Energy Balancing</h3>
-                  <p className="text-2xl font-semibold mb-8">$100 · 90 minutes</p>
+                  <h3 className="text-4xl font-serif mb-6">Full Fee — Kinesiology & Energy Balancing in Toorak</h3>
+                  <p className="text-2xl font-semibold mb-8">$100 · 90 minutes · Toorak, Victoria</p>
                   <p className="text-lg opacity-90 mb-6 leading-relaxed">
                     This is the standard full-fee session and the primary way this work is sustained.
                   </p>
                   <p className="text-lg opacity-90 mb-6 leading-relaxed">
-                    A deep, one-to-one kinesiology session supporting regulation, clarity, and integration within the body and nervous system. Sessions are guided by your body's innate intelligence and may work with stress patterns, emotional load, nervous system responses, and held tension.
+                    A deep, one-to-one kinesiology session in Toorak supporting regulation, clarity, and integration within the body and nervous system. Sessions are guided by your body's innate intelligence and may work with stress patterns, emotional load, nervous system responses, and held tension.
                   </p>
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
                     This option is best if you are financially able to pay the full rate and wish to support the ongoing availability of this work.
                   </p>
                   <a href="/schedule?type=full-fee">
                     <Button size="lg" className="bg-dyad-accent hover:bg-dyad-soft text-white font-semibold shadow-lg h-14">
-                      Book a Full Fee Session
+                      Book a Full Fee Session in Toorak
                       <ArrowRight className="ml-3 h-5 w-5" />
                     </Button>
                   </a>
@@ -99,8 +99,8 @@ const BookSession = () => {
                   <div className="mb-6">
                     <span className="text-sm font-semibold uppercase tracking-widest text-dyad-dark/80">Option 2</span>
                   </div>
-                  <h3 className="text-4xl font-serif mb-6">Community — Discounted Access</h3>
-                  <p className="text-2xl font-semibold mb-8">$30 · 90 minutes</p>
+                  <h3 className="text-4xl font-serif mb-6">Community — Discounted Access in Toorak</h3>
+                  <p className="text-2xl font-semibold mb-8">$30 · 90 minutes · Toorak, Victoria</p>
                   <p className="text-lg opacity-90 mb-6 leading-relaxed">
                     This session offers the same depth of care and attention as the full-fee session, at a reduced contribution for those who cannot currently afford standard rates.
                   </p>
@@ -112,7 +112,7 @@ const BookSession = () => {
                   </p>
                   <a href="/schedule?type=community-discounted">
                     <Button size="lg" className="bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-lg h-14">
-                      Book a Community Session ($30)
+                      Book a Community Session in Toorak ($30)
                       <ArrowRight className="ml-3 h-5 w-5" />
                     </Button>
                   </a>
@@ -132,10 +132,10 @@ const BookSession = () => {
                   <div className="mb-6">
                     <span className="text-sm font-semibold uppercase tracking-widest text-dyad-accent">Option 3</span>
                   </div>
-                  <h3 className="text-4xl font-serif mb-6">Community — Free Access (Limited)</h3>
-                  <p className="text-2xl font-semibold mb-8">Free · 90 minutes · one session per week</p>
+                  <h3 className="text-4xl font-serif mb-6">Community — Free Access in Toorak (Limited)</h3>
+                  <p className="text-2xl font-semibold mb-8">Free · 90 minutes · one session per week · Toorak, Victoria</p>
                   <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                    Once per week, I offer a fully free kinesiology session for someone who would otherwise not be able to access this work.
+                    Once per week, I offer a fully free kinesiology session in Toorak for someone who would otherwise not be able to access this work.
                   </p>
                   <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                     This session is identical in structure and care to the paid offerings and is available by direct booking when released.
@@ -145,7 +145,7 @@ const BookSession = () => {
                   </p>
                   <a href="/schedule?type=free-access">
                     <Button size="lg" className="bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-lg h-14">
-                      Book a Free Access Session
+                      Book a Free Access Session in Toorak
                       <ArrowRight className="ml-3 h-5 w-5" />
                     </Button>
                   </a>
@@ -184,7 +184,7 @@ const BookSession = () => {
       <footer className="bg-dyad-accent text-white py-16">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <p className="text-xl mb-8 opacity-90">
-            I'd be honoured to work with you.
+            I'd be honoured to work with you in Toorak.
           </p>
           <a href="/" className="text-dyad-background-soft hover:text-dyad-soft transition-colors font-semibold">
             ← Return to Home

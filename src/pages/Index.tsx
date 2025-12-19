@@ -58,28 +58,51 @@ const Index = () => {
             <div className="w-56 h-56 mx-auto rounded-full shadow-2xl overflow-hidden border-8 border-dyad-dark ring-4 ring-dyad-soft/50">
               <img 
                 src="/daniele-buatti-hero.jpeg" 
-                alt="Daniele Buatti, The Embodied Practitioner" 
+                alt="Daniele Buatti, Kinesiologist in Toorak, Victoria" 
                 className="w-full h-full object-cover object-center"
-                loading="lazy" // Added lazy loading
+                loading="lazy"
               />
             </div>
           </div>
 
           <h1 className="text-6xl md:text-8xl font-serif mb-8 leading-tight pt-16">
-            Resonance Kinesiology
+            Kinesiology in Toorak
           </h1>
           <p className="text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
-            Guiding you to unwind stress, find emotional clarity, and express your authentic self through Kinesiology, Somatic Awareness, and Vocal Freedom.
+            Expert kinesiology sessions in Toorak, Victoria. Nervous system regulation, emotional clarity, and somatic awareness for Melbourne residents.
           </p>
           <a href="/book-session">
             <Button 
               size="lg" 
               className="text-xl px-12 py-8 h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-xl rounded-full transition-colors"
             >
-              View Session Options
+              Book Your Toorak Session
               <ArrowRight className="ml-3 h-5 w-5" />
             </Button>
           </a>
+        </div>
+      </section>
+
+      {/* Location Info Section - Added for SEO */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2 className="text-4xl font-serif text-dyad-dark mb-6">Serving Toorak & Melbourne</h2>
+          <p className="text-xl text-gray-700 mb-4">
+            Conveniently located in Toorak, Victoria (3142), serving Melbourne and surrounding areas.
+          </p>
+          <p className="text-lg text-gray-600 mb-8">
+            Find expert kinesiology services near you for nervous system regulation and emotional clarity.
+          </p>
+          <div className="flex justify-center space-x-8">
+            <div className="flex items-center">
+              <Phone className="h-6 w-6 mr-2 text-dyad-accent" />
+              <span className="text-lg">0424 174 067</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-6 w-6 mr-2 text-dyad-accent" />
+              <span className="text-lg">daniele.kinesiology@gmail.com</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -87,9 +110,9 @@ const Index = () => {
       <section className="bg-dyad-dark py-24 md:py-32 text-dyad-background-soft">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-serif mb-6">What I Work With</h2>
+            <h2 className="text-5xl md:text-6xl font-serif mb-6">Kinesiology Services in Toorak</h2>
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
-              Guiding you to shift stress patterns and free your authentic expression.
+              Professional kinesiology sessions in Toorak, Victoria for nervous system regulation, emotional clarity, and somatic awareness.
             </p>
           </div>
           
@@ -99,7 +122,7 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Nervous System Regulation</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Resolve fight, flight, freeze, and fawn patterns to restore grounded internal safety.
+                  Resolve fight, flight, freeze, and fawn patterns to restore grounded internal safety. Available in Toorak, Victoria.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -112,7 +135,7 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Emotional Clarity & Meaning</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Transform emotional patterns and root beliefs held in the body into wisdom.
+                  Transform emotional patterns and root beliefs held in the body into wisdom. Toorak-based kinesiology sessions.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -125,7 +148,7 @@ const Index = () => {
               <div className="relative z-10">
                 <CardTitle className="text-3xl font-bold mb-4 text-dyad-dark leading-snug">Vocal Freedom & Expression</CardTitle>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Release emotional blocks in the throat and diaphragm for a naturally powerful voice.
+                  Release emotional blocks in the throat and diaphragm for a naturally powerful voice. Available in Toorak, Melbourne.
                 </p>
               </div>
               <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 z-0">
@@ -157,6 +180,9 @@ const Index = () => {
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             I guide you into relationship with your own internal intelligence — the part that already knows how to heal. My work integrates professional kinesiology, somatic modalities, and years of experience as a vocal coach and performing artist.
           </p>
+          <p className="text-lg text-gray-600 mt-4">
+            Based in Toorak, Victoria, serving Melbourne and surrounding areas.
+          </p>
         </div>
       </section>
 
@@ -173,12 +199,12 @@ const Index = () => {
           
           <a href="/book-session">
             <Button size="lg" className="text-xl px-12 py-8 h-16 bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-2xl w-full sm:w-auto rounded-full transition-colors">
-              View Session Options
+              Book Your Toorak Session
             </Button>
           </a>
           
           <div className="mt-16 text-sm opacity-70 space-y-2">
-            <p>Toorak, Melbourne Vic</p>
+            <p>Toorak, Melbourne Vic 3142</p>
             <div className="flex justify-center space-x-6 mt-4">
               <a href="mailto:daniele.kinesiology@gmail.com" className="hover:text-dyad-soft transition-colors flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
