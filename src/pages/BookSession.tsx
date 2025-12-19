@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Leaf, Users, Mail } from "lucide-react";
+import { useEffect } from "react";
 
 const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
@@ -67,7 +68,7 @@ const BookSession = () => {
       <section className="py-0 -mt-8">
         <div className="space-y-0"> {/* Removed container to allow full width */}
 
-          {/* Full Fee Session - Full width */}
+          {/* Full Fee Session - Full width with iframe embed */}
           <div className="bg-dyad-dark text-dyad-background-soft">
             <div className="container mx-auto px-6 max-w-6xl py-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -86,21 +87,29 @@ const BookSession = () => {
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
                     This option is best if you are financially able to pay the full rate and wish to support the ongoing availability of this work.
                   </p>
-                  <a href="https://danielebuatti.as.me/kinesiology90" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="bg-dyad-accent hover:bg-dyad-soft text-white font-semibold shadow-lg h-14">
-                      Book a Full Fee Session
-                      <ArrowRight className="ml-3 h-5 w-5" />
-                    </Button>
-                  </a>
                 </div>
                 <div className="hidden md:flex justify-center">
                   <Leaf className="h-48 w-48 text-white/20" />
                 </div>
               </div>
             </div>
+
+            {/* Iframe Embed for Full Fee Session */}
+            <div className="container mx-auto px-6 max-w-4xl pb-12">
+              <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+                <iframe
+                  src="https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=83873258"
+                  width="100%"
+                  height="800"
+                  frameBorder="0"
+                  allow="payment"
+                  className="w-full"
+                ></iframe>
+              </div>
+            </div>
           </div>
 
-          {/* Community Discounted Session - Full width */}
+          {/* Community Discounted Session - Full width with button embed */}
           <div className="bg-dyad-accent text-dyad-background-soft">
             <div className="container mx-auto px-6 max-w-6xl py-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -119,12 +128,16 @@ const BookSession = () => {
                   <p className="text-lg opacity-90 mb-8 leading-relaxed">
                     Please choose this option only if the full fee is genuinely out of reach for you at this time.
                   </p>
-                  <a href="https://danielebuatti.as.me/kinesiology90disc" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-lg h-14">
-                      Book a Community Session ($30)
-                      <ArrowRight className="ml-3 h-5 w-5" />
-                    </Button>
-                  </a>
+                  {/* Button Embed for Community Discounted Session */}
+                  <div className="mt-8">
+                    <a
+                      href="https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=86951879"
+                      target="_blank"
+                      className="inline-block bg-dyad-dark hover:bg-dyad-soft text-white font-semibold shadow-lg h-14 px-8 rounded-lg transition-colors"
+                    >
+                      Book Community Kinesiology – Discounted (90 minutes)
+                    </a>
+                  </div>
                 </div>
                 <div className="hidden md:flex justify-center">
                   <Heart className="h-48 w-48 text-white/20" />
@@ -133,7 +146,7 @@ const BookSession = () => {
             </div>
           </div>
 
-          {/* Community Free Session - Full width */}
+          {/* Community Free Session - Full width with booking bar embed */}
           <div className="bg-dyad-soft border-t border-b border-dyad-soft/30">
             <div className="container mx-auto px-6 max-w-6xl py-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -152,12 +165,17 @@ const BookSession = () => {
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                     Please book this option only if payment of any kind is not currently possible for you. If you are able to contribute financially, I invite you to choose one of the paid options so this space can remain available to those most in need.
                   </p>
-                  <a href="https://danielebuatti.as.me/kinesiology90free" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-lg h-14">
-                      Book a Free Access Session
-                      <ArrowRight className="ml-3 h-5 w-5" />
-                    </Button>
-                  </a>
+                  {/* Booking Bar Embed for Free Session */}
+                  <div className="acuity-booking-bar mt-8">
+                    <div className="text-lg font-semibold mb-4">Daniele Buatti</div>
+                    <a
+                      href="https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=86951880"
+                      target="_blank"
+                      className="acuity-embed-button inline-block bg-dyad-accent hover:bg-dyad-dark text-white font-semibold shadow-lg h-14 px-8 rounded-lg transition-colors"
+                    >
+                      Schedule Free Access Session
+                    </a>
+                  </div>
                 </div>
                 <div className="hidden md:flex justify-center">
                   <Users className="h-48 w-48 text-dyad-dark/20" />
