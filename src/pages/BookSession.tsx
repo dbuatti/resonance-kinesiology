@@ -115,7 +115,7 @@ const BookSession = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <span className="inline-block px-3 py-1 rounded bg-white/20 text-white text-xs font-black uppercase tracking-[0.2em] mb-6">
-              Option 01
+              Option 1
             </span>
             <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">Full Fee — Kinesiology & Energy Balancing</h3>
             {/* Price highlight: Using a bright tint so it pops against the dark bg */}
