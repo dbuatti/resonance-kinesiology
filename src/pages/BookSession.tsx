@@ -183,7 +183,6 @@ const BookSession = () => {
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-16 text-center">
-        <div className="container mx-auto px-6 max-w-4xl">
           <a href="/" className="text-white hover:text-dyad-accent transition-colors font-bold underline underline-offset-4">
             ← Return to Home
           </a>
