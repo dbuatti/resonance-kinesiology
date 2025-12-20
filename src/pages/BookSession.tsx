@@ -147,7 +147,7 @@ const BookSession = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <span className="inline-block px-3 py-1 rounded bg-black/10 text-slate-900 text-xs font-black uppercase tracking-[0.2em] mb-6">
-              Option 02
+              Option 2
             </span>
             <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight text-slate-950">Community — Discounted Access</h3>
             <p className="text-2xl font-bold mb-8 text-slate-900">$30 · 90 minutes · Toorak</p>
