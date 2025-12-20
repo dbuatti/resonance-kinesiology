@@ -178,7 +178,7 @@ const Index = () => {
             Kinesiologist • Somatic Practitioner • Vocal Coach
           </h3>
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            I guide you into relationship with your own internal intelligence — the part that already knows how to heal. My work asdsadasintegrates professional kinesiology, somatic modalities, and years of experience as a vocal coach and performing artist.
+            I guide you into relationship with your own internal intelligence — the part that already knows how to heal. My work integrates professional kinesiology, somatic modalities, and years of experience as a vocal coach and performing artist.
           </p>
           <p className="text-lg text-gray-600 mt-4">
             Based in Toorak, Victoria, serving Melbourne and surrounding areas.
