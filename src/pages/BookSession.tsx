@@ -104,11 +104,106 @@ const BookSession = () => {
         </div>
       </section>
 
-      {/* Session Options */}
-      <section className="py-0">
-        <div className="space-y-0">
-          
+{/* Session Options Section */}
+<section className="py-0">
+  <div className="flex flex-col">
 
+    {/* Option 1: DARK BACKGROUND */}
+    {/* Use: Pure white text and a bright highlight color for the price */}
+    <div className="bg-dyad-dark text-white">
+      <div className="container mx-auto px-6 max-w-6xl py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block px-3 py-1 rounded bg-white/20 text-white text-xs font-black uppercase tracking-[0.2em] mb-6">
+              Option 01
+            </span>
+            <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">Full Fee — Kinesiology & Energy Balancing</h3>
+            {/* Price highlight: Using a bright tint so it pops against the dark bg */}
+            <p className="text-2xl font-bold mb-8 text-dyad-soft">$100 · 90 minutes · Toorak</p>
+            <div className="space-y-6 text-white/95 text-lg leading-relaxed max-w-lg">
+              <p>This is the standard full-fee session and the primary way my work is sustained.</p>
+              <p>A deep, one-to-one session in Toorak supporting regulation and clarity, guided by your body's innate intelligence.</p>
+            </div>
+            <div className="mt-10">
+              <a href="/schedule?type=full-fee">
+                <Button size="lg" className="bg-white text-dyad-dark hover:bg-dyad-soft font-bold shadow-xl h-14 px-8 rounded-full">
+                  Book Full Fee Session
+                  <ArrowRight className="ml-3 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
+          <div className="hidden md:flex justify-center opacity-10">
+            <Leaf className="h-64 w-64 text-white" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Option 2: ACCENT BACKGROUND (The most challenging) */}
+    {/* Fix: We use slate-950 (near black) for text. If text is black on a colored bg, it is always readable. */}
+    <div className="bg-dyad-accent text-slate-950">
+      <div className="container mx-auto px-6 max-w-6xl py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block px-3 py-1 rounded bg-black/10 text-slate-900 text-xs font-black uppercase tracking-[0.2em] mb-6">
+              Option 02
+            </span>
+            <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight text-slate-950">Community — Discounted Access</h3>
+            <p className="text-2xl font-bold mb-8 text-slate-900">$30 · 90 minutes · Toorak</p>
+            <div className="space-y-6 text-slate-900 text-lg leading-relaxed max-w-lg">
+              <p className="font-medium">Same depth of care, offered at a reduced contribution for those who cannot currently afford standard rates.</p>
+              <p>These sessions are part of a community-care model that balances accessibility with sustainability.</p>
+            </div>
+            <div className="mt-10">
+              <a href="/schedule?type=community-discounted">
+                <Button size="lg" className="bg-slate-950 text-white hover:bg-black font-bold shadow-xl h-14 px-8 rounded-full">
+                  Book Community Session ($30)
+                  <ArrowRight className="ml-3 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
+          <div className="hidden md:flex justify-center opacity-20">
+            <Heart className="h-64 w-64 text-slate-950" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Option 3: SOFT/LIGHT BACKGROUND */}
+    {/* Fix: Use your deep 'dyad-dark' color for text to ensure it contrasts against the soft bg. */}
+    <div className="bg-dyad-soft text-dyad-dark">
+      <div className="container mx-auto px-6 max-w-6xl py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block px-3 py-1 rounded bg-dyad-dark/10 text-dyad-dark text-xs font-black uppercase tracking-[0.2em] mb-6">
+              Option 03
+            </span>
+            <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">Community — Free Access (Limited)</h3>
+            <p className="text-2xl font-bold mb-8 text-dyad-accent">Free · 90 minutes · Toorak</p>
+            <div className="space-y-6 text-dyad-dark/90 text-lg leading-relaxed max-w-lg">
+              <p>Once per week, I offer a fully free kinesiology session for someone who would otherwise not be able to access this work.</p>
+              <p className="italic font-medium">Please book this option only if payment of any kind is not currently possible for you.</p>
+            </div>
+            <div className="mt-10">
+              <a href="/schedule?type=free-access">
+                <Button size="lg" className="bg-dyad-accent hover:bg-dyad-dark text-white font-bold shadow-xl h-14 px-8 rounded-full">
+                  Book Free Access Session
+                  <ArrowRight className="ml-3 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
+          <div className="hidden md:flex justify-center opacity-10">
+            <Users className="h-64 w-64 text-dyad-dark" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* Integrity Note */}
       <section className="bg-dyad-background-soft py-24">
