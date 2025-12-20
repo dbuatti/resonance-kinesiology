@@ -133,30 +133,55 @@ const BookSession = () => {
             </div>
           </div>
 
-          {/* Option 2 - Accent Background: Use dark text for contrast if accent is mid-tone */}
-          <div className="bg-dyad-accent text-dyad-dark">
-            <div className="container mx-auto px-6 max-w-6xl py-16">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <span className="inline-block px-3 py-1 rounded bg-black/10 text-dyad-dark text-sm font-bold uppercase tracking-widest mb-6">Option 2</span>
-                  <h3 className="text-4xl font-serif mb-6">Community — Discounted Access</h3>
-                  <p className="text-2xl font-bold mb-8">$30 · 90 minutes</p>
-                  <p className="text-lg mb-8 leading-relaxed font-medium">
-                    This session offers the same depth of care for those who cannot currently afford standard rates.
-                  </p>
-                  <a href="/schedule?type=community-discounted">
-                    <Button size="lg" className="bg-dyad-dark text-white hover:bg-black font-bold shadow-lg h-14 px-8">
-                      Book a Community Session ($30)
-                      <ArrowRight className="ml-3 h-5 w-5" />
-                    </Button>
-                  </a>
-                </div>
-                <div className="hidden md:flex justify-end opacity-20">
-                  <Heart className="h-64 w-64 text-dyad-dark" />
-                </div>
-              </div>
-            </div>
-          </div>
+{/* Option 2 - Redesigned for Maximum Legibility */}
+<div className="bg-white border-y border-dyad-soft/30"> 
+  <div className="container mx-auto px-6 max-w-6xl py-16">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Visual Side (Swapped for variety) */}
+      <div className="hidden md:flex justify-center order-2 md:order-1">
+        <div className="relative">
+          {/* Decorative background element to give color without making text sit on it */}
+          <div className="absolute -inset-4 bg-dyad-accent/10 rounded-full blur-3xl" />
+          <Heart className="h-48 w-48 text-dyad-accent relative z-10" />
+        </div>
+      </div>
+
+      {/* Content Side */}
+      <div className="flex flex-col justify-center order-1 md:order-2">
+        <div className="mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-dyad-accent/10 text-dyad-dark text-sm font-bold uppercase tracking-widest border border-dyad-accent/20">
+            Option 2
+          </span>
+        </div>
+        
+        <h3 className="text-4xl font-serif text-slate-900 mb-6">
+          Community — <span className="text-dyad-accent">Discounted Access</span>
+        </h3>
+        
+        <div className="flex items-baseline gap-2 mb-8">
+          <span className="text-3xl font-bold text-slate-900">$30</span>
+          <span className="text-slate-600 text-lg">/ 90 minutes · Toorak</span>
+        </div>
+
+        <div className="space-y-4 mb-8">
+          <p className="text-lg text-slate-800 leading-relaxed">
+            This session offers the same depth of care and attention as the full-fee session, at a reduced contribution for those who cannot currently afford standard rates.
+          </p>
+          <p className="text-lg text-slate-800 font-medium leading-relaxed">
+            Please choose this option only if the full fee is genuinely out of reach for you at this time.
+          </p>
+        </div>
+
+        <a href="/schedule?type=community-discounted">
+          <Button size="lg" className="bg-dyad-accent hover:bg-dyad-dark text-white font-bold shadow-md h-14 px-10 rounded-xl transition-all hover:scale-[1.02]">
+            Book a Community Session ($30)
+            <ArrowRight className="ml-3 h-5 w-5" />
+          </Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Option 3 - Soft Background: High contrast dark text */}
           <div className="bg-white border-y border-dyad-soft/30">
