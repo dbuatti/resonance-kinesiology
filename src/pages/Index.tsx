@@ -2,41 +2,23 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf } from "lucide-react";
+import Header from "@/components/Header";
 
 const BOOKING_URL = "https://danielebuatti.as.me/kinesiology";
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
 const Index = () => {
+  const navLinks = [
+    { href: "/book-session", label: "Session Options", isPrimary: false },
+    { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true, isPrimary: false },
+  ];
+
   return (
     <div className="bg-dyad-background-soft min-h-screen text-dyad-dark">
       
-      {/* Header - Fixed and Minimal */}
-      <header className="sticky top-0 z-20 bg-dyad-background-soft/95 backdrop-blur-sm border-b border-dyad-soft/30">
-        <nav className="container mx-auto px-6 py-4 max-w-6xl flex justify-between items-center">
-          <a href="/" className="text-2xl font-serif tracking-wider text-dyad-dark font-bold hover:text-dyad-accent transition-colors">
-            ✦ Resonance Kinesiology
-          </a>
-          <div className="flex items-center space-x-4">
-            <a href="/book-session">
-              <Button 
-                size="sm" 
-                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
-              >
-                Session Options
-              </Button>
-            </a>
-            <a href={MUSIC_WORK_URL} target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="sm" 
-                className="bg-dyad-dark hover:bg-dyad-accent text-white shadow-md text-sm px-4 py-2 rounded-full transition-colors"
-              >
-                My Music Work
-              </Button>
-            </a>
-          </div>
-        </nav>
-      </header>
+      {/* Header - Replaced with Header component */}
+      <Header links={navLinks} />
 
       {/* Hero Section - Ethereal Background, Text Focused, Photo Overlay */}
       <section 
