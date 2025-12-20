@@ -86,7 +86,7 @@ const Index = () => {
             It never lies — and it never rushes.
           </p>
           <p className="text-xl font-light mb-6 max-w-3xl mx-auto opacity-90">
-            My work medasdsadasdets you at the pace of your nervous system.
+            My work meets you at the pace of your nervous system.
             I slow down, listen, track, and make sense of what your body is trying to communicate.
           </p>
           <p className="text-xl font-light mb-12 max-w-3xl mx-auto opacity-90">
