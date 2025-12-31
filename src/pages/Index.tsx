@@ -2,10 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, Gift } from "lucide-react"; // Added Gift icon
 import Header from "@/components/Header";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
+const GIFT_CARD_URL = "https://buy.stripe.com/8x200lfmagH81vS4PU53O05"; // Stripe Gift Card URL
 
 const Index = () => {
   const navLinks = [
@@ -112,6 +113,30 @@ const Index = () => {
               “Daniele’s sessions were profoundly grounding... clarity and ease I hadn’t felt in years.”
             </p>
             <p className="text-lg font-bold text-dyad-accent uppercase tracking-widest">— Deborah, Melbourne</p>
+          </div>
+        </section>
+
+        {/* Gift Card Section */}
+        <section className="bg-white py-20 md:py-24">
+          <div className="container mx-auto px-6 max-w-2xl text-center">
+            <div className="bg-dyad-background-soft p-8 md:p-10 rounded-3xl shadow-lg border border-dyad-soft/30">
+              <div className="flex items-center justify-center mb-6">
+                <Gift className="h-8 w-8 text-dyad-accent mr-3" />
+                <h3 className="text-3xl font-serif text-dyad-dark font-bold">Gift a Kinesiology Session</h3>
+              </div>
+              <p className="text-lg text-slate-800 mb-8 leading-relaxed">
+                Give the gift of relaxation and balance. Purchase a 90-minute Kinesiology session for someone special.
+              </p>
+              <a href={GIFT_CARD_URL} target="_blank" rel="noopener noreferrer">
+                <Button 
+                  size="lg" 
+                  className="bg-dyad-accent hover:bg-dyad-dark text-white font-bold shadow-md px-8 h-14 rounded-full transition-transform hover:scale-105"
+                >
+                  Buy Gift Card
+                  <ArrowRight className="ml-3 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
           </div>
         </section>
       </main>
