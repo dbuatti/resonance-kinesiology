@@ -79,11 +79,11 @@ const Schedule = () => {
               <iframe
                 src={getIframeUrl()}
                 width="100%"
-                height="1550" // Increased height to accommodate both top and bottom cropping
+                height="1550" 
                 frameBorder="0"
                 allow="payment"
-                className="w-full absolute top-[-400px] left-0" // Crops 400px from top
-                style={{ transform: 'scale(1.0)', bottom: '-150px' }} // Crops 150px from bottom
+                className="w-full absolute top-[-400px] left-0" 
+                style={{ transform: 'scale(1.0)' }}
               ></iframe>
             </div>
           </div>
