@@ -27,18 +27,18 @@ const Schedule = () => {
       case 'community-discounted':
         return {
           title: "Community Kinesiology – Discounted",
-          description: "90-minute session at a reduced rate of $30 for those who cannot currently afford standard rates."
+          description: "60-minute session at a reduced rate of $30 for those who cannot currently afford standard rates."
         };
       case 'free-access':
         return {
           title: "Community Kinesiology – Free Access",
-          description: "90-minute free session for those who would otherwise not be able to access this work."
+          description: "60-minute free session for those who would otherwise not be able to access this work."
         };
       case 'full-fee':
       default:
         return {
           title: "Kinesiology & Energy Balancing",
-          description: "90-minute full fee session at $100, the standard rate that sustains this work."
+          description: "60-minute full fee session at $100, the standard rate that sustains this work."
         };
     }
   };

@@ -19,7 +19,7 @@ const BookSession = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4">Session Options</h1>
-          <p className="text-xl text-slate-800 mb-2 font-medium">Friday mornings · 90-minute sessions · Toorak, VIC</p>
+          <p className="text-xl text-slate-800 mb-2 font-medium">Friday mornings · 60-minute sessions · Toorak, VIC</p>
           
           <div className="bg-white/50 border border-dyad-soft/50 p-8 rounded-3xl mt-8 max-w-3xl mx-auto shadow-sm">
             <p className="text-lg text-slate-900 mb-4 leading-relaxed">
@@ -88,7 +88,7 @@ const BookSession = () => {
                 <div>
                   <span className="inline-block px-3 py-1 rounded bg-white/10 text-white/80 text-xs font-black uppercase tracking-[0.2em] mb-6">Option 01</span>
                   <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">Full Fee — Balancing & Integration</h3>
-                  <p className="text-2xl font-bold mb-8 text-dyad-soft">$100 · 90 minutes</p>
+                  <p className="text-2xl font-bold mb-8 text-dyad-soft">$100 · 60 minutes</p>
                   <div className="space-y-6 text-white/90 text-lg leading-relaxed mb-10">
                     <p>This is the standard rate and the primary way my practice is sustained.</p>
                     <p>A deep session supporting regulation, clarity, and somatic integration. We work with your body's innate intelligence to address stress patterns, emotional load, and held tension within the nervous system.</p>
@@ -118,7 +118,7 @@ const BookSession = () => {
                 <div className="order-2">
                   <span className="inline-block px-3 py-1 rounded bg-black/10 text-slate-900 text-xs font-black uppercase tracking-[0.2em] mb-6">Option 02</span>
                   <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight text-slate-950">Community — Discounted Access</h3>
-                  <p className="text-2xl font-bold mb-8 text-slate-900">$30 · 90 minutes</p>
+                  <p className="text-2xl font-bold mb-8 text-slate-900">$30 · 60 minutes</p>
                   <div className="space-y-6 text-slate-900 text-lg leading-relaxed mb-10">
                     <p>This session offers the same depth of care at a reduced contribution for those who cannot currently afford standard rates.</p>
                     <p>These spaces are offered as part of a community-care model that balances accessibility with sustainability.</p>
@@ -142,7 +142,7 @@ const BookSession = () => {
                 <div>
                   <span className="inline-block px-3 py-1 rounded bg-dyad-dark/10 text-dyad-dark text-xs font-black uppercase tracking-[0.2em] mb-6">Option 03</span>
                   <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">Community — Free Access</h3>
-                  <p className="text-2xl font-bold mb-8 text-dyad-accent">Fully Subsidised · 90 minutes</p>
+                  <p className="text-2xl font-bold mb-8 text-dyad-accent">Fully Subsidised · 60 minutes</p>
                   <div className="space-y-6 text-dyad-dark/90 text-lg leading-relaxed mb-10">
                     <p>Once per week, I offer a fully free session for someone who would otherwise not be able to access this work.</p>
                     <p>This space is identical in structure and care to the paid offerings and is available by direct booking when released.</p>

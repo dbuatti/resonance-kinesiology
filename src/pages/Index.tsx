@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, Gift } from "lucide-react"; // Added Gift icon
+import { ArrowRight, Brain, Heart, Mic2, Phone, Mail, Leaf, Gift } from "lucide-react";
 import Header from "@/components/Header";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
@@ -58,7 +58,7 @@ const Index = () => {
                 size="lg" 
                 className="text-lg md:text-xl px-10 py-7 md:h-16 bg-dyad-accent hover:bg-dyad-dark text-white font-bold shadow-xl rounded-full transition-transform hover:scale-105"
               >
-                Book Your Toorak Session
+                Book Your Session
                 <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </a>
@@ -97,7 +97,6 @@ const Index = () => {
                     </p>
                   </div>
                   <div className="absolute -bottom-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity text-dyad-dark">
-                    {/* Simplified icon scaling for background decorative use */}
                     <div className="h-48 w-48">{item.icon}</div>
                   </div>
                 </Card>
@@ -125,7 +124,7 @@ const Index = () => {
                 <h3 className="text-3xl font-serif text-dyad-dark font-bold">Gift a Kinesiology Session</h3>
               </div>
               <p className="text-lg text-slate-800 mb-8 leading-relaxed">
-                Give the gift of relaxation and balance. Purchase a 90-minute Kinesiology session for someone special.
+                Give the gift of relaxation and balance. Purchase a 60-minute Kinesiology session for someone special.
               </p>
               <a href={GIFT_CARD_URL} target="_blank" rel="noopener noreferrer">
                 <Button 
@@ -146,7 +145,7 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h3 className="text-4xl font-serif mb-8 text-white">Ready to Begin</h3>
           <p className="text-xl mb-10 text-white font-medium max-w-xl mx-auto leading-relaxed">
-            90-minute Balance Sessions available in Toorak, Melbourne & online.
+            60-minute Balance Sessions available in Toorak, Melbourne & online.
           </p>
           
           <a href="/book-session">
