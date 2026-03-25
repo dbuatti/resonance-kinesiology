@@ -1,10 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone, Brain, Zap, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone, Brain, Zap, CheckCircle2, Coffee, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
+import { showSuccess } from "@/utils/toast";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
@@ -14,6 +15,11 @@ const BookSession = () => {
     { href: "/book-session", label: "Session Options" },
     { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true },
   ];
+
+  const copyToClipboard = (text: string, label: string) => {
+    navigator.clipboard.writeText(text);
+    showSuccess(`${label} copied to clipboard`);
+  };
 
   return (
     <div className="bg-dyad-background-soft min-h-screen text-slate-900 selection:bg-dyad-accent/20">
@@ -38,62 +44,8 @@ const BookSession = () => {
           </div>
         </section>
 
-        {/* Location Info Section */}
-        <section className="bg-white py-24 md:py-32 border-y border-dyad-soft/10">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-20 items-center">
-              <FadeIn direction="right">
-                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8">The Clinics</h2>
-                <p className="text-xl text-slate-600 mb-10 leading-relaxed font-light">
-                  Practising from two professional health hubs in Melbourne, designed for safety and regulation.
-                </p>
-                <div className="space-y-8">
-                  <div className="flex items-start group">
-                    <div className="h-12 w-12 rounded-2xl bg-dyad-sky/30 flex items-center justify-center mr-5 shrink-0 group-hover:bg-dyad-accent/20 transition-colors">
-                      <MapPin className="h-6 w-6 text-dyad-accent" />
-                    </div>
-                    <div>
-                      <span className="text-xl font-bold block text-dyad-dark mb-1">Cherish Health, Richmond</span>
-                      <span className="text-slate-500 font-light">Integrated health hub for neuro-somatic work.</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start group">
-                    <div className="h-12 w-12 rounded-2xl bg-dyad-sky/30 flex items-center justify-center mr-5 shrink-0 group-hover:bg-dyad-accent/20 transition-colors">
-                      <MapPin className="h-6 w-6 text-dyad-accent" />
-                    </div>
-                    <div>
-                      <span className="text-xl font-bold block text-dyad-dark mb-1">Toorak Practice</span>
-                      <span className="text-slate-500 font-light">Quiet, dedicated space for deep regulation.</span>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-              
-              <FadeIn direction="left" delay={0.2}>
-                <div className="bg-dyad-dark p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                  <h3 className="text-2xl font-serif text-white mb-8">Clinical Focus</h3>
-                  <ul className="space-y-5">
-                    {[
-                      "Functional Neuro Health (FNH) Assessments",
-                      "Cranial nerve & reflex integration",
-                      "Subconscious emotional repatterning",
-                      "Vocal & Performance Integration"
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 mr-4 text-dyad-accent mt-1 flex-shrink-0" />
-                        <span className="text-white/80 font-light text-lg">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
-
         {/* Session Options */}
-        <section className="py-24 md:py-40">
+        <section className="py-24 md:py-32">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid grid-cols-1 gap-12">
 
@@ -204,6 +156,60 @@ const BookSession = () => {
           </div>
         </section>
 
+        {/* Preparation Checklist Section */}
+        <section className="bg-dyad-dark py-24 md:py-40 text-white">
+          <div className="container mx-auto px-6 max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-20 items-center">
+              <FadeIn direction="right">
+                <h2 className="text-4xl md:text-6xl font-serif mb-8">Preparing for Your Session</h2>
+                <p className="text-xl text-white/60 mb-10 leading-relaxed font-light">
+                  To get the most out of our time together, I recommend a few simple steps to prepare your system.
+                </p>
+                <div className="space-y-6">
+                  {[
+                    { icon: Coffee, title: "Hydration", desc: "Drink plenty of water before and after. Neurological signals travel better in a hydrated system." },
+                    { icon: Leaf, title: "Comfort", desc: "Wear comfortable clothing that allows for gentle movement and ease of breath." },
+                    { icon: Clock, title: "Integration", desc: "If possible, leave 15-30 mins after our session for quiet integration before returning to your day." },
+                    { icon: Sparkles, title: "Intention", desc: "You don't need a clear goal, but notice what feels most present in your body as you arrive." }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start">
+                      <div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center mr-4 shrink-0">
+                        <item.icon className="h-5 w-5 text-dyad-accent" />
+                      </div>
+                      <div>
+                        <span className="font-bold block text-white mb-1">{item.title}</span>
+                        <span className="text-white/50 text-sm font-light">{item.desc}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </FadeIn>
+              
+              <FadeIn direction="left" delay={0.2}>
+                <div className="bg-white/5 border border-white/10 p-12 rounded-[2.5rem] backdrop-blur-sm">
+                  <h3 className="text-2xl font-serif mb-6">The Clinics</h3>
+                  <div className="space-y-8">
+                    <div className="flex items-start">
+                      <MapPin className="h-6 w-6 text-dyad-accent mr-4 mt-1" />
+                      <div>
+                        <span className="text-xl font-bold block mb-1">Cherish Health, Richmond</span>
+                        <span className="text-white/50 font-light">Integrated health hub for neuro-somatic work.</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <MapPin className="h-6 w-6 text-dyad-accent mr-4 mt-1" />
+                      <div>
+                        <span className="text-xl font-bold block mb-1">Toorak Practice</span>
+                        <span className="text-white/50 font-light">Quiet, dedicated space for deep regulation.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </section>
+
         {/* Contact & Integrity Section */}
         <section className="bg-white py-24 md:py-40">
           <div className="container mx-auto px-6 max-w-3xl text-center">
@@ -215,9 +221,12 @@ const BookSession = () => {
               </p>
               <div className="bg-dyad-background-soft p-10 rounded-[2.5rem] inline-block w-full max-w-md shadow-xl border border-dyad-soft/20 group hover:border-dyad-accent/30 transition-all">
                 <Mail className="h-8 w-8 text-dyad-accent mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
-                <a href="mailto:daniele.kinesiology@gmail.com" className="text-xl md:text-2xl text-dyad-dark font-bold hover:text-dyad-accent transition-colors block break-all leading-tight underline underline-offset-8 decoration-dyad-soft/30">
+                <button 
+                  onClick={() => copyToClipboard("daniele.kinesiology@gmail.com", "Email")}
+                  className="text-xl md:text-2xl text-dyad-dark font-bold hover:text-dyad-accent transition-colors block w-full break-all leading-tight underline underline-offset-8 decoration-dyad-soft/30"
+                >
                   daniele.kinesiology@gmail.com
-                </a>
+                </button>
               </div>
             </FadeIn>
           </div>
