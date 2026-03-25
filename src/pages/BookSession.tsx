@@ -20,12 +20,12 @@ const BookSession = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-dyad-sky/10">
           <div className="container mx-auto px-6 max-w-4xl text-center">
             <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4">Clinical Session Options</h1>
             <p className="text-xl text-slate-800 mb-2 font-medium">Richmond & Toorak · 75-minute sessions · Melbourne, VIC</p>
             
-            <div className="bg-white/50 border border-dyad-soft/50 p-8 rounded-3xl mt-8 max-w-3xl mx-auto shadow-sm">
+            <div className="bg-white/80 backdrop-blur-sm border border-dyad-soft/50 p-8 rounded-3xl mt-8 max-w-3xl mx-auto shadow-sm">
               <p className="text-lg text-slate-900 mb-4 leading-relaxed">
                 I offer specialised neuro-somatic sessions that bridge the gap between brain-based assessment and emotional integration. 
                 All clinical sessions are now <strong>75 minutes</strong> to ensure the depth required for neurological repatterning.
@@ -64,7 +64,7 @@ const BookSession = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-dyad-background-soft p-8 rounded-3xl border border-dyad-soft/30">
+              <div className="bg-dyad-sky/20 p-8 rounded-3xl border border-dyad-soft/30">
                 <h3 className="text-2xl font-serif text-dyad-dark mb-6">Clinical Focus</h3>
                 <ul className="space-y-4">
                   {[
@@ -89,8 +89,9 @@ const BookSession = () => {
           <div className="flex flex-col">
 
             {/* Option 1: Certified Kinesiology */}
-            <div className="bg-dyad-dark text-white">
-              <div className="container mx-auto px-6 max-w-6xl py-20 md:py-28">
+            <div className="bg-dyad-dark text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-dyad-accent/5 rounded-full translate-x-1/3 -translate-y-1/3"></div>
+              <div className="container mx-auto px-6 max-w-6xl py-20 md:py-28 relative z-10">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   <div>
                     <span className="inline-block px-3 py-1 rounded bg-white/10 text-white/80 text-xs font-black uppercase tracking-[0.2em] mb-6">Certified Practice</span>
@@ -101,7 +102,7 @@ const BookSession = () => {
                       <p>We address the root of stress patterns, emotional blocks, and physical tension using a combination of meridian work and brain-based assessments.</p>
                     </div>
                     <a href="/schedule?type=full-fee">
-                      <Button size="lg" className="bg-white text-dyad-dark hover:bg-dyad-soft font-bold shadow-xl h-14 px-10 rounded-full transition-all hover:scale-105">
+                      <Button size="lg" className="bg-dyad-accent hover:bg-white hover:text-dyad-dark text-white font-bold shadow-xl h-14 px-10 rounded-full transition-all hover:scale-105">
                         Book Clinical Session
                         <ArrowRight className="ml-3 h-5 w-5" />
                       </Button>
@@ -115,8 +116,9 @@ const BookSession = () => {
             </div>
 
             {/* Option 2: FNH Clinical Study */}
-            <div className="bg-dyad-accent text-white">
-              <div className="container mx-auto px-6 max-w-6xl py-20 md:py-28">
+            <div className="bg-dyad-accent text-white relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-dyad-dark/10 rounded-full -translate-x-1/3 translate-y-1/3"></div>
+              <div className="container mx-auto px-6 max-w-6xl py-20 md:py-28 relative z-10">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   <div className="hidden md:flex justify-center opacity-20 order-1">
                     <Zap className="h-64 w-64 text-white" />
@@ -130,7 +132,7 @@ const BookSession = () => {
                       <p>These sessions focus specifically on neurological assessments, cranial nerves, and primitive reflex integration to support chronic pain and performance.</p>
                     </div>
                     <a href="/schedule?type=community-discounted">
-                      <Button size="lg" className="bg-white text-dyad-dark hover:bg-dyad-soft font-bold shadow-xl h-14 px-10 rounded-full transition-all hover:scale-105">
+                      <Button size="lg" className="bg-dyad-dark hover:bg-white hover:text-dyad-dark text-white font-bold shadow-xl h-14 px-10 rounded-full transition-all hover:scale-105">
                         Book Neuro Assessment
                         <ArrowRight className="ml-3 h-5 w-5" />
                       </Button>
@@ -141,7 +143,7 @@ const BookSession = () => {
             </div>
 
             {/* Option 3: Free Access */}
-            <div className="bg-dyad-soft text-dyad-dark border-y border-dyad-soft/30">
+            <div className="bg-dyad-sky/30 text-dyad-dark border-y border-dyad-soft/30">
               <div className="container mx-auto px-6 max-w-6xl py-20 md:py-28">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   <div>
@@ -176,7 +178,7 @@ const BookSession = () => {
               Thank you for choosing the path that aligns honestly with your current capacity. 
               If you're unsure which level is right for you, feel free to reach out.
             </p>
-            <div className="bg-dyad-background-soft p-8 rounded-2xl inline-block w-full max-w-md shadow-sm border border-dyad-soft/20 group">
+            <div className="bg-dyad-sky/10 p-8 rounded-2xl inline-block w-full max-w-md shadow-sm border border-dyad-soft/20 group">
               <Mail className="h-6 w-6 text-dyad-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
               <a href="mailto:daniele.kinesiology@gmail.com" className="text-lg md:text-xl text-dyad-dark font-bold hover:text-dyad-accent transition-colors block break-all leading-tight underline underline-offset-4">
                 daniele.kinesiology@gmail.com

@@ -22,12 +22,12 @@ export default {
         serif: ['"Playfair Display"', 'serif'],
       },
       colors: {
-        // Custom Palette
-        'dyad-dark': '#1E3261', // Deep Indigo/Dark Blue
-        'dyad-accent': '#67447A', // Muted Violet
-        'dyad-soft': '#7A7CAC', // Soft Gray-Violet
-        'dyad-secondary-accent': '#548DC0', // Lighter Blue
-        'dyad-background-soft': '#F8F7F4', // Creamy background inspired by reference
+        // Custom Palette inspired by the resonance image
+        'dyad-dark': '#1E3261', // Deep Indigo from the darker cloud areas
+        'dyad-accent': '#D46A9B', // Vibrant Resonance Pink from the clouds
+        'dyad-soft': '#A5B4FC', // Soft Periwinkle/Lavender
+        'dyad-sky': '#E0F2FE', // Light Sky Blue
+        'dyad-background-soft': '#FDFCFB', // Very soft cream/white
 
         // Existing Shadcn colors
         border: "hsl(var(--border))",
