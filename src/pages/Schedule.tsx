@@ -29,19 +29,19 @@ const Schedule = () => {
     switch(appointmentType) {
       case 'community-discounted':
         return {
-          title: "Community Kinesiology – Discounted",
-          description: "60-minute session at a reduced rate of $30 for those who cannot currently afford standard rates."
+          title: "FNH Neuro-Health Assessment (Clinical Study)",
+          description: "1 hour 15 minutes @ A$120.00. Introductory Case Study Rate focusing on neurological pathways, cranial nerves, and primitive reflex integration."
         };
       case 'free-access':
         return {
-          title: "Community Kinesiology – Free Access",
-          description: "60-minute free session for those who would otherwise not be able to access this work."
+          title: "Community — Fully Subsidised Access",
+          description: "1 hour 15 minutes. Integrity & Access Initiative. A fully subsidised session for those who would otherwise not be able to access this clinical work."
         };
       case 'full-fee':
       default:
         return {
-          title: "Kinesiology & Energy Balancing",
-          description: "60-minute full fee session at $100, the standard rate that sustains this work."
+          title: "Neuro-Somatic Kinesiology (Certified Practice)",
+          description: "1 hour 15 minutes @ A$150.00. A comprehensive clinical session integrating professional Kinesiology with somatic tracking and nervous system regulation."
         };
     }
   };

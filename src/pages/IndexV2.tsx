@@ -431,7 +431,7 @@ const Index = () => {
             If you’re ready to meet your body — with honesty, safety, and respect — I’d be honoured to work with you.
           </p>
           <p className="text-2xl font-semibold mb-10">
-            90-minute Balance Sessions available in Toorak, Melbourne & online.
+            75-minute Balance Sessions available in Toorak, Melbourne & online.
           </p>
           
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">

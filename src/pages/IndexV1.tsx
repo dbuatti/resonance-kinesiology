@@ -58,7 +58,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="text-xl px-12 py-8 bg-white text-purple-600 hover:bg-gray-50 font-semibold shadow-2xl h-16">
-                Book 90min Session
+                Book 75min Session
                 <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </div>
@@ -170,7 +170,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-12 lg:p-20 rounded-3xl shadow-2xl">
-              <h3 className="text-4xl md:text-5xl font-bold mb-8">90 Minute Sessions</h3>
+              <h3 className="text-4xl md:text-5xl font-bold mb-8">75 Minute Sessions</h3>
               <p className="text-xl mb-12 opacity-95 leading-relaxed max-w-2xl mx-auto">
                 Time, space, and depth. Opening → activation → corrections → integration.
               </p>
