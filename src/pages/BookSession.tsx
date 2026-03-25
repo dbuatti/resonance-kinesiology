@@ -67,7 +67,7 @@ const BookSession = () => {
                   "Functional Neuro Health (FNH) Assessments",
                   "Cranial nerve & reflex integration",
                   "Subconscious emotional repatterning",
-                  "Vocal & performance embodiment"
+                  "Vocal & Performance Neuro-Somatic Integration"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <Leaf className="h-5 w-5 mr-3 text-dyad-accent mt-1 flex-shrink-0" />
