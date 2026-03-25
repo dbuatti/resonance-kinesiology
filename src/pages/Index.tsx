@@ -19,7 +19,7 @@ const Index = () => {
   const peaceFramework = [
     { letter: "P", title: "Presence", description: "Establishing a safe, regulated container for the nervous system to settle." },
     { letter: "E", title: "Embodiment", description: "Tracking internal sensations and somatic signals in real-time." },
-    { letter: "A", title: "Assessment", description: "Neurological testing of pathways, cranial nerves, and reflexes." },
+    { letter: "A", title: "Assessment", description: "Neurological testing of pathways, cranial nerves, and realised reflexes." },
     { letter: "C", title: "Correction", description: "Targeted kinesiology and neuro-balancing to shift stress patterns." },
     { letter: "E", title: "Expression", description: "Integrating shifts into voice, movement, and authentic action." }
   ];
@@ -125,7 +125,7 @@ const Index = () => {
                   <div className="mb-4 text-dyad-accent group-hover:scale-110 transition-transform duration-300"><Mic2 className="h-10 w-10" /></div>
                   <CardTitle className="text-2xl font-serif mb-4 text-dyad-dark leading-snug">Vocal & Performance</CardTitle>
                   <p className="text-slate-800 leading-relaxed text-lg">
-                    Specialized support for vocal freedom, diaphragm release, and embodied expression for performers and leaders.
+                    Specialised support for vocal freedom, diaphragm release, and embodied expression for performers and leaders.
                   </p>
                 </div>
               </Card>

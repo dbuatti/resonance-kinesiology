@@ -27,7 +27,7 @@ const BookSession = () => {
             
             <div className="bg-white/50 border border-dyad-soft/50 p-8 rounded-3xl mt-8 max-w-3xl mx-auto shadow-sm">
               <p className="text-lg text-slate-900 mb-4 leading-relaxed">
-                I offer specialized neuro-somatic sessions that bridge the gap between brain-based assessment and emotional integration. 
+                I offer specialised neuro-somatic sessions that bridge the gap between brain-based assessment and emotional integration. 
                 All clinical sessions are now <strong>75 minutes</strong> to ensure the depth required for neurological repatterning.
               </p>
             </div>
