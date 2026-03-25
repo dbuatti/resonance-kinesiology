@@ -55,7 +55,7 @@ const Index = () => {
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-8xl font-serif mb-6 leading-tight text-dyad-dark pt-16 md:pt-0">
+            <h1 className="text-5xl md:text-8xl font-serif mb-6 leading-tight text-dyad-dark pt-24 md:pt-20">
               Neuro-Somatic <br className="hidden md:block" /> Kinesiology
             </h1>
             <p className="text-xl md:text-2xl font-medium mb-10 max-w-2xl mx-auto text-slate-800 leading-relaxed">
