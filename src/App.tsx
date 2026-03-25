@@ -10,6 +10,7 @@ import BookSession from "./pages/BookSession";
 import Schedule from "./pages/Schedule";
 import OnboardingDrafts from "./pages/OnboardingDrafts";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -19,14 +20,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/book-session" element={<BookSession />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/onboarding-drafts" element={<OnboardingDrafts />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/v1" element={<IndexV1 />} />
-          <Route path="/v2" element={<IndexV2 />} /> {/* New route for the original Index */}
+          <Route path="/v2" element={<IndexV2 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
