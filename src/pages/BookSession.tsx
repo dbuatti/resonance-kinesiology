@@ -115,22 +115,22 @@ const BookSession = () => {
             </div>
 
             {/* Option 2: FNH Clinical Study */}
-            <div className="bg-dyad-accent text-slate-950">
+            <div className="bg-dyad-accent text-white">
               <div className="container mx-auto px-6 max-w-6xl py-20 md:py-28">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   <div className="hidden md:flex justify-center opacity-20 order-1">
-                    <Zap className="h-64 w-64 text-slate-950" />
+                    <Zap className="h-64 w-64 text-white" />
                   </div>
                   <div className="order-2">
-                    <span className="inline-block px-3 py-1 rounded bg-black/10 text-slate-900 text-xs font-black uppercase tracking-[0.2em] mb-6">Clinical Study</span>
-                    <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight text-slate-950">FNH Neuro-Health Assessment</h3>
-                    <p className="text-2xl font-bold mb-8 text-slate-900">$120 · 75 minutes</p>
-                    <div className="space-y-6 text-slate-900 text-lg leading-relaxed mb-10">
+                    <span className="inline-block px-3 py-1 rounded bg-white/10 text-white/80 text-xs font-black uppercase tracking-[0.2em] mb-6">Clinical Study</span>
+                    <h3 className="text-4xl md:text-5xl font-serif mb-6 leading-tight text-white">FNH Neuro-Health Assessment</h3>
+                    <p className="text-2xl font-bold mb-8 text-white/90">$120 · 75 minutes</p>
+                    <div className="space-y-6 text-white/80 text-lg leading-relaxed mb-10">
                       <p>As a Practitioner-in-Training of the Functional Neuro Health approach, I offer these sessions at a reduced rate for clinical case study work.</p>
                       <p>These sessions focus specifically on neurological assessments, cranial nerves, and primitive reflex integration to support chronic pain and performance.</p>
                     </div>
                     <a href="/schedule?type=community-discounted">
-                      <Button size="lg" className="bg-slate-950 text-white hover:bg-black font-bold shadow-xl h-14 px-10 rounded-full transition-all hover:scale-105">
+                      <Button size="lg" className="bg-white text-dyad-dark hover:bg-dyad-soft font-bold shadow-xl h-14 px-10 rounded-full transition-all hover:scale-105">
                         Book Neuro Assessment
                         <ArrowRight className="ml-3 h-5 w-5" />
                       </Button>
