@@ -1,12 +1,15 @@
 "use client";
 
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Mail } from "lucide-react";
+import { ArrowLeft, Mail, Loader2 } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
+import FadeIn from "@/components/FadeIn";
 
 const Schedule = () => {
   const [searchParams] = useSearchParams();
   const appointmentType = searchParams.get('type');
+  const [isLoading, setIsLoading] = React.useState(true);
 
   // Get the appropriate iframe URL based on the appointment type
   const getIframeUrl = () => {
@@ -64,16 +67,25 @@ const Schedule = () => {
       {/* Schedule Section */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Book Your Session</h1>
-            <h2 className="text-2xl md:text-3xl font-serif text-dyad-accent mb-4">{title}</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {description}
-            </p>
-          </div>
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Book Your Session</h1>
+              <h2 className="text-2xl md:text-3xl font-serif text-dyad-accent mb-4">{title}</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                {description}
+              </p>
+            </div>
+          </FadeIn>
 
           {/* Acuity Scheduling Embed - Dynamic based on appointment type */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden relative min-h-[600px]">
+            {isLoading && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
+                <Loader2 className="h-10 w-10 text-dyad-accent animate-spin mb-4" />
+                <p className="text-slate-500 font-serif italic">Loading booking calendar...</p>
+              </div>
+            )}
+            
             {/* Iframe container with custom styling to crop top and bottom */}
             <div className="acuity-iframe-container relative h-[1000px] overflow-hidden">
               <iframe
@@ -82,6 +94,7 @@ const Schedule = () => {
                 height="1550" 
                 frameBorder="0"
                 allow="payment"
+                onLoad={() => setIsLoading(false)}
                 className="w-full absolute top-[-400px] left-0" 
                 style={{ transform: 'scale(1.0)' }}
               ></iframe>
@@ -89,16 +102,18 @@ const Schedule = () => {
           </div>
 
           {/* Help Section */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-serif text-dyad-dark mb-6">Need Help Booking?</h3>
-            <p className="text-lg text-gray-700 mb-4 max-w-2xl mx-auto">
-              If you have any questions about which session type is right for you or need assistance with booking, please don't hesitate to reach out.
-            </p>
-            <a href="mailto:daniele.kinesiology@gmail.com" className="inline-flex items-center text-dyad-accent hover:text-dyad-dark transition-colors font-semibold">
-              <Mail className="h-5 w-5 mr-2" />
-              daniele.kinesiology@gmail.com
-            </a>
-          </div>
+          <FadeIn delay={0.4}>
+            <div className="mt-16 text-center">
+              <h3 className="text-2xl font-serif text-dyad-dark mb-6">Need Help Booking?</h3>
+              <p className="text-lg text-gray-700 mb-4 max-w-2xl mx-auto">
+                If you have any questions about which session type is right for you or need assistance with booking, please don't hesitate to reach out.
+              </p>
+              <a href="mailto:daniele.kinesiology@gmail.com" className="inline-flex items-center text-dyad-accent hover:text-dyad-dark transition-colors font-semibold">
+                <Mail className="h-5 w-5 mr-2" />
+                daniele.kinesiology@gmail.com
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
