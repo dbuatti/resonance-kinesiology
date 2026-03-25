@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, MapPin, Gift, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, MapPin, Gift, ShieldCheck, Sparkles, Quote } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -23,6 +23,19 @@ const Index = () => {
     { letter: "A", title: "Assessment", description: "Neurological testing of pathways, cranial nerves, and realised reflexes." },
     { letter: "C", title: "Correction", description: "Targeted kinesiology and neuro-balancing to shift stress patterns." },
     { letter: "E", title: "Expression", description: "Integrating shifts into voice, movement, and authentic action." }
+  ];
+
+  const testimonials = [
+    {
+      text: "Daniele's approach is unlike any other. He has a way of making the complex language of the nervous system feel accessible and deeply healing.",
+      author: "Sarah M.",
+      role: "Creative Professional"
+    },
+    {
+      text: "I came in with chronic tension and left with a sense of space and clarity I hadn't felt in years. The neuro-health assessment was a game changer.",
+      author: "James L.",
+      role: "Performance Artist"
+    }
   ];
 
   return (
@@ -203,11 +216,42 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Client Words Section */}
+        <section className="py-24 md:py-40 bg-white">
+          <div className="container mx-auto px-6 max-w-5xl">
+            <FadeIn>
+              <div className="text-center mb-20">
+                <h2 className="text-4xl md:text-6xl font-serif text-dyad-dark mb-6">Client Words</h2>
+                <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
+                  Reflections from those who have walked the path of resonance.
+                </p>
+              </div>
+            </FadeIn>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              {testimonials.map((t, i) => (
+                <FadeIn key={i} delay={0.2 * i} direction={i % 2 === 0 ? "right" : "left"}>
+                  <div className="bg-dyad-background-soft p-10 rounded-[2.5rem] border border-dyad-soft/10 relative h-full flex flex-col">
+                    <Quote className="h-10 w-10 text-dyad-accent/20 absolute top-8 left-8" />
+                    <p className="text-xl text-slate-700 italic mb-8 leading-relaxed relative z-10 pt-6">
+                      "{t.text}"
+                    </p>
+                    <div className="mt-auto">
+                      <p className="font-bold text-dyad-dark">{t.author}</p>
+                      <p className="text-sm text-slate-500">{t.role}</p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Gift Card Section */}
-        <section className="bg-white py-24 md:py-32">
+        <section className="bg-dyad-sky/5 py-24 md:py-32">
           <div className="container mx-auto px-6 max-w-3xl text-center">
             <FadeIn>
-              <div className="bg-dyad-background-soft p-10 md:p-20 rounded-[3rem] shadow-2xl border border-dyad-soft/20 relative overflow-hidden group">
+              <div className="bg-white p-10 md:p-20 rounded-[3rem] shadow-2xl border border-dyad-soft/20 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-dyad-accent/5 rounded-full -translate-y-1/2 translate-x-1/2 transition-transform group-hover:scale-110 duration-700"></div>
                 <div className="relative z-10">
                   <div className="flex items-center justify-center mb-8">
