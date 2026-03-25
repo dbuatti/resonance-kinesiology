@@ -21,10 +21,20 @@ const Footer = () => {
               Neuro-somatic support for nervous system regulation, emotional clarity, and authentic expression.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 rounded-full bg-white/10 hover:bg-dyad-accent transition-colors">
+              <a 
+                href="https://www.instagram.com/resonance.with.daniele" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white/10 hover:bg-dyad-accent transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 rounded-full bg-white/10 hover:bg-dyad-accent transition-colors">
+              <a 
+                href="#" 
+                className="p-2 rounded-full bg-white/10 hover:bg-dyad-accent transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
             </div>

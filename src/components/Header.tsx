@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { cn } from '@/lib/utils';
 
@@ -148,7 +148,16 @@ const Header: React.FC<HeaderProps> = ({ links, className, logoText = '✦ Reson
               <div className="p-8 border-t border-dyad-soft/20 bg-dyad-soft/5">
                 <p className="text-[10px] text-dyad-dark/40 uppercase tracking-[0.2em] font-bold mb-4">Contact</p>
                 <p className="text-sm text-dyad-dark/80 mb-2">daniele.kinesiology@gmail.com</p>
-                <p className="text-sm text-dyad-dark/80">0424 174 067</p>
+                <p className="text-sm text-dyad-dark/80 mb-4">0424 174 067</p>
+                <a 
+                  href="https://www.instagram.com/resonance.with.daniele" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center text-sm text-dyad-accent font-bold hover:text-dyad-dark transition-colors"
+                >
+                  <Instagram className="h-4 w-4 mr-2" />
+                  @resonance.with.daniele
+                </a>
               </div>
             </div>
           </SheetContent>
