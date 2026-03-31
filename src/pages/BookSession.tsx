@@ -192,10 +192,10 @@ const BookSession = () => {
                 <div className="space-y-6">
                   <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
                     <h3 className="text-2xl font-serif text-dyad-dark mb-2">Cherish Health</h3>
-                    <p className="text-slate-500 mb-4">Richmond, VIC</p>
+                    <p className="text-slate-500 mb-4">184 Bridge Rd, Richmond VIC 3121</p>
                     <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9944!3d-37.8244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2sRichmond%20VIC!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9944!3d-37.8244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2s184%20Bridge%20Rd%2C%20Richmond%20VIC%203121!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
@@ -210,10 +210,10 @@ const BookSession = () => {
                 <div className="space-y-6">
                   <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
                     <h3 className="text-2xl font-serif text-dyad-dark mb-2">Toorak Practice</h3>
-                    <p className="text-slate-500 mb-4">Toorak, VIC</p>
+                    <p className="text-slate-500 mb-4">685 Toorak Rd, Toorak VIC 3144</p>
                     <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d145.01!3d-37.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2sToorak%20VIC!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d145.01!3d-37.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2s685%20Toorak%20Rd%2C%20Toorak%20VIC%203144!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
@@ -290,14 +290,14 @@ const BookSession = () => {
                       <MapPin className="h-6 w-6 text-dyad-accent mr-4 mt-1" />
                       <div>
                         <span className="text-xl font-bold block mb-1">Cherish Health, Richmond</span>
-                        <span className="text-white/50 font-light">Integrated health hub for neuro-somatic work.</span>
+                        <span className="text-white/50 font-light">184 Bridge Rd, Richmond VIC 3121</span>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <MapPin className="h-6 w-6 text-dyad-accent mr-4 mt-1" />
                       <div>
                         <span className="text-xl font-bold block mb-1">Toorak Practice</span>
-                        <span className="text-white/50 font-light">Quiet, dedicated space for deep regulation.</span>
+                        <span className="text-white/50 font-light">685 Toorak Rd, Toorak VIC 3144</span>
                       </div>
                     </div>
                   </div>

@@ -31,7 +31,7 @@ How to prepare:
 - Comfort: Wear comfortable clothing that allows for gentle movement.
 - Integration: If possible, try to leave 15-30 minutes after our session for quiet integration before jumping back into your day.
 
-Location: [Richmond/Toorak Address]
+Location: 184 Bridge Rd, Richmond OR 685 Toorak Rd, Toorak
 Time: [Date & Time]
 
 If you have any questions before we meet, please don't hesitate to reach out.
@@ -54,7 +54,7 @@ What to expect:
 - We will identify specific "drills" or corrections to help your brain feel safer and more regulated.
 - As this is a clinical study session, I may take detailed notes on our findings for my case study logs (all data is anonymized).
 
-Location: [Richmond/Toorak Address]
+Location: 184 Bridge Rd, Richmond OR 685 Toorak Rd, Toorak
 Time: [Date & Time]
 
 I look forward to exploring your nervous system's unique map with you.
@@ -77,7 +77,7 @@ How to prepare:
 - Space: Ensure you have a quiet, comfortable environment (if online) or arrive a few minutes early to settle (if in-person).
 - Intention: You don't need to have everything "figured out," but coming with a sense of what feels most present in your body right now is a great starting point.
 
-Location: [Richmond/Toorak Address/Online Link]
+Location: 184 Bridge Rd, Richmond OR 685 Toorak Rd, Toorak
 Time: [Date & Time]
 
 I’m honoured to work with you.
