@@ -129,7 +129,7 @@ const BookSession = () => {
                       <Button 
                         size="lg" 
                         data-cal-link="danielebuatti/fnh-neuro-75"
-                        data-cal-namespace="cal"
+                        data-cal-namespace="fnh-neuro-75"
                         data-cal-config='{"layout":"month_view"}'
                         className="w-full bg-dyad-dark text-white hover:bg-white hover:text-dyad-dark font-bold h-14 rounded-full transition-all"
                       >
