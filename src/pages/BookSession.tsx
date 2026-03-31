@@ -9,6 +9,7 @@ import { showSuccess } from "@/utils/toast";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
+const FNH_CAL_URL = "https://cal.com/danielebuatti/fnh-neuro-75";
 
 const BookSession = () => {
   const navLinks = [
@@ -199,7 +200,7 @@ const BookSession = () => {
                     <p className="text-slate-500 mb-4">184 Bridge Rd, Richmond VIC 3121</p>
                     <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9944!3d-37.8244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2s184%20Bridge%20Rd%2C%20Richmond%20VIC%203121!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
+                        src="https://maps.google.com/maps?q=184%20Bridge%20Rd,%20Richmond%20VIC%203121&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
@@ -217,7 +218,7 @@ const BookSession = () => {
                     <p className="text-slate-500 mb-4">685 Toorak Rd, Toorak VIC 3144</p>
                     <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d145.01!3d-37.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2s685%20Toorak%20Rd%2C%20Toorak%20VIC%203144!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
+                        src="https://maps.google.com/maps?q=685%20Toorak%20Rd,%20Toorak%20VIC%203144&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
