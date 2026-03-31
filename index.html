@@ -26,6 +26,13 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- Cal.com embed snippet -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let a = C.Cal; if (a.q) { return a; } a.q = []; if (arguments.length > 0) { p(a, arguments); } return a; }; let s = d.createElement("script"); s.src = L; s.async = true; d.getElementsByTagName("head")[0].appendChild(s); C.Cal.ns = "cal"; })(window, "cal", "https://app.cal.com/embed/embed.js");
+      Cal("init", "fnh-neuro-75", {origin:"https://cal.com"});
+      Cal("ui", {"styles":{"branding":{"brandColor":"#1E3261"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+
     <!-- Acuity Scheduling Embed Script -->
     <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
 

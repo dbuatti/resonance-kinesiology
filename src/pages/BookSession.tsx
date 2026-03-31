@@ -9,7 +9,6 @@ import { showSuccess } from "@/utils/toast";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
-const FNH_CAL_URL = "https://cal.com/danielebuatti/fnh-neuro-75";
 
 const BookSession = () => {
   const navLinks = [
@@ -125,11 +124,16 @@ const BookSession = () => {
                         <span className="text-4xl font-bold text-white">$120</span>
                         <span className="text-white/60 font-light">/ 75 min</span>
                       </div>
-                      <a href={FNH_CAL_URL} target="_blank" rel="noopener noreferrer">
-                        <Button size="lg" className="w-full bg-dyad-dark text-white hover:bg-white hover:text-dyad-dark font-bold h-14 rounded-full transition-all">
-                          Book Assessment
-                        </Button>
-                      </a>
+                      {/* Cal.com Popup Trigger */}
+                      <Button 
+                        size="lg" 
+                        data-cal-link="danielebuatti/fnh-neuro-75"
+                        data-cal-namespace="cal"
+                        data-cal-config='{"layout":"month_view"}'
+                        className="w-full bg-dyad-dark text-white hover:bg-white hover:text-dyad-dark font-bold h-14 rounded-full transition-all"
+                      >
+                        Book Assessment
+                      </Button>
                     </div>
                     <div className="p-12 md:p-16 flex flex-col justify-center">
                       <p className="text-xl text-slate-700 mb-8 leading-relaxed font-light">
