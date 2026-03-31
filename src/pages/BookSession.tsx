@@ -8,6 +8,7 @@ import FadeIn from "@/components/FadeIn";
 import { showSuccess } from "@/utils/toast";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
+const FNH_CAL_URL = "https://cal.com/danielebuatti/fnh-neuro-75";
 
 const BookSession = () => {
   const navLinks = [
@@ -104,7 +105,8 @@ const BookSession = () => {
                         <span className="text-4xl font-bold text-white">$120</span>
                         <span className="text-white/60 font-light">/ 75 min</span>
                       </div>
-                      <a href="/schedule?type=community-discounted">
+                      {/* Direct link to Cal.com as requested */}
+                      <a href={FNH_CAL_URL} target="_blank" rel="noopener noreferrer">
                         <Button size="lg" className="w-full bg-dyad-dark text-white hover:bg-white hover:text-dyad-dark font-bold h-14 rounded-full transition-all">
                           Book Assessment
                         </Button>

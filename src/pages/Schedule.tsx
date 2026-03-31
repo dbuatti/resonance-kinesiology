@@ -5,17 +5,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail, Loader2 } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import FadeIn from "@/components/FadeIn";
+import { cn } from "@/lib/utils";
 
 const Schedule = () => {
   const [searchParams] = useSearchParams();
   const appointmentType = searchParams.get('type');
   const [isLoading, setIsLoading] = React.useState(true);
 
+  const isCalCom = appointmentType === 'community-discounted';
+
   // Get the appropriate iframe URL based on the appointment type
   const getIframeUrl = () => {
     switch(appointmentType) {
       case 'community-discounted':
-        return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=23329090";
+        // New Cal.com link for FNH trial
+        return "https://cal.com/danielebuatti/fnh-neuro-75?embed=true";
       case 'free-access':
         return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=86951880";
       case 'full-fee':
@@ -77,7 +81,7 @@ const Schedule = () => {
             </div>
           </FadeIn>
 
-          {/* Acuity Scheduling Embed - Dynamic based on appointment type */}
+          {/* Scheduling Embed */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden relative min-h-[600px]">
             {isLoading && (
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
@@ -86,16 +90,22 @@ const Schedule = () => {
               </div>
             )}
             
-            {/* Iframe container with custom styling to crop top and bottom */}
-            <div className="acuity-iframe-container relative h-[1000px] overflow-hidden">
+            {/* Iframe container - Conditional styling for Cal.com vs Acuity */}
+            <div className={cn(
+              "relative overflow-hidden",
+              isCalCom ? "h-[700px]" : "acuity-iframe-container h-[1000px]"
+            )}>
               <iframe
                 src={getIframeUrl()}
                 width="100%"
-                height="1550" 
+                height={isCalCom ? "700" : "1550"} 
                 frameBorder="0"
                 allow="payment"
                 onLoad={() => setIsLoading(false)}
-                className="w-full absolute top-[-400px] left-0" 
+                className={cn(
+                  "w-full",
+                  !isCalCom && "absolute top-[-400px] left-0"
+                )}
                 style={{ transform: 'scale(1.0)' }}
               ></iframe>
             </div>
