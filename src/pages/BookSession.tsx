@@ -47,14 +47,14 @@ const BookSession = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-32 bg-dyad-sky/5 relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-dyad-sky/5 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(165,180,252,0.1),transparent_70%)] pointer-events-none"></div>
           <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
             <FadeIn>
-              <h1 className="text-5xl md:text-7xl font-serif text-dyad-dark mb-6 tracking-tight">Clinical Session Options</h1>
-              <p className="text-xl md:text-2xl text-dyad-accent mb-10 font-serif italic">Richmond & Toorak · 75-minute sessions</p>
+              <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4 tracking-tight">Clinical Session Options</h1>
+              <p className="text-xl md:text-2xl text-dyad-accent mb-8 font-serif italic">Richmond & Toorak · 75-minute sessions</p>
               
-              <div className="bg-white/60 backdrop-blur-md border border-dyad-soft/20 p-10 rounded-[2.5rem] max-w-3xl mx-auto shadow-xl">
+              <div className="bg-white/60 backdrop-blur-md border border-dyad-soft/20 p-8 md:p-10 rounded-[2.5rem] max-w-3xl mx-auto shadow-xl">
                 <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-light">
                   I offer specialised neuro-somatic sessions that bridge the gap between brain-based assessment and emotional integration. 
                   All clinical sessions are now <span className="font-bold text-dyad-dark">75 minutes</span> to ensure the depth required for neurological repatterning.
@@ -65,15 +65,15 @@ const BookSession = () => {
         </section>
 
         {/* Session Options */}
-        <section className="py-24 md:py-32">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 gap-12">
+            <div className="grid grid-cols-1 gap-10">
 
               {/* Option 1: Certified Kinesiology */}
               <FadeIn direction="up">
                 <div className="bg-white rounded-[3rem] shadow-2xl border border-dyad-soft/10 overflow-hidden group hover:border-dyad-accent/30 transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
-                    <div className="bg-dyad-dark p-12 md:p-16 text-white flex flex-col justify-center">
+                    <div className="bg-dyad-dark p-10 md:p-14 text-white flex flex-col justify-center">
                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-dyad-soft mb-6">Tier 01</span>
                       <h3 className="text-3xl md:text-4xl font-serif mb-4">Neuro-Somatic Kinesiology</h3>
                       <div className="flex items-baseline gap-2 mb-8">
@@ -86,7 +86,7 @@ const BookSession = () => {
                         </Button>
                       </a>
                     </div>
-                    <div className="p-12 md:p-16 flex flex-col justify-center">
+                    <div className="p-10 md:p-14 flex flex-col justify-center">
                       <p className="text-xl text-slate-700 mb-8 leading-relaxed font-light">
                         A comprehensive clinical session integrating professional kinesiology with somatic tracking and nervous system regulation.
                       </p>
@@ -117,7 +117,7 @@ const BookSession = () => {
               <FadeIn direction="up" delay={0.2}>
                 <div className="bg-white rounded-[3rem] shadow-2xl border border-dyad-soft/10 overflow-hidden group hover:border-dyad-accent/30 transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
-                    <div className="bg-dyad-accent p-12 md:p-16 text-white flex flex-col justify-center">
+                    <div className="bg-dyad-accent p-10 md:p-14 text-white flex flex-col justify-center">
                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/60 mb-6">Tier 02</span>
                       <h3 className="text-3xl md:text-4xl font-serif mb-4">FNH Neuro-Health Assessment</h3>
                       <div className="flex items-baseline gap-2 mb-8">
@@ -136,7 +136,7 @@ const BookSession = () => {
                         Book Assessment
                       </Button>
                     </div>
-                    <div className="p-12 md:p-16 flex flex-col justify-center">
+                    <div className="p-10 md:p-14 flex flex-col justify-center">
                       <p className="text-xl text-slate-700 mb-8 leading-relaxed font-light">
                         Practitioner-in-Training sessions focused specifically on neurological assessments, cranial nerves, and primitive reflex integration.
                       </p>
@@ -154,7 +154,7 @@ const BookSession = () => {
               <FadeIn direction="up" delay={0.4}>
                 <div className="bg-dyad-sky/20 rounded-[3rem] border border-dyad-soft/30 overflow-hidden group transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
-                    <div className="p-12 md:p-16 flex flex-col justify-center border-r border-dyad-soft/20">
+                    <div className="p-10 md:p-14 flex flex-col justify-center border-r border-dyad-soft/20">
                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-dyad-dark/40 mb-6">Tier 03</span>
                       <h3 className="text-3xl md:text-4xl font-serif mb-4 text-dyad-dark">Community — Free Access</h3>
                       <div className="flex items-baseline gap-2 mb-8">
@@ -167,7 +167,7 @@ const BookSession = () => {
                         </Button>
                       </a>
                     </div>
-                    <div className="p-12 md:p-16 flex flex-col justify-center">
+                    <div className="p-10 md:p-14 flex flex-col justify-center">
                       <p className="text-xl text-slate-700 mb-6 leading-relaxed font-light">
                         Once per week, I offer a fully free session for someone who would otherwise not be able to access this clinical work.
                       </p>
@@ -183,11 +183,11 @@ const BookSession = () => {
         </section>
 
         {/* Authority Section */}
-        <section className="py-24 md:py-32 bg-dyad-dark text-white">
+        <section className="py-16 md:py-24 bg-dyad-dark text-white">
           <div className="container mx-auto px-6 max-w-4xl text-center">
             <FadeIn>
-              <Music className="h-12 w-12 text-dyad-accent mx-auto mb-8" />
-              <h2 className="text-4xl md:text-5xl font-serif mb-8">The Path to Resonance</h2>
+              <Music className="h-10 w-10 text-dyad-accent mx-auto mb-6" />
+              <h2 className="text-4xl md:text-5xl font-serif mb-6">The Path to Resonance</h2>
               <p className="text-xl md:text-2xl font-light leading-relaxed opacity-90 italic">
                 "With over a decade of experience as a professional Music Director and Vocal Coach, I understand resonance not just as a physical phenomenon, but as a state of being. My work helps you find that internal alignment where your voice, body, and nervous system are in harmony."
               </p>
@@ -196,16 +196,16 @@ const BookSession = () => {
         </section>
 
         {/* Locations Section */}
-        <section className="py-24 md:py-40 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-serif text-dyad-dark mb-6">Clinic Locations</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Clinic Locations</h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
                 Find me in Richmond and Toorak.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-10">
               <FadeIn direction="right">
                 <div className="space-y-6">
                   <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
@@ -247,12 +247,12 @@ const BookSession = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-24 md:py-40 bg-dyad-sky/10">
+        <section className="py-16 md:py-24 bg-dyad-sky/10">
           <div className="container mx-auto px-6 max-w-3xl">
             <FadeIn>
-              <div className="text-center mb-16">
-                <HelpCircle className="h-12 w-12 text-dyad-accent mx-auto mb-6" />
-                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-6">Common Questions</h2>
+              <div className="text-center mb-12">
+                <HelpCircle className="h-10 w-10 text-dyad-accent mx-auto mb-4" />
+                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Common Questions</h2>
               </div>
               
               <Accordion type="single" collapsible className="w-full space-y-4">
@@ -272,12 +272,12 @@ const BookSession = () => {
         </section>
 
         {/* Preparation Checklist Section */}
-        <section className="bg-dyad-dark py-24 md:py-40 text-white">
+        <section className="bg-dyad-dark py-16 md:py-24 text-white">
           <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
               <FadeIn direction="right">
-                <h2 className="text-4xl md:text-6xl font-serif mb-8">Preparing for Your Session</h2>
-                <p className="text-xl text-white/60 mb-10 leading-relaxed font-light">
+                <h2 className="text-4xl md:text-5xl font-serif mb-6">Preparing for Your Session</h2>
+                <p className="text-xl text-white/60 mb-8 leading-relaxed font-light">
                   To get the most out of our time together, I recommend a few simple steps to prepare your system.
                 </p>
                 <div className="space-y-6">
@@ -301,7 +301,7 @@ const BookSession = () => {
               </FadeIn>
               
               <FadeIn direction="left" delay={0.2}>
-                <div className="bg-white/5 border border-white/10 p-12 rounded-[2.5rem] backdrop-blur-sm">
+                <div className="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-sm">
                   <h3 className="text-2xl font-serif mb-6">The Clinics</h3>
                   <div className="space-y-8">
                     <div className="flex items-start">
@@ -326,15 +326,15 @@ const BookSession = () => {
         </section>
 
         {/* Contact & Integrity Section */}
-        <section className="bg-white py-24 md:py-40">
+        <section className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-6 max-w-3xl text-center">
             <FadeIn>
-              <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-8">Integrity & Access</h2>
-              <p className="text-xl text-slate-600 leading-relaxed mb-12 font-light">
+              <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-6">Integrity & Access</h2>
+              <p className="text-xl text-slate-600 leading-relaxed mb-10 font-light">
                 Thank you for choosing the path that aligns honestly with your current capacity. 
                 If you're unsure which level is right for you, feel free to reach out.
               </p>
-              <div className="bg-dyad-background-soft p-10 rounded-[2.5rem] inline-block w-full max-w-md shadow-xl border border-dyad-soft/20 group hover:border-dyad-accent/30 transition-all">
+              <div className="bg-dyad-background-soft p-8 md:p-10 rounded-[2.5rem] inline-block w-full max-w-md shadow-xl border border-dyad-soft/20 group hover:border-dyad-accent/30 transition-all">
                 <Mail className="h-8 w-8 text-dyad-accent mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
                 <button 
                   onClick={() => copyToClipboard("daniele.kinesiology@gmail.com", "Email")}

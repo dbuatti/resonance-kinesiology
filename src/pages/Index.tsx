@@ -47,7 +47,7 @@ const Index = () => {
       <main>
         {/* Hero Section */}
         <section 
-          className="relative pt-32 pb-24 md:pt-48 md:pb-40 border-b border-dyad-soft/10 overflow-hidden"
+          className="relative pt-24 pb-20 md:pt-32 md:pb-28 border-b border-dyad-soft/10 overflow-hidden"
           style={{ 
             backgroundImage: 'url(/resonance-background-horizontal.png)', 
             backgroundSize: 'cover', 
@@ -59,8 +59,8 @@ const Index = () => {
           <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
             
             <FadeIn direction="down" duration={1} delay={0.2}>
-              <div className="relative inline-block mb-12 md:mb-16">
-                <div className="w-40 h-40 md:w-52 md:h-52 mx-auto rounded-full shadow-2xl overflow-hidden border-4 border-white ring-8 ring-dyad-accent/10 transition-all duration-700 hover:ring-dyad-accent/20">
+              <div className="relative inline-block mb-10 md:mb-12">
+                <div className="w-36 h-36 md:w-48 md:h-48 mx-auto rounded-full shadow-2xl overflow-hidden border-4 border-white ring-8 ring-dyad-accent/10 transition-all duration-700 hover:ring-dyad-accent/20">
                   <img 
                     src="/daniele-buatti-hero.jpeg" 
                     alt="Daniele Buatti, Neuro-Somatic Kinesiologist" 
@@ -75,13 +75,13 @@ const Index = () => {
             </FadeIn>
 
             <FadeIn delay={0.4}>
-              <h1 className="text-5xl md:text-8xl font-serif mb-8 leading-[1.1] text-dyad-dark tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-[1.1] text-dyad-dark tracking-tight">
                 Neuro-Somatic <br className="hidden md:block" /> <span className="italic text-dyad-accent">Kinesiology</span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.6}>
-              <p className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-dyad-dark/80 leading-relaxed">
+              <p className="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto text-dyad-dark/80 leading-relaxed">
                 Brain-based nervous system regulation and somatic integration in <span className="font-semibold text-dyad-dark">Richmond & Toorak</span>.
               </p>
             </FadeIn>
@@ -110,7 +110,7 @@ const Index = () => {
             </FadeIn>
             
             <FadeIn delay={1} direction="none">
-              <div className="mt-12 flex items-center justify-center text-xs text-dyad-accent font-bold uppercase tracking-[0.2em] opacity-70">
+              <div className="mt-10 flex items-center justify-center text-xs text-dyad-accent font-bold uppercase tracking-[0.2em] opacity-70">
                 <ShieldCheck className="h-4 w-4 mr-2" />
                 Functional Neuro Health Practitioner (In-Training)
               </div>
@@ -119,10 +119,10 @@ const Index = () => {
         </section>
 
         {/* Authority Snippet */}
-        <section className="py-16 bg-white border-b border-dyad-soft/10">
+        <section className="py-12 md:py-16 bg-white border-b border-dyad-soft/10">
           <div className="container mx-auto px-6 max-w-4xl text-center">
             <FadeIn>
-              <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4">
                 <Music className="h-6 w-6 text-dyad-accent" />
                 <span className="text-xs font-black uppercase tracking-[0.3em] text-dyad-dark/40">The Resonance Theme</span>
               </div>
@@ -134,7 +134,7 @@ const Index = () => {
         </section>
 
         {/* Somatic Check-in Section */}
-        <section className="py-24 md:py-40 bg-dyad-background-soft">
+        <section className="py-16 md:py-24 bg-dyad-background-soft">
           <div className="container mx-auto px-6">
             <FadeIn>
               <SomaticCheckIn />
@@ -143,13 +143,13 @@ const Index = () => {
         </section>
 
         {/* Service Blocks */}
-        <section className="bg-dyad-dark py-24 md:py-32 text-white relative overflow-hidden">
+        <section className="bg-dyad-dark py-16 md:py-24 text-white relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(212,106,155,0.15),transparent_50%)] pointer-events-none"></div>
           
           <div className="container mx-auto px-6 max-w-6xl relative z-10">
             <FadeIn>
-              <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-6xl font-serif mb-6">Clinical Somatic Support</h2>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-serif mb-4">Clinical Somatic Support</h2>
                 <p className="text-xl text-white/60 max-w-3xl mx-auto font-light">
                   Bridging the gap between traditional kinesiology and modern functional neurology.
                 </p>
@@ -163,9 +163,9 @@ const Index = () => {
                 { icon: Mic2, title: "Vocal & Performance", desc: "Specialised support for vocal freedom, diaphragm release, and embodied expression for performers and leaders." }
               ].map((service, i) => (
                 <FadeIn key={i} delay={0.2 * i} direction="up">
-                  <Card className="relative bg-white/5 border border-white/10 p-10 transition-all hover:bg-white/10 hover:border-white/20 shadow-2xl group h-full flex flex-col">
-                    <div className="mb-8 text-dyad-accent group-hover:scale-110 transition-transform duration-500">
-                      <service.icon className="h-12 w-12" />
+                  <Card className="relative bg-white/5 border border-white/10 p-8 transition-all hover:bg-white/10 hover:border-white/20 shadow-2xl group h-full flex flex-col">
+                    <div className="mb-6 text-dyad-accent group-hover:scale-110 transition-transform duration-500">
+                      <service.icon className="h-10 w-10" />
                     </div>
                     <CardTitle className="text-2xl font-serif mb-4 text-white leading-snug">{service.title}</CardTitle>
                     <p className="text-white/70 leading-relaxed text-lg font-light">
@@ -179,17 +179,17 @@ const Index = () => {
         </section>
 
         {/* Richmond Clinic Section */}
-        <section className="bg-white py-24 md:py-40">
+        <section className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <FadeIn direction="right">
                 <div className="relative">
                   <div className="inline-block px-4 py-1.5 rounded-full bg-dyad-accent/10 text-dyad-accent text-[10px] font-black uppercase tracking-[0.2em] mb-6">New Location</div>
-                  <h2 className="text-4xl md:text-6xl font-serif text-dyad-dark mb-8 leading-tight">Now Practising at Cherish Health, Richmond</h2>
-                  <p className="text-xl text-slate-700 mb-6 leading-relaxed font-light">
+                  <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-6 leading-tight">Now Practising at Cherish Health, Richmond</h2>
+                  <p className="text-xl text-slate-700 mb-4 leading-relaxed font-light">
                     I am excited to bring my practice to the integrated health hub in Richmond. 
                   </p>
-                  <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+                  <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                     Alongside standard Kinesiology, I am now offering <strong>Neuro-Health Assessments</strong> using the FNH framework—a brain-based approach to chronic pain, stress, and performance.
                   </p>
                   <a href="/book-session">
@@ -202,8 +202,8 @@ const Index = () => {
               <FadeIn direction="left" delay={0.3}>
                 <div className="relative aspect-square md:aspect-[4/5] bg-dyad-sky/20 rounded-[2rem] border border-dyad-soft/20 flex items-center justify-center group overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-dyad-accent/5 to-transparent"></div>
-                  <MapPin className="h-32 w-32 text-dyad-accent opacity-10 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700" />
-                  <div className="absolute bottom-8 left-8 right-8 bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-lg">
+                  <MapPin className="h-24 w-24 text-dyad-accent opacity-10 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700" />
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-white/20 shadow-lg">
                     <p className="text-dyad-dark font-serif text-lg font-bold">Cherish Health</p>
                     <p className="text-slate-500 text-sm">Richmond, VIC</p>
                   </div>
@@ -214,11 +214,11 @@ const Index = () => {
         </section>
 
         {/* PEACE Framework Section */}
-        <section id="peace-method" className="bg-dyad-sky/10 py-24 md:py-40 border-y border-dyad-soft/10">
+        <section id="peace-method" className="bg-dyad-sky/10 py-16 md:py-24 border-y border-dyad-soft/10">
           <div className="container mx-auto px-6 max-w-6xl">
             <FadeIn>
-              <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-6xl font-serif text-dyad-dark mb-6">The PEACE Framework</h2>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">The PEACE Framework</h2>
                 <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
                   A structured, clinical approach to somatic and neurological transformation.
                 </p>
@@ -228,11 +228,11 @@ const Index = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
               {peaceFramework.map((item, i) => (
                 <FadeIn key={i} delay={0.1 * i} direction="up">
-                  <div className="bg-white p-8 rounded-3xl shadow-sm border border-dyad-soft/10 flex flex-col items-center text-center md:items-start md:text-left transition-all hover:shadow-xl hover:-translate-y-2 h-full">
-                    <div className="w-14 h-14 bg-dyad-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-dyad-accent/20">
+                  <div className="bg-white p-6 rounded-3xl shadow-sm border border-dyad-soft/10 flex flex-col items-center text-center md:items-start md:text-left transition-all hover:shadow-xl hover:-translate-y-2 h-full">
+                    <div className="w-12 h-12 bg-dyad-accent text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-5 shadow-lg shadow-dyad-accent/20">
                       {item.letter}
                     </div>
-                    <h3 className="text-xl font-bold text-dyad-dark mb-3">{item.title}</h3>
+                    <h3 className="text-lg font-bold text-dyad-dark mb-2">{item.title}</h3>
                     <p className="text-sm text-slate-500 leading-relaxed font-light">{item.description}</p>
                   </div>
                 </FadeIn>
@@ -242,23 +242,23 @@ const Index = () => {
         </section>
 
         {/* Client Words Section */}
-        <section className="py-24 md:py-40 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-6 max-w-5xl">
             <FadeIn>
-              <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-6xl font-serif text-dyad-dark mb-6">Client Words</h2>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Client Words</h2>
                 <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
                   Reflections from those who have walked the path of resonance.
                 </p>
               </div>
             </FadeIn>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-10">
               {testimonials.map((t, i) => (
                 <FadeIn key={i} delay={0.2 * i} direction={i % 2 === 0 ? "right" : "left"}>
-                  <div className="bg-dyad-background-soft p-10 rounded-[2.5rem] border border-dyad-soft/10 relative h-full flex flex-col">
-                    <Quote className="h-10 w-10 text-dyad-accent/20 absolute top-8 left-8" />
-                    <p className="text-xl text-slate-700 italic mb-8 leading-relaxed relative z-10 pt-6">
+                  <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/10 relative h-full flex flex-col">
+                    <Quote className="h-8 w-8 text-dyad-accent/20 absolute top-6 left-6" />
+                    <p className="text-xl text-slate-700 italic mb-6 leading-relaxed relative z-10 pt-4">
                       "{t.text}"
                     </p>
                     <div className="mt-auto">
@@ -273,17 +273,17 @@ const Index = () => {
         </section>
 
         {/* Gift Card Section */}
-        <section className="bg-dyad-sky/5 py-24 md:py-32">
+        <section className="bg-dyad-sky/5 py-16 md:py-24">
           <div className="container mx-auto px-6 max-w-3xl text-center">
             <FadeIn>
-              <div className="bg-white p-10 md:p-20 rounded-[3rem] shadow-2xl border border-dyad-soft/20 relative overflow-hidden group">
+              <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-dyad-soft/20 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-dyad-accent/5 rounded-full -translate-y-1/2 translate-x-1/2 transition-transform group-hover:scale-110 duration-700"></div>
                 <div className="relative z-10">
-                  <div className="flex items-center justify-center mb-8">
-                    <Gift className="h-10 w-10 text-dyad-accent mr-4" />
+                  <div className="flex items-center justify-center mb-6">
+                    <Gift className="h-8 w-8 text-dyad-accent mr-3" />
                     <h3 className="text-3xl md:text-4xl font-serif text-dyad-dark font-bold">Gift a Session</h3>
                   </div>
-                  <p className="text-xl text-slate-700 mb-12 leading-relaxed font-light">
+                  <p className="text-xl text-slate-700 mb-10 leading-relaxed font-light">
                     Give the gift of neurological regulation and somatic balance to someone you care about.
                   </p>
                   <a href={GIFT_CARD_URL} target="_blank" rel="noopener noreferrer">
