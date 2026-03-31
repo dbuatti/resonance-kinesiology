@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance Kinesiology Email</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* RESET STYLES */
+        body { margin: 0; padding: 0; min-width: 100%; width: 100% !important; height: 100% !important; background-color: #FDFCFB; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+        table { border-spacing: 0; border-collapse: collapse; }
+        img { border: 0; line-height: 100%; outline: none; text-decoration: none; }
+        
+        /* LAYOUT */
+        .wrapper { width: 100%; table-layout: fixed; background-color: #FDFCFB; padding-bottom: 40px; }
+        .main { background-color: #ffffff; margin: 0 auto; width: 100%; max-width: 600px; border-spacing: 0; color: #1E3261; border-radius: 32px; overflow: hidden; margin-top: 40px; border: 1px solid #E0F2FE; }
+        
+        /* HEADER */
+        .header { padding: 48px 40px 32px 40px; text-align: center; }
+        .logo { color: #1E3261; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; letter-spacing: 0.05em; }
+        .sub-logo { color: #D46A9B; font-size: 10px; font-weight: 900; letter-spacing: 0.3em; margin-top: 12px; text-transform: uppercase; }
+
+        /* CONTENT */
+        .content { padding: 0 48px 40px 48px; line-height: 1.7; font-size: 16px; color: #334155; }
+        .content h1, .content h2, .content h3 { color: #1E3261; font-family: 'Playfair Display', serif; font-weight: 700; margin-top: 0; line-height: 1.2; }
+        .content p { margin-bottom: 24px; }
+        .content a { color: #D46A9B; text-decoration: underline; font-weight: 600; }
+        
+        /* FOOTER */
+        .footer { width: 100%; max-width: 600px; margin: 0 auto; padding: 40px 20px; text-align: center; color: #64748b; font-size: 12px; }
+        .footer a { color: #1E3261; text-decoration: none; font-weight: bold; }
+        .footer-divider { height: 1px; background-color: #E0F2FE; margin-bottom: 24px; width: 100px; margin-left: auto; margin-right: auto; }
+        
+        /* BUTTONS */
+        .btn { background-color: #1E3261; color: #ffffff !important; padding: 16px 32px; border-radius: 100px; text-decoration: none !important; display: inline-block; font-weight: bold; font-size: 14px; letter-spacing: 0.05em; box-shadow: 0 10px 15px -3px rgba(30, 50, 97, 0.2); }
+
+        /* MOBILE OPTIMIZATION */
+        @media screen and (max-width: 600px) {
+            .main { margin-top: 0; border-radius: 0; border: none; }
+            .content { padding: 0 30px 40px 30px; }
+            .header { padding: 40px 20px 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <center class="wrapper">
+        <table class="main" role="presentation">
+            <!-- Header -->
+            <tr>
+                <td class="header">
+                    <div class="logo">✦ Resonance Kinesiology</div>
+                    <div class="sub-logo">Neuro-Somatic Support</div>
+                </td>
+            </tr>
+            
+            <!-- Body Content -->
+            <tr>
+                <td class="content">
+                    {{ message_content }}
+                </td>
+            </tr>
+            
+            <!-- Signature Area -->
+            <tr>
+                <td style="padding: 0 48px 48px 48px;">
+                    <table width="100%">
+                        <tr>
+                            <td style="border-top: 1px solid #E0F2FE; padding-top: 24px;">
+                                <div style="font-family: 'Playfair Display', serif; font-weight: 700; color: #1E3261; font-size: 18px; margin-bottom: 4px;">Daniele Buatti</div>
+                                <div style="color: #D46A9B; font-size: 12px; font-weight: 800; text-transform: uppercase; tracking: 0.1em;">Neuro-Somatic Kinesiologist</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Footer -->
+        <table class="footer" role="presentation">
+            <tr>
+                <td>
+                    <div class="footer-divider"></div>
+                    <p style="margin-bottom: 16px; font-style: italic; font-family: 'Playfair Display', serif; font-size: 16px; color: #1E3261;">
+                        "Come home to your body."
+                    </p>
+                    <p style="margin-bottom: 16px;">
+                        {{ address }}
+                    </p>
+                    <p>
+                        <a href="{{ unsubscribe_url }}">Unsubscribe</a> &nbsp;•&nbsp; 
+                        <a href="{{ subscriber_preferences_url }}">Update Preferences</a>
+                    </p>
+                    <div style="margin-top: 24px; opacity: 0.4; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;">
+                        Richmond & Toorak, Melbourne
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
