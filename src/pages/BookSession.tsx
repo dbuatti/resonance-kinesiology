@@ -1,11 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone, Brain, Zap, CheckCircle2, Coffee, Sparkles } from "lucide-react";
+import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone, Brain, Zap, CheckCircle2, Coffee, Sparkles, HelpCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import { showSuccess } from "@/utils/toast";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 const FNH_CAL_URL = "https://cal.com/danielebuatti/fnh-neuro-75";
@@ -21,6 +22,25 @@ const BookSession = () => {
     navigator.clipboard.writeText(text);
     showSuccess(`${label} copied to clipboard`);
   };
+
+  const faqs = [
+    {
+      q: "What is the difference between Kinesiology and FNH?",
+      a: "Kinesiology uses muscle monitoring to identify subconscious stress and emotional blocks, often working with meridians and acupressure. FNH (Functional Neuro Health) is a brain-based approach that specifically assesses neurological pathways, cranial nerves, and primitive reflexes to address physical performance and chronic pain."
+    },
+    {
+      q: "How many sessions will I need?",
+      a: "While many people feel a shift after one session, deep neurological repatterning usually happens over 3-5 sessions. We will discuss a plan that suits your specific goals during our first meeting."
+    },
+    {
+      q: "Do I need to prepare anything?",
+      a: "Just yourself! Wear comfortable clothing and ensure you're hydrated. You don't need to have a clear 'problem' to solve—we can work with whatever is present in your system."
+    },
+    {
+      q: "Is this work suitable for children?",
+      a: "Yes, neuro-somatic work is excellent for children, particularly for primitive reflex integration and emotional regulation. Please contact me directly to discuss sessions for minors."
+    }
+  ];
 
   return (
     <div className="bg-dyad-background-soft min-h-screen text-slate-900 selection:bg-dyad-accent/20">
@@ -105,7 +125,6 @@ const BookSession = () => {
                         <span className="text-4xl font-bold text-white">$120</span>
                         <span className="text-white/60 font-light">/ 75 min</span>
                       </div>
-                      {/* Direct link to Cal.com as requested */}
                       <a href={FNH_CAL_URL} target="_blank" rel="noopener noreferrer">
                         <Button size="lg" className="w-full bg-dyad-dark text-white hover:bg-white hover:text-dyad-dark font-bold h-14 rounded-full transition-all">
                           Book Assessment
@@ -155,6 +174,82 @@ const BookSession = () => {
                 </div>
               </FadeIn>
             </div>
+          </div>
+        </section>
+
+        {/* Locations Section */}
+        <section className="py-24 md:py-40 bg-white">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-serif text-dyad-dark mb-6">Clinic Locations</h2>
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
+                Find me in Richmond and Toorak.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <FadeIn direction="right">
+                <div className="space-y-6">
+                  <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
+                    <h3 className="text-2xl font-serif text-dyad-dark mb-2">Cherish Health</h3>
+                    <p className="text-slate-500 mb-4">Richmond, VIC</p>
+                    <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9944!3d-37.8244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2sRichmond%20VIC!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen 
+                        loading="lazy"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn direction="left" delay={0.2}>
+                <div className="space-y-6">
+                  <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
+                    <h3 className="text-2xl font-serif text-dyad-dark mb-2">Toorak Practice</h3>
+                    <p className="text-slate-500 mb-4">Toorak, VIC</p>
+                    <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d145.01!3d-37.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e5fd9e1705%3A0x5045675218ce7e0!2sToorak%20VIC!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" 
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen 
+                        loading="lazy"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 md:py-40 bg-dyad-sky/10">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <FadeIn>
+              <div className="text-center mb-16">
+                <HelpCircle className="h-12 w-12 text-dyad-accent mx-auto mb-6" />
+                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-6">Common Questions</h2>
+              </div>
+              
+              <Accordion type="single" collapsible className="w-full space-y-4">
+                {faqs.map((faq, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="bg-white rounded-2xl border border-dyad-soft/20 px-6 overflow-hidden">
+                    <AccordionTrigger className="text-left font-bold text-dyad-dark hover:no-underline py-6">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-600 leading-relaxed pb-6">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </FadeIn>
           </div>
         </section>
 

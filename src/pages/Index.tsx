@@ -6,6 +6,7 @@ import { ArrowRight, Brain, Heart, Mic2, MapPin, Gift, ShieldCheck, Sparkles, Qu
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
+import SomaticCheckIn from "@/components/SomaticCheckIn";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 const GIFT_CARD_URL = "https://buy.stripe.com/8x200lfmagH81vS4PU53O05";
@@ -113,6 +114,15 @@ const Index = () => {
                 <ShieldCheck className="h-4 w-4 mr-2" />
                 Functional Neuro Health Practitioner (In-Training)
               </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Somatic Check-in Section */}
+        <section className="py-24 md:py-40 bg-dyad-background-soft">
+          <div className="container mx-auto px-6">
+            <FadeIn>
+              <SomaticCheckIn />
             </FadeIn>
           </div>
         </section>
