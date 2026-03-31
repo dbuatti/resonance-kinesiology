@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone, Brain, Zap, CheckCircle2, Coffee, Sparkles, HelpCircle } from "lucide-react";
+import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone, Brain, Zap, CheckCircle2, Coffee, Sparkles, HelpCircle, Music } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -9,7 +9,6 @@ import { showSuccess } from "@/utils/toast";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
-const FNH_CAL_URL = "https://cal.com/danielebuatti/fnh-neuro-75";
 
 const BookSession = () => {
   const navLinks = [
@@ -122,8 +121,9 @@ const BookSession = () => {
                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/60 mb-6">Tier 02</span>
                       <h3 className="text-3xl md:text-4xl font-serif mb-4">FNH Neuro-Health Assessment</h3>
                       <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-bold text-white">$120</span>
-                        <span className="text-white/60 font-light">/ 75 min</span>
+                        <span className="text-4xl font-bold text-white">$50</span>
+                        <span className="text-white/60 font-light line-through ml-2">$120</span>
+                        <span className="text-white/60 font-light ml-2">/ 75 min</span>
                       </div>
                       {/* Cal.com Popup Trigger */}
                       <Button 
@@ -142,7 +142,7 @@ const BookSession = () => {
                       </p>
                       <div className="bg-dyad-sky/10 p-6 rounded-2xl border border-dyad-soft/20">
                         <p className="text-sm text-slate-500 italic">
-                          *Reduced rate for clinical case study work. Data is anonymized for research purposes.
+                          *Special Clinical Study Rate. This introductory pricing supports my final certification phase. Data is anonymized for research purposes.
                         </p>
                       </div>
                     </div>
@@ -179,6 +179,19 @@ const BookSession = () => {
                 </div>
               </FadeIn>
             </div>
+          </div>
+        </section>
+
+        {/* Authority Section */}
+        <section className="py-24 md:py-32 bg-dyad-dark text-white">
+          <div className="container mx-auto px-6 max-w-4xl text-center">
+            <FadeIn>
+              <Music className="h-12 w-12 text-dyad-accent mx-auto mb-8" />
+              <h2 className="text-4xl md:text-5xl font-serif mb-8">The Path to Resonance</h2>
+              <p className="text-xl md:text-2xl font-light leading-relaxed opacity-90 italic">
+                "With over a decade of experience as a professional Music Director and Vocal Coach, I understand resonance not just as a physical phenomenon, but as a state of being. My work helps you find that internal alignment where your voice, body, and nervous system are in harmony."
+              </p>
+            </FadeIn>
           </div>
         </section>
 

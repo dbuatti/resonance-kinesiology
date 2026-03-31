@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, MapPin, Gift, ShieldCheck, Sparkles, Quote } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, MapPin, Gift, ShieldCheck, Sparkles, Quote, Music } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -28,12 +28,12 @@ const Index = () => {
 
   const testimonials = [
     {
-      text: "Daniele's approach is unlike any other. He has a way of making the complex language of the nervous system feel accessible and deeply healing.",
+      text: "Daniele's approach is unlike any other. He helped me resolve chronic jaw tension and find my voice again after years of suppression.",
       author: "Sarah M.",
       role: "Creative Professional"
     },
     {
-      text: "I came in with chronic tension and left with a sense of space and clarity I hadn't felt in years. The neuro-health assessment was a game changer.",
+      text: "A game changer for my performance anxiety; I finally feel grounded on stage. The neuro-health assessment provided immediate physical shifts.",
       author: "James L.",
       role: "Performance Artist"
     }
@@ -114,6 +114,21 @@ const Index = () => {
                 <ShieldCheck className="h-4 w-4 mr-2" />
                 Functional Neuro Health Practitioner (In-Training)
               </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Authority Snippet */}
+        <section className="py-16 bg-white border-b border-dyad-soft/10">
+          <div className="container mx-auto px-6 max-w-4xl text-center">
+            <FadeIn>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Music className="h-6 w-6 text-dyad-accent" />
+                <span className="text-xs font-black uppercase tracking-[0.3em] text-dyad-dark/40">The Resonance Theme</span>
+              </div>
+              <p className="text-xl md:text-2xl font-serif text-dyad-dark leading-relaxed italic">
+                "With over a decade of experience as a professional Music Director and Vocal Coach, I understand resonance not just as a physical phenomenon, but as a state of being."
+              </p>
             </FadeIn>
           </div>
         </section>
