@@ -69,22 +69,26 @@ const BookSession = () => {
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid grid-cols-1 gap-10">
 
-              {/* Option 1: Certified Kinesiology */}
+              {/* Option 1: Full Price Session */}
               <FadeIn direction="up">
                 <div className="bg-white rounded-[3rem] shadow-2xl border border-dyad-soft/10 overflow-hidden group hover:border-dyad-accent/30 transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
                     <div className="bg-dyad-dark p-10 md:p-14 text-white flex flex-col justify-center">
                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-dyad-soft mb-6">Tier 01</span>
-                      <h3 className="text-3xl md:text-4xl font-serif mb-4">Neuro-Somatic Kinesiology</h3>
+                      <h3 className="text-3xl md:text-4xl font-serif mb-4">Full Price Session (Neurological Kinesiology)</h3>
                       <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-bold text-dyad-accent">$150</span>
+                        <span className="text-4xl font-bold text-dyad-accent">$100</span>
                         <span className="text-white/50 font-light">/ 75 min</span>
                       </div>
-                      <a href="/schedule?type=full-fee">
-                        <Button size="lg" className="w-full bg-white text-dyad-dark hover:bg-dyad-accent hover:text-white font-bold h-14 rounded-full transition-all">
-                          Book Session
-                        </Button>
-                      </a>
+                      <Button 
+                        size="lg" 
+                        data-cal-link="danielebuatti/fnh-kinesiology"
+                        data-cal-namespace="fnh-kinesiology"
+                        data-cal-config='{"layout":"month_view"}'
+                        className="w-full bg-white text-dyad-dark hover:bg-dyad-accent hover:text-white font-bold h-14 rounded-full transition-all"
+                      >
+                        Book Session
+                      </Button>
                     </div>
                     <div className="p-10 md:p-14 flex flex-col justify-center">
                       <p className="text-xl text-slate-700 mb-8 leading-relaxed font-light">

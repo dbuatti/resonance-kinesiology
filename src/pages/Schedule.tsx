@@ -12,19 +12,18 @@ const Schedule = () => {
   const appointmentType = searchParams.get('type');
   const [isLoading, setIsLoading] = React.useState(true);
 
-  const isCalCom = appointmentType === 'community-discounted';
+  const isCalCom = appointmentType === 'community-discounted' || appointmentType === 'full-fee' || !appointmentType;
 
   // Get the appropriate iframe URL based on the appointment type
   const getIframeUrl = () => {
     switch(appointmentType) {
       case 'community-discounted':
-        // New Cal.com link for FNH trial
         return "https://cal.com/danielebuatti/fnh-neuro-75?embed=true";
       case 'free-access':
         return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=86951880";
       case 'full-fee':
       default:
-        return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=83873258";
+        return "https://cal.com/danielebuatti/fnh-kinesiology?embed=true";
     }
   };
 
@@ -44,8 +43,8 @@ const Schedule = () => {
       case 'full-fee':
       default:
         return {
-          title: "Neuro-Somatic Kinesiology (Certified Practice)",
-          description: "1 hour 15 minutes @ A$150.00. A comprehensive clinical session integrating professional Kinesiology with somatic tracking and nervous system regulation."
+          title: "Full Price Session (Neurological Kinesiology)",
+          description: "1 hour 15 minutes @ A$100.00. A comprehensive clinical session integrating professional Kinesiology with somatic tracking and nervous system regulation."
         };
     }
   };
