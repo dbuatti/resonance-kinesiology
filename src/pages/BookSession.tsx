@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Leaf, Users, Mail, MapPin, Clock, Phone, Brain, Zap, CheckCircle2, Coffee, Sparkles, HelpCircle, Music } from "lucide-react";
+import { ArrowRight, Leaf, Users, Mail, MapPin, Clock, Phone, CheckCircle2, Coffee, Sparkles, HelpCircle, Music, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -15,6 +15,7 @@ const BookSession = () => {
     { href: "/", label: "Home" },
     { href: "/book-session", label: "Session Options" },
     { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true },
+    { href: "https://resonance-with-daniele.vercel.app/", label: "RESONANCE CHOIR", isExternal: true },
   ];
 
   const copyToClipboard = (text: string, label: string) => {
@@ -25,15 +26,15 @@ const BookSession = () => {
   const faqs = [
     {
       q: "What is the difference between Kinesiology and FNH?",
-      a: "Kinesiology uses muscle monitoring to identify subconscious stress and emotional blocks, often working with meridians and acupressure. FNH (Functional Neuro Health) is a brain-based approach that specifically assesses neurological pathways, cranial nerves, and primitive reflexes to address physical performance and chronic pain."
+      a: "Both Kinesiology and FNH use muscle monitoring as a feedback tool, but they apply it within different frameworks. Kinesiology uses it to identify subconscious stress and emotional blocks, often working with meridians and acupressure. FNH (Functional Neuro Health) uses the same biofeedback principle but interprets responses through a functional neurology lens — specifically assessing neurological pathways, cranial nerves, and primitive reflexes to address physical performance and chronic pain."
     },
     {
       q: "How many sessions will I need?",
-      a: "While many people feel a shift after one session, deep neurological repatterning usually happens over 3-5 sessions. We will discuss a plan that suits your specific goals during our first meeting."
+      a: "While many people feel a shift after one session, deep neurological repatterning usually happens over 3-5 sessions. I will discuss a plan that suits your specific goals during our first meeting."
     },
     {
       q: "Do I need to prepare anything?",
-      a: "Just yourself! Wear comfortable clothing and ensure you're hydrated. You don't need to have a clear 'problem' to solve—we can work with whatever is present in your system."
+      a: "Just yourself! Wear comfortable clothing and ensure you're hydrated. You don't need to have a clear 'problem' to solve—I can work with whatever is present in your system."
     },
     {
       q: "Is this work suitable for children?",
@@ -52,12 +53,11 @@ const BookSession = () => {
           <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
             <FadeIn>
               <h1 className="text-5xl md:text-6xl font-serif text-dyad-dark mb-4 tracking-tight">Clinical Session Options</h1>
-              <p className="text-xl md:text-2xl text-dyad-accent mb-8 font-serif italic">Richmond & Toorak · 75-minute sessions</p>
+              <p className="text-xl md:text-2xl text-dyad-accent mb-8 font-serif italic">Toorak · 60-minute sessions</p>
               
               <div className="bg-white/60 backdrop-blur-md border border-dyad-soft/20 p-8 md:p-10 rounded-[2.5rem] max-w-3xl mx-auto shadow-xl">
                 <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-light">
-                  I offer specialised neuro-somatic sessions that bridge the gap between brain-based assessment and emotional integration. 
-                  All clinical sessions are now <span className="font-bold text-dyad-dark">75 minutes</span> to ensure the depth required for neurological repatterning.
+                  I offer specialised neuro-somatic sessions that bridge the gap between brain-based assessment and emotional integration.
                 </p>
               </div>
             </FadeIn>
@@ -69,65 +69,19 @@ const BookSession = () => {
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid grid-cols-1 gap-10">
 
-              {/* Option 1: Full Price Session */}
-              <FadeIn direction="up">
-                <div className="bg-white rounded-[3rem] shadow-2xl border border-dyad-soft/10 overflow-hidden group hover:border-dyad-accent/30 transition-all duration-500">
-                  <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
-                    <div className="bg-dyad-dark p-10 md:p-14 text-white flex flex-col justify-center">
-                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-dyad-soft mb-6">Tier 01</span>
-                      <h3 className="text-3xl md:text-4xl font-serif mb-4">Full Price Session (Neurological Kinesiology)</h3>
-                      <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-bold text-dyad-accent">$100</span>
-                        <span className="text-white/50 font-light">/ 75 min</span>
-                      </div>
-                      <Button 
-                        size="lg" 
-                        data-cal-link="danielebuatti/fnh-kinesiology"
-                        data-cal-namespace="fnh-kinesiology"
-                        data-cal-config='{"layout":"month_view"}'
-                        className="w-full bg-white text-dyad-dark hover:bg-dyad-accent hover:text-white font-bold h-14 rounded-full transition-all"
-                      >
-                        Book Session
-                      </Button>
-                    </div>
-                    <div className="p-10 md:p-14 flex flex-col justify-center">
-                      <p className="text-xl text-slate-700 mb-8 leading-relaxed font-light">
-                        A comprehensive clinical session integrating professional kinesiology with somatic tracking and nervous system regulation.
-                      </p>
-                      <div className="grid sm:grid-cols-2 gap-6">
-                        <div className="flex items-start">
-                          <Brain className="h-5 w-5 mr-3 text-dyad-accent shrink-0 mt-1" />
-                          <span className="text-slate-600 text-sm">Brain-based assessment</span>
-                        </div>
-                        <div className="flex items-start">
-                          <Heart className="h-5 w-5 mr-3 text-dyad-accent shrink-0 mt-1" />
-                          <span className="text-slate-600 text-sm">Emotional clearing</span>
-                        </div>
-                        <div className="flex items-start">
-                          <Zap className="h-5 w-5 mr-3 text-dyad-accent shrink-0 mt-1" />
-                          <span className="text-slate-600 text-sm">Meridian balancing</span>
-                        </div>
-                        <div className="flex items-start">
-                          <Clock className="h-5 w-5 mr-3 text-dyad-accent shrink-0 mt-1" />
-                          <span className="text-slate-600 text-sm">Deep integration time</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-
               {/* Option 2: FNH Clinical Study */}
               <FadeIn direction="up" delay={0.2}>
                 <div className="bg-white rounded-[3rem] shadow-2xl border border-dyad-soft/10 overflow-hidden group hover:border-dyad-accent/30 transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
                     <div className="bg-dyad-accent p-10 md:p-14 text-white flex flex-col justify-center">
-                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/60 mb-6">Tier 02</span>
                       <h3 className="text-3xl md:text-4xl font-serif mb-4">FNH Neuro-Health Assessment</h3>
-                      <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-bold text-white">$50</span>
+                      <div className="flex items-baseline gap-2 mb-2">
+                        <span className="text-4xl font-bold text-white">$70</span>
                         <span className="text-white/60 font-light line-through ml-2">$120</span>
-                        <span className="text-white/60 font-light ml-2">/ 75 min</span>
+                        <span className="text-white/60 font-light ml-2">/ 60 min</span>
+                      </div>
+                      <div className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-8">
+                        Save $50
                       </div>
                       {/* Cal.com Popup Trigger */}
                       <Button 
@@ -139,10 +93,11 @@ const BookSession = () => {
                       >
                         Book Assessment
                       </Button>
+                      <p className="text-white/50 text-xs text-center mt-3">Opens booking calendar</p>
                     </div>
                     <div className="p-10 md:p-14 flex flex-col justify-center">
                       <p className="text-xl text-slate-700 mb-8 leading-relaxed font-light">
-                        Practitioner-in-Training sessions focused specifically on neurological assessments, cranial nerves, and primitive reflex integration.
+                        I am studying the Functional Neuro Health model pioneered by Nick Moss — these Practitioner-in-Training sessions focus specifically on neurological assessments, cranial nerves, and primitive reflex integration.
                       </p>
                       <div className="bg-dyad-sky/10 p-6 rounded-2xl border border-dyad-soft/20">
                         <p className="text-sm text-slate-500 italic">
@@ -159,17 +114,21 @@ const BookSession = () => {
                 <div className="bg-dyad-sky/20 rounded-[3rem] border border-dyad-soft/30 overflow-hidden group transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
                     <div className="p-10 md:p-14 flex flex-col justify-center border-r border-dyad-soft/20">
-                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-dyad-dark/40 mb-6">Tier 03</span>
                       <h3 className="text-3xl md:text-4xl font-serif mb-4 text-dyad-dark">Community — Free Access</h3>
                       <div className="flex items-baseline gap-2 mb-8">
                         <span className="text-4xl font-bold text-dyad-accent">Free</span>
-                        <span className="text-dyad-dark/40 font-light">/ 75 min</span>
+                        <span className="text-dyad-dark/40 font-light">/ 60 min</span>
                       </div>
-                      <a href="/schedule?type=free-access">
-                        <Button size="lg" className="w-full bg-dyad-dark text-white hover:bg-dyad-accent font-bold h-14 rounded-full transition-all">
-                          Check Availability
-                        </Button>
-                      </a>
+                      <Button 
+                        size="lg" 
+                        data-cal-link="danielebuatti/fnh-neuro-health-assessment-community-free"
+                        data-cal-namespace="fnh-neuro-health-assessment-community-free"
+                        data-cal-config='{"layout":"month_view"}'
+                        className="w-full bg-dyad-dark text-white hover:bg-dyad-accent font-bold h-14 rounded-full transition-all"
+                      >
+                        Book Free Session
+                      </Button>
+                      <p className="text-dyad-dark/40 text-xs text-center mt-3">Opens booking calendar</p>
                     </div>
                     <div className="p-10 md:p-14 flex flex-col justify-center">
                       <p className="text-xl text-slate-700 mb-6 leading-relaxed font-light">
@@ -205,44 +164,24 @@ const BookSession = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Clinic Locations</h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
-                Find me in Richmond and Toorak.
+                Find me in Toorak.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-10">
-              <FadeIn direction="right">
-                <div className="space-y-6">
-                  <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
-                    <h3 className="text-2xl font-serif text-dyad-dark mb-2">Cherish Health</h3>
-                    <p className="text-slate-500 mb-4">184 Bridge Rd, Richmond VIC 3121</p>
-                    <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
-                      <iframe 
-                        src="https://maps.google.com/maps?q=184%20Bridge%20Rd,%20Richmond%20VIC%203121&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style={{ border: 0 }} 
-                        allowFullScreen 
-                        loading="lazy"
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-              <FadeIn direction="left" delay={0.2}>
-                <div className="space-y-6">
-                  <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
-                    <h3 className="text-2xl font-serif text-dyad-dark mb-2">Toorak Practice</h3>
-                    <p className="text-slate-500 mb-4">685 Toorak Rd, Toorak VIC 3144</p>
-                    <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
-                      <iframe 
-                        src="https://maps.google.com/maps?q=685%20Toorak%20Rd,%20Toorak%20VIC%203144&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style={{ border: 0 }} 
-                        allowFullScreen 
-                        loading="lazy"
-                      ></iframe>
-                    </div>
+            <div className="max-w-xl mx-auto">
+              <FadeIn direction="up">
+                <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/20">
+                  <h3 className="text-2xl font-serif text-dyad-dark mb-2">Toorak Practice</h3>
+                  <p className="text-slate-500 mb-4">685 Toorak Rd, Toorak VIC 3144</p>
+                  <div className="aspect-video rounded-2xl overflow-hidden border border-dyad-soft/10">
+                    <iframe 
+                      src="https://maps.google.com/maps?q=685%20Toorak%20Rd,%20Toorak%20VIC%203144&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                      width="100%" 
+                      height="100%" 
+                      style={{ border: 0 }} 
+                      allowFullScreen 
+                      loading="lazy"
+                    ></iframe>
                   </div>
                 </div>
               </FadeIn>
@@ -307,20 +246,11 @@ const BookSession = () => {
               <FadeIn direction="left" delay={0.2}>
                 <div className="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-sm">
                   <h3 className="text-2xl font-serif mb-6">The Clinics</h3>
-                  <div className="space-y-8">
-                    <div className="flex items-start">
-                      <MapPin className="h-6 w-6 text-dyad-accent mr-4 mt-1" />
-                      <div>
-                        <span className="text-xl font-bold block mb-1">Cherish Health, Richmond</span>
-                        <span className="text-white/50 font-light">184 Bridge Rd, Richmond VIC 3121</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <MapPin className="h-6 w-6 text-dyad-accent mr-4 mt-1" />
-                      <div>
-                        <span className="text-xl font-bold block mb-1">Toorak Practice</span>
-                        <span className="text-white/50 font-light">685 Toorak Rd, Toorak VIC 3144</span>
-                      </div>
+                  <div className="flex items-start">
+                    <MapPin className="h-6 w-6 text-dyad-accent mr-4 mt-1 shrink-0" />
+                    <div>
+                      <span className="text-xl font-bold block mb-1">Toorak Practice</span>
+                      <span className="text-white/50 font-light">685 Toorak Rd, Toorak VIC 3144</span>
                     </div>
                   </div>
                 </div>

@@ -16,14 +16,15 @@ const Index = () => {
     { href: "/", label: "Home" },
     { href: "/book-session", label: "Session Options" },
     { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true },
+    { href: "https://resonance-with-daniele.vercel.app/", label: "RESONANCE CHOIR", isExternal: true },
   ];
 
   const peaceFramework = [
-    { letter: "P", title: "Presence", description: "Establishing a safe, regulated container for the nervous system to settle." },
-    { letter: "E", title: "Embodiment", description: "Tracking internal sensations and somatic signals in real-time." },
-    { letter: "A", title: "Assessment", description: "Neurological testing of pathways, cranial nerves, and realised reflexes." },
-    { letter: "C", title: "Correction", description: "Targeted kinesiology and neuro-balancing to shift stress patterns." },
-    { letter: "E", title: "Expression", description: "Integrating shifts into voice, movement, and authentic action." }
+    { letter: "P", title: "Preliminary Assessment", subtitle: "Map the System", description: "I start by listening to your story and mapping how your system is functioning. Using advanced neurological assessment tools, I identify where your nervous system is holding threat and where communication has broken down." },
+    { letter: "E", title: "Ease the System", subtitle: "Create Safety First", description: "I calm your stress response using proven techniques including breath restoration, vagus nerve activation, and relaxation protocols. Until your nervous system feels safe, no lasting change is possible." },
+    { letter: "A", title: "Align the Hierarchy", subtitle: "Find the Keystone", description: "I identify your nervous system's top priority — the keystone issue driving other symptoms. By working within a structured functional hierarchy, I ensure interventions are applied in the right order." },
+    { letter: "C", title: "Correct", subtitle: "Restore Communication", description: "I correct faulty neurological pathways and restore brain–body communication using precise, evidence-informed techniques. Clients often feel shifts immediately." },
+    { letter: "E", title: "Embed", subtitle: "Build Lasting Resilience", description: "I lock in change with simple practices you can take home — breath work, movement protocols, lifestyle tweaks — to build resilience, not dependency." }
   ];
 
   const testimonials = [
@@ -40,7 +41,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="bg-dyad-background-soft min-h-screen text-slate-900 overflow-x-hidden selection:bg-dyad-accent/20 selection:text-dyad-dark">
+    <div className="bg-dyad-background-soft min-h-screen text-slate-900 selection:bg-dyad-accent/20 selection:text-dyad-dark">
       
       <Header links={navLinks} />
 
@@ -82,7 +83,7 @@ const Index = () => {
 
             <FadeIn delay={0.6}>
               <p className="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto text-dyad-dark/80 leading-relaxed">
-                Brain-based nervous system regulation and somatic integration in <span className="font-semibold text-dyad-dark">Richmond & Toorak</span>.
+                Brain-based nervous system regulation and somatic integration in <span className="font-semibold text-dyad-dark">Toorak</span>.
               </p>
             </FadeIn>
 
@@ -110,9 +111,12 @@ const Index = () => {
             </FadeIn>
             
             <FadeIn delay={1} direction="none">
-              <div className="mt-10 flex items-center justify-center text-xs text-dyad-accent font-bold uppercase tracking-[0.2em] opacity-70">
-                <ShieldCheck className="h-4 w-4 mr-2" />
-                Functional Neuro Health Practitioner (In-Training)
+              <div className="mt-10 flex flex-col items-center text-xs text-dyad-accent font-bold uppercase opacity-70">
+                <div className="flex items-center tracking-[0.2em]">
+                  <ShieldCheck className="h-4 w-4 mr-2" />
+                  Functional Neuro Health Practitioner (In-Training)
+                </div>
+                <span className="text-[10px] tracking-[0.15em] mt-1 opacity-60">Studying the model pioneered by Nick Moss</span>
               </div>
             </FadeIn>
           </div>
@@ -159,7 +163,7 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { icon: Heart, title: "Somatic Kinesiology", desc: "Focus on emotional clearing, root beliefs, and meridian balancing for deep internal safety and subconscious alignment." },
-                { icon: Brain, title: "Functional Neuro Health", desc: "Direct assessment of neurological pathways, cranial nerves, and primitive reflexes to address chronic pain, stress, and performance." },
+                { icon: Brain, title: "Functional Neuro Health", desc: "Direct assessment of neurological pathways, cranial nerves, and primitive reflexes, based on the model pioneered by Nick Moss." },
                 { icon: Mic2, title: "Vocal & Performance", desc: "Specialised support for vocal freedom, diaphragm release, and embodied expression for performers and leaders." }
               ].map((service, i) => (
                 <FadeIn key={i} delay={0.2 * i} direction="up">
@@ -178,40 +182,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Richmond Clinic Section */}
-        <section className="bg-white py-16 md:py-24">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <FadeIn direction="right">
-                <div className="relative">
-                  <div className="inline-block px-4 py-1.5 rounded-full bg-dyad-accent/10 text-dyad-accent text-[10px] font-black uppercase tracking-[0.2em] mb-6">New Location</div>
-                  <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-6 leading-tight">Now Practising at Cherish Health, Richmond</h2>
-                  <p className="text-xl text-slate-700 mb-4 leading-relaxed font-light">
-                    I am excited to bring my practice to the integrated health hub in Richmond. 
-                  </p>
-                  <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                    Alongside standard Kinesiology, I am now offering <strong>Neuro-Health Assessments</strong> using the FNH framework—a brain-based approach to chronic pain, stress, and performance.
-                  </p>
-                  <a href="/book-session">
-                    <Button className="bg-dyad-dark hover:bg-dyad-accent text-white rounded-full px-10 h-14 text-base font-bold transition-all hover:shadow-xl hover:-translate-y-1">
-                      View Richmond Availability
-                    </Button>
-                  </a>
-                </div>
-              </FadeIn>
-              <FadeIn direction="left" delay={0.3}>
-                <div className="relative aspect-square md:aspect-[4/5] bg-dyad-sky/20 rounded-[2rem] border border-dyad-soft/20 flex items-center justify-center group overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-dyad-accent/5 to-transparent"></div>
-                  <MapPin className="h-24 w-24 text-dyad-accent opacity-10 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700" />
-                  <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-white/20 shadow-lg">
-                    <p className="text-dyad-dark font-serif text-lg font-bold">Cherish Health</p>
-                    <p className="text-slate-500 text-sm">Richmond, VIC</p>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
 
         {/* PEACE Framework Section */}
         <section id="peace-method" className="bg-dyad-sky/10 py-16 md:py-24 border-y border-dyad-soft/10">
@@ -229,10 +199,11 @@ const Index = () => {
               {peaceFramework.map((item, i) => (
                 <FadeIn key={i} delay={0.1 * i} direction="up">
                   <div className="bg-white p-6 rounded-3xl shadow-sm border border-dyad-soft/10 flex flex-col items-center text-center md:items-start md:text-left transition-all hover:shadow-xl hover:-translate-y-2 h-full">
-                    <div className="w-12 h-12 bg-dyad-accent text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-5 shadow-lg shadow-dyad-accent/20">
+                    <div className="w-12 h-12 bg-dyad-accent text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-4 shadow-lg shadow-dyad-accent/20 flex-shrink-0">
                       {item.letter}
                     </div>
-                    <h3 className="text-lg font-bold text-dyad-dark mb-2">{item.title}</h3>
+                    <h3 className="text-lg font-bold text-dyad-dark mb-1">{item.title}</h3>
+                    <p className="text-xs uppercase tracking-widest text-dyad-accent/70 font-semibold mb-3">{item.subtitle}</p>
                     <p className="text-sm text-slate-500 leading-relaxed font-light">{item.description}</p>
                   </div>
                 </FadeIn>
@@ -296,6 +267,31 @@ const Index = () => {
                     </Button>
                   </a>
                 </div>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Booking CTA */}
+        <section className="bg-dyad-dark py-20 md:py-28">
+          <div className="container mx-auto px-6 max-w-4xl text-center">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Begin Your Journey</h2>
+              <p className="text-xl text-white/60 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you are ready to book a full assessment or want to explore the work through a community session, the next step is simple.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="/book-session">
+                  <Button size="lg" className="bg-dyad-accent hover:bg-white hover:text-dyad-dark text-white font-bold px-12 h-16 rounded-full text-lg transition-all hover:shadow-xl hover:-translate-y-1">
+                    Book a Session
+                    <ArrowRight className="ml-3 h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="#peace-method">
+                  <Button variant="outline" size="lg" className="border-white/40 text-white bg-transparent hover:bg-white hover:text-dyad-dark font-bold px-12 h-16 rounded-full text-lg transition-all">
+                    The PEACE Method
+                  </Button>
+                </a>
               </div>
             </FadeIn>
           </div>

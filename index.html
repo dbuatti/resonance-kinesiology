@@ -32,6 +32,7 @@
       
       Cal("init", "fnh-neuro-75", {origin:"https://app.cal.com"});
       Cal("init", "fnh-kinesiology", {origin:"https://app.cal.com"});
+      Cal("init", "fnh-neuro-health-assessment-community-free", {origin:"https://app.cal.com"});
       
       Cal.ns["fnh-neuro-75"]("ui", {
         "styles": {"branding": {"brandColor": "#1E3261"}},
@@ -40,6 +41,12 @@
       });
 
       Cal.ns["fnh-kinesiology"]("ui", {
+        "styles": {"branding": {"brandColor": "#1E3261"}},
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+
+      Cal.ns["fnh-neuro-health-assessment-community-free"]("ui", {
         "styles": {"branding": {"brandColor": "#1E3261"}},
         "hideEventTypeDetails": false,
         "layout": "month_view"

@@ -33,18 +33,18 @@ const Schedule = () => {
       case 'community-discounted':
         return {
           title: "FNH Neuro-Health Assessment (Clinical Study)",
-          description: "1 hour 15 minutes @ A$120.00. Introductory Case Study Rate focusing on neurological pathways, cranial nerves, and primitive reflex integration."
+          description: "1 hour @ A$120.00. Introductory Case Study Rate focusing on neurological pathways, cranial nerves, and primitive reflex integration."
         };
       case 'free-access':
         return {
           title: "Community — Fully Subsidised Access",
-          description: "1 hour 15 minutes. Integrity & Access Initiative. A fully subsidised session for those who would otherwise not be able to access this clinical work."
+          description: "1 hour. Integrity & Access Initiative. A fully subsidised session for those who would otherwise not be able to access this clinical work."
         };
       case 'full-fee':
       default:
         return {
           title: "Full Price Session (Neurological Kinesiology)",
-          description: "1 hour 15 minutes @ A$100.00. A comprehensive clinical session integrating professional Kinesiology with somatic tracking and nervous system regulation."
+          description: "1 hour @ A$100.00. A comprehensive clinical session integrating professional Kinesiology with somatic tracking and nervous system regulation."
         };
     }
   };

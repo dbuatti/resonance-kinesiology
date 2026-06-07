@@ -47,6 +47,7 @@ const Footer = () => {
               <li><Link to="/" className="text-white/80 hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/book-session" className="text-white/80 hover:text-white transition-colors">Session Options</Link></li>
               <li><a href="https://www.danielebuatti.com/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">My Music Work</a></li>
+              <li><a href="https://resonance-with-daniele.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">RESONANCE CHOIR</a></li>
             </ul>
           </div>
 
@@ -64,7 +65,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start text-white/80">
                 <MapPin className="h-5 w-5 mr-3 text-dyad-soft mt-1" />
-                <span>Richmond & Toorak<br />Melbourne, VIC</span>
+                <span>Toorak<br />Melbourne, VIC</span>
               </div>
             </div>
           </div>
