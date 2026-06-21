@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Leaf, Users, Mail, MapPin, Clock, Phone, CheckCircle2, Coffee, Sparkles, HelpCircle, Music, ExternalLink } from "lucide-react";
+import { ArrowRight, Leaf, Mail, MapPin, Clock, Coffee, Sparkles, HelpCircle, Music } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -74,7 +74,7 @@ const BookSession = () => {
                 <div className="bg-white rounded-[3rem] shadow-2xl border border-dyad-soft/10 overflow-hidden group hover:border-dyad-accent/30 transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
                     <div className="bg-dyad-accent p-10 md:p-14 text-white flex flex-col justify-center">
-                      <h3 className="text-3xl md:text-4xl font-serif mb-4">FNH Neuro-Health Assessment</h3>
+                      <h2 className="text-3xl md:text-4xl font-serif mb-4">FNH Neuro-Health Assessment</h2>
                       <div className="flex items-baseline gap-2 mb-2">
                         <span className="text-4xl font-bold text-white">$70</span>
                         <span className="text-white/60 font-light line-through ml-2">$120</span>
@@ -86,8 +86,8 @@ const BookSession = () => {
                       {/* Cal.com Popup Trigger */}
                       <Button 
                         size="lg" 
-                        data-cal-link="danielebuatti/fnh-neuro-75"
-                        data-cal-namespace="fnh-neuro-75"
+                        data-cal-link="danielebuatti/fnh-neuro"
+                        data-cal-namespace="fnh-neuro"
                         data-cal-config='{"layout":"month_view"}'
                         className="w-full bg-dyad-dark text-white hover:bg-white hover:text-dyad-dark font-bold h-14 rounded-full transition-all"
                       >
@@ -114,7 +114,7 @@ const BookSession = () => {
                 <div className="bg-dyad-sky/20 rounded-[3rem] border border-dyad-soft/30 overflow-hidden group transition-all duration-500">
                   <div className="grid md:grid-cols-[1fr_1.5fr] items-stretch">
                     <div className="p-10 md:p-14 flex flex-col justify-center border-r border-dyad-soft/20">
-                      <h3 className="text-3xl md:text-4xl font-serif mb-4 text-dyad-dark">Community — Free Access</h3>
+                      <h2 className="text-3xl md:text-4xl font-serif mb-4 text-dyad-dark">Community — Free Access</h2>
                       <div className="flex items-baseline gap-2 mb-8">
                         <span className="text-4xl font-bold text-dyad-accent">Free</span>
                         <span className="text-dyad-dark/40 font-light">/ 60 min</span>

@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ links, className, logoText = '✦ Reson
         {/* Mobile Navigation */}
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="hover:bg-dyad-soft/30 rounded-full">
+            <Button variant="ghost" size="icon" className="hover:bg-dyad-soft/30 rounded-full" aria-label="Open navigation menu">
               <Menu className="h-6 w-6 text-dyad-dark" />
             </Button>
           </SheetTrigger>
@@ -100,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ links, className, logoText = '✦ Reson
               <div className="p-6 border-b border-dyad-soft/20 flex justify-between items-center">
                 <span className="font-serif font-bold text-dyad-dark text-lg">Menu</span>
                 <SheetClose asChild>
-                  <Button variant="ghost" size="icon" className="rounded-full">
+                  <Button variant="ghost" size="icon" className="rounded-full" aria-label="Close navigation menu">
                     <X className="h-6 w-6" />
                   </Button>
                 </SheetClose>

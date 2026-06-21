@@ -31,7 +31,7 @@ const states = [
     id: 'tense',
     label: 'Physically Tense',
     icon: Brain,
-    color: 'bg-slate-400',
+    color: 'bg-dyad-dark/50',
     tip: 'Your body is holding a pattern. Try "gentle humming": the vibration of your own voice can help stimulate the vagus nerve and signal safety to the brain.'
   }
 ];

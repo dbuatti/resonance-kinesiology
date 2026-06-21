@@ -30,17 +30,10 @@
     <script type="text/javascript">
       (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
       
-      Cal("init", "fnh-neuro-75", {origin:"https://app.cal.com"});
-      Cal("init", "fnh-kinesiology", {origin:"https://app.cal.com"});
+      Cal("init", "fnh-neuro", {origin:"https://app.cal.com"});
       Cal("init", "fnh-neuro-health-assessment-community-free", {origin:"https://app.cal.com"});
       
-      Cal.ns["fnh-neuro-75"]("ui", {
-        "styles": {"branding": {"brandColor": "#1E3261"}},
-        "hideEventTypeDetails": false,
-        "layout": "month_view"
-      });
-
-      Cal.ns["fnh-kinesiology"]("ui", {
+      Cal.ns["fnh-neuro"]("ui", {
         "styles": {"branding": {"brandColor": "#1E3261"}},
         "hideEventTypeDetails": false,
         "layout": "month_view"
@@ -81,8 +74,7 @@
         "longitude": "144.999994"
       },
       "sameAs": [
-        "https://www.facebook.com/yourpage",
-        "https://www.instagram.com/yourprofile"
+        "https://www.instagram.com/resonance.with.daniele"
       ],
       "hasMap": "https://www.google.com/maps/place/685+Toorak+Rd,+Toorak+VIC+3144",
       "image": "https://resonance-kinesiology.vercel.app/daniele-buatti-hero.jpeg",

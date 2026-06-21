@@ -1,9 +1,7 @@
 "use client";
 
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,13 +27,6 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="p-2 rounded-full bg-white/10 hover:bg-dyad-accent transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -74,8 +65,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>© {currentYear} Resonance Kinesiology. All rights reserved.</p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

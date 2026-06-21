@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, MapPin, Gift, ShieldCheck, Sparkles, Quote, Music } from "lucide-react";
+import { ArrowRight, Brain, Heart, Mic2, Gift, ShieldCheck, Sparkles, Quote, Music } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -252,7 +252,7 @@ const Index = () => {
                 <div className="relative z-10">
                   <div className="flex items-center justify-center mb-6">
                     <Gift className="h-8 w-8 text-dyad-accent mr-3" />
-                    <h3 className="text-3xl md:text-4xl font-serif text-dyad-dark font-bold">Gift a Session</h3>
+                    <h2 className="text-3xl md:text-4xl font-serif text-dyad-dark font-bold">Gift a Session</h2>
                   </div>
                   <p className="text-xl text-slate-700 mb-10 leading-relaxed font-light">
                     Give the gift of neurological regulation and somatic balance to someone you care about.

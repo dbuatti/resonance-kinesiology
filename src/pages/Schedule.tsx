@@ -12,39 +12,32 @@ const Schedule = () => {
   const appointmentType = searchParams.get('type');
   const [isLoading, setIsLoading] = React.useState(true);
 
-  const isCalCom = appointmentType === 'community-discounted' || appointmentType === 'full-fee' || !appointmentType;
+  const isCalCom = appointmentType !== 'free-access';
 
   // Get the appropriate iframe URL based on the appointment type
   const getIframeUrl = () => {
     switch(appointmentType) {
       case 'community-discounted':
-        return "https://cal.com/danielebuatti/fnh-neuro-75?embed=true";
-      case 'free-access':
-        return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=86951880";
       case 'full-fee':
       default:
-        return "https://cal.com/danielebuatti/fnh-kinesiology?embed=true";
+        return "https://cal.com/danielebuatti/fnh-neuro?embed=true";
+      case 'free-access':
+        return "https://app.acuityscheduling.com/schedule.php?owner=22925011&appointmentType=86951880";
     }
   };
 
   // Get the session description based on the appointment type
   const getSessionDescription = () => {
     switch(appointmentType) {
-      case 'community-discounted':
-        return {
-          title: "FNH Neuro-Health Assessment (Clinical Study)",
-          description: "1 hour @ A$120.00. Introductory Case Study Rate focusing on neurological pathways, cranial nerves, and primitive reflex integration."
-        };
       case 'free-access':
         return {
           title: "Community — Fully Subsidised Access",
           description: "1 hour. Integrity & Access Initiative. A fully subsidised session for those who would otherwise not be able to access this clinical work."
         };
-      case 'full-fee':
       default:
         return {
-          title: "Full Price Session (Neurological Kinesiology)",
-          description: "1 hour @ A$100.00. A comprehensive clinical session integrating professional Kinesiology with somatic tracking and nervous system regulation."
+          title: "FNH Neuro-Health Assessment",
+          description: "1 hour @ A$70.00. New client rate focusing on neurological pathways, cranial nerves, and primitive reflex integration."
         };
     }
   };
