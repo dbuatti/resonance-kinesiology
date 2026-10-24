@@ -62,6 +62,20 @@ const Footer = () => {
           </div>
         </div>
 
+        <div className="mb-12 text-sm text-white/60">
+          <span className="uppercase tracking-widest text-white/40">Also from Daniele</span>
+          <span className="mx-3 text-white/30" aria-hidden="true">·</span>
+          <a
+            href="https://danielebuatti.com/pianobyheart"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/80 hover:text-white underline underline-offset-4 decoration-white/30 transition-colors"
+          >
+            Piano by Heart
+          </a>
+          {" "}— live improvised piano evenings to rest and reset.
+        </div>
+
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>© {currentYear} Resonance Kinesiology. All rights reserved.</p>
           <div className="flex space-x-6">
