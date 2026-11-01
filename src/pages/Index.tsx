@@ -263,7 +263,9 @@ const Index = () => {
           <div className="container mx-auto px-6 max-w-3xl text-center">
             <FadeIn>
               <a 
-                href="/guide" 
+                href="https://kinesiology-app.vercel.app/guide" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center text-dyad-accent hover:text-dyad-dark font-semibold text-lg underline underline-offset-4 transition-colors"
               >
                 Read the full guide: What happens in a session, pricing & timeline
