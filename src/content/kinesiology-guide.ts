@@ -125,7 +125,7 @@ export const guideContent: GuideContent = {
     headline: "Some things don't respond to trying harder.",
     subline:
       "FNH kinesiology with Daniele Buatti in Toorak. Hands-on work for your nervous system — jaw tension, headaches, breath, stress patterns.",
-    line: "A plain-language guide to what happens in a session, what you leave with, and how long it takes.",
+    line: "What happens in a session, what you leave with, and how long it takes.",
     scrollCue: "Scroll",
   },
 
@@ -226,7 +226,7 @@ export const guideContent: GuideContent = {
       heading: "What you leave with",
       intro: "This is the part most people don't expect.",
       bullets: [
-        "Written notes after every session, by email, in plain language. What we found, what we did, what it might mean.",
+        "Written notes after every session, by email. What we found, what we did, what it might mean.",
         "One or two small practices. Not a program. Two things you'll actually do.",
         "Numbers we track over time, so progress isn't only a feeling.",
         "A thread that carries forward. I keep detailed records, so each session starts from where the last one left off. You never have to re-explain.",
