@@ -165,3 +165,233 @@
     min-width: 100%; /* Ensure iframe fills width */
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   /guide — digital brochure
+   Everything here is scoped under `.guide` so it can't leak into the app or
+   the marketing landing page. Only `@page` is inherently global, and it is
+   set inside the print block below for this route's A4 layout.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Scroll progress — a 2px hairlines at the very top, brand-coloured. */
+.guide-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: 3px;
+  pointer-events: none;
+  background: hsl(var(--border) / 0.5);
+}
+.guide-progress__fill {
+  height: 100%;
+  width: 0;
+  background: var(--dawn-rose);
+  transition: width 120ms linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide-progress__fill { transition: none; }
+}
+
+/* Dawn brand kit — scoped to .guide only */
+.guide {
+  --dawn-ground: #FBF5F0;
+  --dawn-ground-dark: #1C1D33;
+  --dawn-surface: #FFFFFF;
+  --dawn-surface-dark: #25273F;
+  --dawn-surface-warm: #F8E6DF;
+  --dawn-surface-warm-dark: #2E2A44;
+  --dawn-ink: #24264A;
+  --dawn-ink-dark: #F3EAE6;
+  --dawn-ink-muted: #5E5A78;
+  --dawn-ink-muted-dark: #A9A3B8;
+  --dawn-accent: #7A4A6E;
+  --dawn-accent-dark: #E8B4BF;
+  --dawn-peach: #F4D4CB;
+  --dawn-rose: #DFABB8;
+  --dawn-lavender: #B6A2C5;
+  --dawn-sky: #B9C5D5;
+  --dawn-sky-dark: #8FA0BA;
+  --dawn-hairline: #E7DCD6;
+  --dawn-hairline-dark: #34364F;
+  --dawn-placeholder-bg: #FCE7B8;
+  --dawn-placeholder-text: #5A4A22;
+  --ink: #24264A;
+  --ground: #FBF5F0;
+}
+
+.guide.dark { color-scheme: dark; }
+
+/* Subtle warm gradient on page bg */
+.guide.light { background: linear-gradient(180deg, var(--dawn-ground) 0%, var(--dawn-surface) 100%); }
+.guide.dark { background: linear-gradient(180deg, var(--dawn-ground-dark) 0%, var(--dawn-surface-dark) 100%); }
+
+/* CTA accent glow on hover */
+.guide-cta:hover { filter: brightness(1.15); box-shadow: 0 0 0 4px var(--dawn-peach); }
+.guide[data-motion="on"] .guide-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.guide[data-motion="on"] .guide-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide .guide-reveal,
+  .guide[data-motion="on"] .guide-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Visible only on paper. */
+.guide-print-only { display: none; }
+
+/* ── Print / Save as PDF ───────────────────────────────────────────────── */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 18mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .guide {
+    background: #fff !important;
+    color: #000 !important;
+    overflow: visible !important;
+    min-height: 0 !important;
+  }
+
+  /* Chrome that has no meaning on a page. */
+  .guide .guide-progress,
+  .guide .guide-noprint,
+  .guide .guide-cta-strip {
+    display: none !important;
+  }
+
+  .guide .guide-print-only { display: block !important; }
+
+  /* Flatten every tinted surface to paper. */
+  .guide section,
+  .guide footer,
+  .guide div {
+    background: transparent !important;
+  }
+  .guide *,
+  .guide *::before,
+  .guide *::after {
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Reveal state must never hide content on paper. */
+  .guide .guide-reveal,
+  .guide[data-motion="on"] .guide-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Cover sits on its own first page, optically centred on the sheet. */
+  .guide .guide-cover {
+    min-height: 258mm !important;
+    padding: 0 !important;
+    justify-content: center;
+    gap: 14mm;
+    page-break-after: avoid;
+  }
+  .guide .guide-cover > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  /* The scroll cue is meaningless on paper. */
+  .guide .guide-scroll-cue { display: none !important; }
+
+  /* One panel per page where it fits. */
+  .guide .guide-panel {
+    page-break-before: always;
+    page-break-inside: avoid;
+    border-top: 0 !important;
+    padding: 0 !important;
+  }
+  .guide .guide-panel > div { padding: 0 !important; max-width: none !important; }
+
+  /* Type: compact, black, no display sizes. */
+  .guide h1 {
+    font-size: 26pt !important;
+    line-height: 1.08 !important;
+    max-width: 12ch !important;
+    margin: 0 0 6mm !important;
+  }
+  .guide h2 {
+    font-size: 15pt !important;
+    line-height: 1.2 !important;
+    margin: 0 0 4mm !important;
+  }
+  .guide h3 { font-size: 11pt !important; }
+  .guide p,
+  .guide li,
+  .guide dd,
+  .guide dt,
+  .guide figcaption {
+    font-size: 11pt !important;
+    line-height: 1.45 !important;
+    max-width: 70ch !important;
+  }
+  /* The one serif pull-line keeps its hierarchy on paper. */
+  .guide p.font-serif {
+    font-size: 15pt !important;
+    line-height: 1.3 !important;
+  }
+  .guide footer > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Placeholder highlights stay legible in mono. */
+  .guide mark {
+    background: transparent !important;
+    color: #000 !important;
+    outline: 1px dashed #666;
+    outline-offset: 1px;
+  }
+
+  /* Photo slots print as a bordered box, never a broken image. */
+  .guide figure,
+  .guide [role="img"] {
+    page-break-inside: avoid;
+  }
+  .guide [role="img"] {
+    height: 55mm !important;
+    aspect-ratio: auto !important;
+    border: 1pt dashed #999 !important;
+    background: transparent !important;
+  }
+
+  /* Panels with a photo keep the booklet's two-column setting on paper. */
+  .guide .guide-panel-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 10mm !important;
+    align-items: start !important;
+  }
+  .guide .guide-panel-grid > figure {
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  .guide a[href^="mailto"] { text-decoration: underline; }
+}

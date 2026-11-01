@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Guide from "./pages/Guide";
 import BookSession from "./pages/BookSession";
 import Schedule from "./pages/Schedule";
 import NotFound from "./pages/NotFound";
@@ -23,6 +24,7 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/guide" element={<Guide />} />
             <Route path="/book-session" element={<BookSession />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="*" element={<NotFound />} />

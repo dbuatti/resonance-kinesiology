@@ -410,7 +410,7 @@ const Index = () => {
           <span className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:ml-auto">
             <a href="mailto:daniele.kinesiology@gmail.com" className="hover:text-foreground">daniele.kinesiology@gmail.com</a>
             <a href="tel:+61424174067" className="hover:text-foreground">0424 174 067</a>
-            <a href="https://studio.danielebuatti.com/guide" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Session guide</a>
+            <a href="/guide" className="hover:text-foreground">Session guide</a>
             <a href="https://resonance.danielebuatti.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-foreground">
               Resonance Choir <ArrowUpRight size={12} />
             </a>
