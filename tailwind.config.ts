@@ -19,15 +19,29 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['"Playfair Display"', 'serif'],
+        serif: ['"Newsreader"', 'serif'],
+        sans: ['"Inter"', 'sans-serif'],
       },
       colors: {
-        // Custom Palette inspired by the resonance image
-        'dyad-dark': '#1E3261', // Deep Indigo from the darker cloud areas
-        'dyad-accent': '#D46A9B', // Vibrant Resonance Pink from the clouds
-        'dyad-soft': '#A5B4FC', // Soft Periwinkle/Lavender
-        'dyad-sky': '#E0F2FE', // Light Sky Blue
-        'dyad-background-soft': '#FDFCFB', // Very soft cream/white
+        // Dawn Brand Kit — Calm, warm, editorial
+        'ground': '#FBF5F0',
+        'surface': '#FFFFFF',
+        'surface-warm': '#F8E6DF',
+        'ink': '#24264A',
+        'ink-muted': '#5E5A78',
+        'accent': '#7A4A6E',
+        'dawn-peach': '#F4D4CB',
+        'dawn-rose': '#DFABB8',
+        'dawn-lavender': '#B6A2C5',
+        'dawn-sky': '#B9C5D5',
+        'hairline': '#E7DCD6',
+        'placeholder': '#FCE7B8',
+        // Legacy dyad (for gradual migration)
+        'dyad-dark': '#24264A',
+        'dyad-accent': '#7A4A6E',
+        'dyad-soft': '#B9C5D5',
+        'dyad-sky': '#F8E6DF',
+        'dyad-background-soft': '#FBF5F0',
 
         // Existing Shadcn colors
         border: "hsl(var(--border))",

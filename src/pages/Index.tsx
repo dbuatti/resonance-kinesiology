@@ -7,6 +7,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import SomaticCheckIn from "@/components/SomaticCheckIn";
+import { injectServiceSchema } from "@/utils/structured-data";
+import { useEffect } from "react";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 const GIFT_CARD_URL = "https://buy.stripe.com/8x200lfmagH81vS4PU53O05";
@@ -15,6 +17,8 @@ const Index = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/book-session", label: "Session Options" },
+    { href: "/resources", label: "Resources" },
+    { href: "/blog", label: "Journal" },
     { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true },
     { href: "https://resonance-with-daniele.vercel.app/", label: "RESONANCE CHOIR", isExternal: true },
   ];
@@ -39,6 +43,48 @@ const Index = () => {
       role: "Performance Artist"
     }
   ];
+
+  const services = [
+    {
+      name: "FNH Neuro-Health Assessment",
+      description: "60-minute session focusing on neurological pathways, cranial nerves, and primitive reflex integration. Practitioner-in-Training clinical study rate.",
+      serviceType: "Functional Neuro Health",
+      areaServed: "Toorak, Melbourne, Victoria",
+      price: "70",
+      currency: "AUD"
+    },
+    {
+      name: "Community — Free Access Session",
+      description: "Fully subsidised 60-minute neuro-somatic session for those who would otherwise not be able to access this clinical work. Released weekly.",
+      serviceType: "Community Health",
+      areaServed: "Toorak, Melbourne, Victoria",
+      price: "0",
+      currency: "AUD"
+    },
+    {
+      name: "Somatic Kinesiology",
+      description: "Focus on emotional clearing, root beliefs, and meridian balancing for deep internal safety and subconscious alignment.",
+      serviceType: "Kinesiology",
+      areaServed: "Toorak, Melbourne, Victoria"
+    },
+    {
+      name: "Functional Neuro Health",
+      description: "Direct assessment of neurological pathways, cranial nerves, and primitive reflexes, based on the model pioneered by Nick Moss.",
+      serviceType: "Functional Neurology",
+      areaServed: "Toorak, Melbourne, Victoria"
+    },
+    {
+      name: "Vocal & Performance Coaching",
+      description: "Specialised support for vocal freedom, diaphragm release, and embodied expression for performers and leaders.",
+      serviceType: "Vocal Coaching",
+      areaServed: "Toorak, Melbourne, Victoria"
+    }
+  ];
+
+  // Inject Service structured data for SEO
+  useEffect(() => {
+    injectServiceSchema(services);
+  }, [services]);
 
   return (
     <div className="bg-dyad-background-soft min-h-screen text-slate-900 selection:bg-dyad-accent/20 selection:text-dyad-dark">
@@ -209,6 +255,21 @@ const Index = () => {
                 </FadeIn>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Guide CTA */}
+        <section className="py-12 md:py-16 bg-dyad-sky/5">
+          <div className="container mx-auto px-6 max-w-3xl text-center">
+            <FadeIn>
+              <a 
+                href="/guide" 
+                className="inline-flex items-center text-dyad-accent hover:text-dyad-dark font-semibold text-lg underline underline-offset-4 transition-colors"
+              >
+                Read the full guide: What happens in a session, pricing & timeline
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </FadeIn>
           </div>
         </section>
 

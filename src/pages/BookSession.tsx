@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import { showSuccess } from "@/utils/toast";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { injectFAQSchema } from "@/utils/structured-data";
+import { useEffect } from "react";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
 
@@ -14,6 +16,8 @@ const BookSession = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/book-session", label: "Session Options" },
+    { href: "/resources", label: "Resources" },
+    { href: "/blog", label: "Journal" },
     { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true },
     { href: "https://resonance-with-daniele.vercel.app/", label: "RESONANCE CHOIR", isExternal: true },
   ];
@@ -41,6 +45,11 @@ const BookSession = () => {
       a: "Yes, neuro-somatic work is excellent for children, particularly for primitive reflex integration and emotional regulation. Please contact me directly to discuss sessions for minors."
     }
   ];
+
+  // Inject FAQ structured data for SEO
+  useEffect(() => {
+    injectFAQSchema(faqs);
+  }, [faqs]);
 
   return (
     <div className="bg-dyad-background-soft min-h-screen text-slate-900 selection:bg-dyad-accent/20">

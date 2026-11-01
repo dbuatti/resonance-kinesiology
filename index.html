@@ -17,13 +17,15 @@
     <meta name="city" content="Toorak" />
     <meta name="country" content="Australia" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA4_MEASUREMENT_ID%"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', '%VITE_GA4_MEASUREMENT_ID%', {
+        send_page_view: false
+      });
     </script>
 
     <!-- Cal.com embed snippet (Modal Configuration) -->
@@ -66,7 +68,7 @@
       },
       "telephone": "+61424174067",
       "email": "daniele.kinesiology@gmail.com",
-      "url": "https://resonance-kinesiology.vercel.app/",
+      "url": "https://kinesiology.danielebuatti.com/",
       "openingHours": "Mo,Tu,We,Th,Fr 09:00-17:00",
       "geo": {
         "@type": "GeoCoordinates",
@@ -77,7 +79,7 @@
         "https://www.instagram.com/resonance.with.daniele"
       ],
       "hasMap": "https://www.google.com/maps/place/685+Toorak+Rd,+Toorak+VIC+3144",
-      "image": "https://resonance-kinesiology.vercel.app/daniele-buatti-hero.jpeg",
+      "image": "https://kinesiology.danielebuatti.com/daniele-buatti-hero.jpeg",
       "priceRange": "$$",
       "areaServed": [
         {
@@ -125,10 +127,10 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://resonance-kinesiology.vercel.app/" />
+    <meta property="og:url" content="https://kinesiology.danielebuatti.com/" />
     <meta property="og:title" content="Daniele Buatti | Kinesiologist - Toorak Kinesiology" />
     <meta property="og:description" content="Daniele Buatti offers expert kinesiology in Toorak, Victoria. Specialising in nervous system regulation, emotional clarity, and somatic awareness. Book your session today." />
-    <meta property="og:image" content="https://resonance-kinesiology.vercel.app/resonance-background-horizontal.png" />
+    <meta property="og:image" content="https://kinesiology.danielebuatti.com/resonance-background-horizontal.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Daniele Buatti | Kinesiologist - Cloud background with ethereal atmosphere" />
@@ -137,14 +139,14 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://resonance-kinesiology.vercel.app/" />
+    <meta property="twitter:url" content="https://kinesiology.danielebuatti.com/" />
     <meta property="twitter:title" content="Daniele Buatti | Kinesiologist" />
     <meta property="twitter:description" content="Expert kinesiology in Toorak, Victoria. Nervous system regulation, emotional clarity, and somatic awareness sessions. Book now." />
-    <meta property="twitter:image" content="https://resonance-kinesiology.vercel.app/resonance-background-horizontal.png" />
+    <meta property="twitter:image" content="https://kinesiology.danielebuatti.com/resonance-background-horizontal.png" />
     <meta property="twitter:image:alt" content="Daniele Buatti | Kinesiologist - Cloud background with ethereal atmosphere" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://resonance-kinesiology.vercel.app/" />
+    <link rel="canonical" href="https://kinesiology.danielebuatti.com/" />
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
