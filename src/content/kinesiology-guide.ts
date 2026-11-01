@@ -15,7 +15,7 @@ import { CALCOM_CONFIG, PROFILE_IMAGE_URL } from "@/config/integrations";
 export const BOOKING_URL = CALCOM_CONFIG.BOOKING_URL;
 
 /** Shown as a mailto link in panel 10. */
-export const CONTACT_EMAIL = "info@danielebuatti.com";
+export const CONTACT_EMAIL = "daniele.kinesiology@gmail.com";
 
 /** Optional practitioners panel — off by default. */
 export const SHOW_PRACTITIONERS_PANEL = false;
