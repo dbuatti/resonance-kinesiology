@@ -456,18 +456,18 @@ export default function KinesiologyGuidePage() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-[#FBF5F0]/0.55 dark:bg-[#1C1D33]/0.75" aria-hidden="true" />
+          <div className="absolute inset-0 bg-[#FBF5F0]/0.75 dark:bg-[#1C1D33]/0.85" aria-hidden="true" />
           <div className="relative mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 md:py-24">
             <h1
               id="cover-heading"
-              className="font-serif text-[42px] font-light leading-[1.04] tracking-[-0.025em] text-ink sm:text-[60px] lg:text-[72px]"
+              className="font-serif text-[42px] font-light leading-[1.04] tracking-[-0.025em] text-ink sm:text-[60px] lg:text-[72px] [text-shadow:0_1px_2px_rgba(251,245,240,0.8)]"
             >
               {cover.headline}
             </h1>
-            <p className="mt-7 max-w-[52ch] text-[19px] leading-[1.55] text-ink sm:text-[21px]">
+            <p className="mt-7 max-w-[52ch] text-[19px] leading-[1.55] text-ink sm:text-[21px] [text-shadow:0_1px_2px_rgba(251,245,240,0.8)]">
               {cover.subline}
             </p>
-            <p className="mt-3 max-w-[52ch] text-[18px] leading-[1.6] text-ink-muted">
+            <p className="mt-3 max-w-[52ch] text-[18px] leading-[1.6] text-ink-muted [text-shadow:0_1px_2px_rgba(251,245,240,0.6)]">
               {cover.line}
             </p>
           </div>
