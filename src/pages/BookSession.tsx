@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import { showSuccess } from "@/utils/toast";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { injectFAQSchema } from "@/utils/structured-data";
+import { injectFAQSchema, removeFAQSchema } from "@/utils/structured-data";
 import { useEffect } from "react";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
@@ -49,6 +49,7 @@ const BookSession = () => {
   // Inject FAQ structured data for SEO
   useEffect(() => {
     injectFAQSchema(faqs);
+    return () => removeFAQSchema();
   }, [faqs]);
 
   return (

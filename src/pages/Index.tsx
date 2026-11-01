@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import SomaticCheckIn from "@/components/SomaticCheckIn";
-import { injectServiceSchema } from "@/utils/structured-data";
+import { injectServiceSchema, removeServiceSchema } from "@/utils/structured-data";
 import { useEffect } from "react";
 
 const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
@@ -84,6 +84,7 @@ const Index = () => {
   // Inject Service structured data for SEO
   useEffect(() => {
     injectServiceSchema(services);
+    return () => removeServiceSchema();
   }, [services]);
 
   return (
