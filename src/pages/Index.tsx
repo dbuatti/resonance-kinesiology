@@ -1,53 +1,85 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Brain, Heart, Mic2, Gift, ShieldCheck, Sparkles, Quote, Music } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FadeIn from "@/components/FadeIn";
-import SomaticCheckIn from "@/components/SomaticCheckIn";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CALCOM_CONFIG, PROFILE_IMAGE_URL } from "@/config/integrations";
+import { ArrowRight, ArrowUpRight, Clock, MapPin, Shirt, Wind } from "lucide-react";
+import { BrandLogo, BrandStar } from "@/components/layout/BrandLogo";
+import { cn } from "@/lib/utils";
 import { injectServiceSchema, removeServiceSchema } from "@/utils/structured-data";
-import { useEffect } from "react";
+import { useEffect as useEffect2 } from "react";
 
-const MUSIC_WORK_URL = "https://www.danielebuatti.com/";
-const GIFT_CARD_URL = "https://buy.stripe.com/8x200lfmagH81vS4PU53O05";
+const BookButton = ({ className = "", size = "lg" }: { className?: string; size?: "lg" | "sm" }) => (
+  <Button
+    asChild
+    className={cn(
+      "group gap-2 rounded-full bg-brand font-normal text-white !shadow-[0_8px_24px_-12px_hsl(var(--brand)/0.55)] hover:bg-brand hover:brightness-125 dark:text-background",
+      size === "lg" ? "h-12 px-6 text-[15px]" : "h-9 px-4 text-[13px]",
+      className
+    )}
+  >
+    <a href={CALCOM_CONFIG.BOOKING_URL} target="_blank" rel="noopener noreferrer">
+      Book a first session
+      <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+    </a>
+  </Button>
+);
+
+/** Concentric "resonance" rings — the brand motif, drawn large and faint. */
+const Rings = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 600 600" className={className} aria-hidden>
+    {[60, 120, 180, 240, 300].map((r, i) => (
+      <circle key={r} cx="300" cy="300" r={r} fill="none" stroke="currentColor" strokeOpacity={0.09 - i * 0.015} strokeWidth="1" />
+    ))}
+  </svg>
+);
+
+const Eyebrow = ({ children }: { children: React.ReactNode }) => (
+  <p className="mb-4 flex items-center gap-2 text-[13px] font-medium text-brand">
+    <span className="h-px w-6 bg-brand/50" />
+    {children}
+  </p>
+);
 
 const Index = () => {
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/book-session", label: "Session Options" },
-    { href: "/resources", label: "Resources" },
-    { href: "/blog", label: "Journal" },
-    { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true },
-    { href: "https://resonance-with-daniele.vercel.app/", label: "RESONANCE CHOIR", isExternal: true },
-  ];
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const peaceFramework = [
-    { letter: "P", title: "Preliminary Assessment", subtitle: "Map the System", description: "I start by listening to your story and mapping how your system is functioning. Using advanced neurological assessment tools, I identify where your nervous system is holding threat and where communication has broken down." },
-    { letter: "E", title: "Ease the System", subtitle: "Create Safety First", description: "I calm your stress response using proven techniques including breath restoration, vagus nerve activation, and relaxation protocols. Until your nervous system feels safe, no lasting change is possible." },
-    { letter: "A", title: "Align the Hierarchy", subtitle: "Find the Keystone", description: "I identify your nervous system's top priority — the keystone issue driving other symptoms. By working within a structured functional hierarchy, I ensure interventions are applied in the right order." },
-    { letter: "C", title: "Correct", subtitle: "Restore Communication", description: "I correct faulty neurological pathways and restore brain–body communication using precise, evidence-informed techniques. Clients often feel shifts immediately." },
-    { letter: "E", title: "Embed", subtitle: "Build Lasting Resilience", description: "I lock in change with simple practices you can take home — breath work, movement protocols, lifestyle tweaks — to build resilience, not dependency." }
-  ];
-
-  const testimonials = [
-    {
-      text: "Daniele's approach is unlike any other. He helped me resolve chronic jaw tension and find my voice again after years of suppression.",
-      author: "Sarah M.",
-      role: "Creative Professional"
-    },
-    {
-      text: "A game changer for my performance anxiety; I finally feel grounded on stage. The neuro-health assessment provided immediate physical shifts.",
-      author: "James L.",
-      role: "Performance Artist"
-    }
-  ];
+  // Inject Service structured data for SEO
+  useEffect2(() => {
+    const services = [
+      {
+        name: "FNH Neuro-Health Assessment",
+        description: "60-minute session focusing on neurological pathways, cranial nerves, and primitive reflex integration.",
+        serviceType: "Functional Neuro Health",
+        areaServed: "Toorak, Melbourne, Victoria",
+        price: "70",
+        currency: "AUD"
+      },
+      {
+        name: "Community — Free Access Session",
+        description: "Fully subsidised 60-minute neuro-somatic session for those who would otherwise not be able to access this clinical work.",
+        serviceType: "Community Health",
+        areaServed: "Toorak, Melbourne, Victoria",
+        price: "0",
+        currency: "AUD"
+      }
+    ];
+    injectServiceSchema(services);
+    return () => removeServiceSchema();
+  }, []);
 
   const services = [
     {
       name: "FNH Neuro-Health Assessment",
-      description: "60-minute session focusing on neurological pathways, cranial nerves, and primitive reflex integration. Practitioner-in-Training clinical study rate.",
+      description: "60-minute session focusing on neurological pathways, cranial nerves, and primitive reflex integration.",
       serviceType: "Functional Neuro Health",
       areaServed: "Toorak, Melbourne, Victoria",
       price: "70",
@@ -55,314 +87,341 @@ const Index = () => {
     },
     {
       name: "Community — Free Access Session",
-      description: "Fully subsidised 60-minute neuro-somatic session for those who would otherwise not be able to access this clinical work. Released weekly.",
+      description: "Fully subsidised 60-minute neuro-somatic session for those who would otherwise not be able to access this clinical work.",
       serviceType: "Community Health",
       areaServed: "Toorak, Melbourne, Victoria",
       price: "0",
       currency: "AUD"
-    },
-    {
-      name: "Somatic Kinesiology",
-      description: "Focus on emotional clearing, root beliefs, and meridian balancing for deep internal safety and subconscious alignment.",
-      serviceType: "Kinesiology",
-      areaServed: "Toorak, Melbourne, Victoria"
-    },
-    {
-      name: "Functional Neuro Health",
-      description: "Direct assessment of neurological pathways, cranial nerves, and primitive reflexes, based on the model pioneered by Nick Moss.",
-      serviceType: "Functional Neurology",
-      areaServed: "Toorak, Melbourne, Victoria"
-    },
-    {
-      name: "Vocal & Performance Coaching",
-      description: "Specialised support for vocal freedom, diaphragm release, and embodied expression for performers and leaders.",
-      serviceType: "Vocal Coaching",
-      areaServed: "Toorak, Melbourne, Victoria"
     }
   ];
 
-  // Inject Service structured data for SEO
-  useEffect(() => {
-    injectServiceSchema(services);
-    return () => removeServiceSchema();
-  }, [services]);
-
   return (
-    <div className="bg-dyad-background-soft min-h-screen text-slate-900 selection:bg-dyad-accent/20 selection:text-dyad-dark">
-      
-      <Header links={navLinks} />
+    <div className="landing relative min-h-screen overflow-x-hidden bg-background text-foreground">
+      {/* Atmosphere */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[900px] overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_0%,hsl(var(--brand)/0.06),transparent_70%),radial-gradient(50%_50%_at_90%_10%,hsl(205_80%_60%/0.07),transparent_70%)]" />
+        <Rings className="absolute -right-40 -top-40 h-[760px] w-[760px] text-brand" />
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent to-background" />
+      </div>
 
-      <main>
-        {/* Hero Section */}
-        <section 
-          className="relative pt-24 pb-20 md:pt-32 md:pb-28 border-b border-dyad-soft/10 overflow-hidden"
-          style={{ 
-            backgroundImage: 'url(/resonance-background-horizontal.png)', 
-            backgroundSize: 'cover', 
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]"></div>
-          
-          <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
-            
-            <FadeIn direction="down" duration={1} delay={0.2}>
-              <div className="relative inline-block mb-10 md:mb-12">
-                <div className="w-36 h-36 md:w-48 md:h-48 mx-auto rounded-full shadow-2xl overflow-hidden border-4 border-white ring-8 ring-dyad-accent/10 transition-all duration-700 hover:ring-dyad-accent/20">
-                  <img 
-                    src="/daniele-buatti-hero.jpeg" 
-                    alt="Daniele Buatti, Neuro-Somatic Kinesiologist" 
-                    className="w-full h-full object-cover object-center scale-110"
-                    loading="eager"
-                  />
-                </div>
-                <div className="absolute -bottom-2 -right-2 bg-white p-3 rounded-full shadow-lg border border-dyad-soft/20">
-                  <Sparkles className="h-5 w-5 text-dyad-accent" />
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.4}>
-              <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-[1.1] text-dyad-dark tracking-tight">
-                Neuro-Somatic <br className="hidden md:block" /> <span className="italic text-dyad-accent">Kinesiology</span>
-              </h1>
-            </FadeIn>
-
-            <FadeIn delay={0.6}>
-              <p className="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto text-dyad-dark/80 leading-relaxed">
-                Brain-based nervous system regulation and somatic integration in <span className="font-semibold text-dyad-dark">Toorak</span>.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={0.8} direction="up">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-                <a href="/book-session" className="w-full sm:w-auto">
-                  <Button 
-                    size="lg" 
-                    className="w-full sm:w-auto text-lg px-10 py-7 md:h-16 bg-dyad-dark hover:bg-dyad-accent text-white font-bold shadow-xl rounded-full transition-all hover:scale-105 active:scale-95"
-                  >
-                    Book Your Session
-                    <ArrowRight className="ml-3 h-5 w-5" />
-                  </Button>
-                </a>
-                <a href="#peace-method" className="w-full sm:w-auto">
-                  <Button 
-                    variant="outline"
-                    size="lg" 
-                    className="w-full sm:w-auto text-lg px-10 py-7 md:h-16 border-dyad-dark/20 text-dyad-dark hover:bg-dyad-dark hover:text-white font-bold shadow-md rounded-full transition-all"
-                  >
-                    The PEACE Method
-                  </Button>
-                </a>
-              </div>
-            </FadeIn>
-            
-            <FadeIn delay={1} direction="none">
-              <div className="mt-10 flex flex-col items-center text-xs text-dyad-accent font-bold uppercase opacity-70">
-                <div className="flex items-center tracking-[0.2em]">
-                  <ShieldCheck className="h-4 w-4 mr-2" />
-                  Functional Neuro Health Practitioner (In-Training)
-                </div>
-                <span className="text-[10px] tracking-[0.15em] mt-1 opacity-60">Studying the model pioneered by Nick Moss</span>
-              </div>
-            </FadeIn>
-          </div>
-        </section>
-
-        {/* Authority Snippet */}
-        <section className="py-12 md:py-16 bg-white border-b border-dyad-soft/10">
-          <div className="container mx-auto px-6 max-w-4xl text-center">
-            <FadeIn>
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Music className="h-6 w-6 text-dyad-accent" />
-                <span className="text-xs font-black uppercase tracking-[0.3em] text-dyad-dark/40">The Resonance Theme</span>
-              </div>
-              <p className="text-xl md:text-2xl font-serif text-dyad-dark leading-relaxed italic">
-                "With over a decade of experience as a professional Music Director and Vocal Coach, I understand resonance not just as a physical phenomenon, but as a state of being."
-              </p>
-            </FadeIn>
-          </div>
-        </section>
-
-        {/* Somatic Check-in Section */}
-        <section className="py-16 md:py-24 bg-dyad-background-soft">
-          <div className="container mx-auto px-6">
-            <FadeIn>
-              <SomaticCheckIn />
-            </FadeIn>
-          </div>
-        </section>
-
-        {/* Service Blocks */}
-        <section className="bg-dyad-dark py-16 md:py-24 text-white relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(212,106,155,0.15),transparent_50%)] pointer-events-none"></div>
-          
-          <div className="container mx-auto px-6 max-w-6xl relative z-10">
-            <FadeIn>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-serif mb-4">Clinical Somatic Support</h2>
-                <p className="text-xl text-white/60 max-w-3xl mx-auto font-light">
-                  Bridging the gap between traditional kinesiology and modern functional neurology.
-                </p>
-              </div>
-            </FadeIn>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { icon: Heart, title: "Somatic Kinesiology", desc: "Focus on emotional clearing, root beliefs, and meridian balancing for deep internal safety and subconscious alignment." },
-                { icon: Brain, title: "Functional Neuro Health", desc: "Direct assessment of neurological pathways, cranial nerves, and primitive reflexes, based on the model pioneered by Nick Moss." },
-                { icon: Mic2, title: "Vocal & Performance", desc: "Specialised support for vocal freedom, diaphragm release, and embodied expression for performers and leaders." }
-              ].map((service, i) => (
-                <FadeIn key={i} delay={0.2 * i} direction="up">
-                  <Card className="relative bg-white/5 border border-white/10 p-8 transition-all hover:bg-white/10 hover:border-white/20 shadow-2xl group h-full flex flex-col">
-                    <div className="mb-6 text-dyad-accent group-hover:scale-110 transition-transform duration-500">
-                      <service.icon className="h-10 w-10" />
-                    </div>
-                    <CardTitle className="text-2xl font-serif mb-4 text-white leading-snug">{service.title}</CardTitle>
-                    <p className="text-white/70 leading-relaxed text-lg font-light">
-                      {service.desc}
-                    </p>
-                  </Card>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
-        {/* PEACE Framework Section */}
-        <section id="peace-method" className="bg-dyad-sky/10 py-16 md:py-24 border-y border-dyad-soft/10">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <FadeIn>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">The PEACE Framework</h2>
-                <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
-                  A structured, clinical approach to somatic and neurological transformation.
-                </p>
-              </div>
-            </FadeIn>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-              {peaceFramework.map((item, i) => (
-                <FadeIn key={i} delay={0.1 * i} direction="up">
-                  <div className="bg-white p-6 rounded-3xl shadow-sm border border-dyad-soft/10 flex flex-col items-center text-center md:items-start md:text-left transition-all hover:shadow-xl hover:-translate-y-2 h-full">
-                    <div className="w-12 h-12 bg-dyad-accent text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-4 shadow-lg shadow-dyad-accent/20 flex-shrink-0">
-                      {item.letter}
-                    </div>
-                    <h3 className="text-lg font-bold text-dyad-dark mb-1">{item.title}</h3>
-                    <p className="text-xs uppercase tracking-widest text-dyad-accent/70 font-semibold mb-3">{item.subtitle}</p>
-                    <p className="text-sm text-slate-500 leading-relaxed font-light">{item.description}</p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Guide CTA */}
-        <section className="py-12 md:py-16 bg-dyad-sky/5">
-          <div className="container mx-auto px-6 max-w-3xl text-center">
-            <FadeIn>
-              <a 
-                href="https://studio.danielebuatti.com/guide" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-dyad-accent hover:text-dyad-dark font-semibold text-lg underline underline-offset-4 transition-colors"
-              >
-                Read the full guide: What happens in a session, pricing & timeline
-                <ArrowRight className="ml-2 h-5 w-5" />
+      {/* Nav */}
+      <header
+        className={cn(
+          "sticky top-0 z-40 transition-[background-color,border-color,box-shadow] duration-300",
+          scrolled ? "border-b border-border/60 bg-background/80 backdrop-blur-xl" : "border-b border-transparent"
+        )}
+      >
+        <div className="mx-auto flex h-16 max-w-6xl items-center gap-6 px-5 pt-[env(safe-area-inset-top)] sm:px-8">
+          <a href="#top" aria-label="Resonance Kinesiology" className="flex items-center">
+            <BrandLogo className="text-[19px] sm:text-[21px]" />
+          </a>
+          <nav className="ml-6 hidden items-center gap-1 text-[14px] text-muted-foreground md:flex">
+            {[
+              ["How it works", "#how"],
+              ["About", "#about"],
+              ["Questions", "#faq"],
+            ].map(([label, href]) => (
+              <a key={href} href={href} className="rounded-full px-3 py-1.5 hover:bg-foreground/[0.05] hover:text-foreground">
+                {label}
               </a>
-            </FadeIn>
+            ))}
+          </nav>
+          <div className="ml-auto flex items-center gap-2">
+            <Button asChild variant="ghost" size="sm" className="rounded-full text-[13px] text-muted-foreground">
+              <a href="https://studio.danielebuatti.com" target="_blank" rel="noopener noreferrer">Client log in</a>
+            </Button>
+            <BookButton size="sm" className="hidden sm:inline-flex" />
+          </div>
+        </div>
+      </header>
+
+      <main id="top" className="relative z-10">
+        {/* Hero */}
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 sm:px-8 md:grid-cols-[1.25fr_1fr] md:pt-20 lg:gap-20">
+          <div>
+            <Eyebrow>FNH kinesiology with Daniele Buatti</Eyebrow>
+            <h1 className="font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] text-brand sm:text-[58px] lg:text-[68px]">
+              Some things don't respond to <em className="italic">trying harder.</em>
+            </h1>
+            <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground">
+              FNH kinesiology is hands-on nervous system work: assessment, movement, breath, and the patterns sitting underneath them. 60 minutes, on a table, in a Toorak studio. You keep your clothes on.
+            </p>
+            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+              <BookButton />
+              <p className="text-[13px] text-muted-foreground">Opens Cal.com. Pick a time, no account needed.</p>
+            </div>
+            <dl className="mt-10 grid max-w-lg grid-cols-3 divide-x divide-border/70 rounded-2xl border border-border/70 bg-card/80 backdrop-blur">
+              {[
+                { icon: Clock, k: "Session", v: "60 minutes" },
+                { icon: MapPin, k: "Studio", v: "Toorak" },
+                { icon: Wind, k: "Per session", v: "$70" },
+              ].map((f) => (
+                <div key={f.k} className="px-4 py-3">
+                  <dt className="flex items-center gap-1.5 text-[11.5px] text-muted-foreground">
+                    <f.icon size={12} /> {f.k}
+                  </dt>
+                  <dd className="mt-0.5 text-[15px] font-medium">{f.v}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-sm md:max-w-none">
+            <div className="absolute -inset-6 rounded-[40px] bg-[radial-gradient(closest-side,hsl(var(--brand)/0.08),transparent)] blur-2xl" aria-hidden />
+            <figure className="relative overflow-hidden rounded-[28px] border border-border/70 bg-card p-3 shadow-[0_30px_70px_-40px_hsl(var(--brand)/0.35)]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[20px] bg-muted">
+                <img src={PROFILE_IMAGE_URL} alt="Daniele Buatti" className="h-full w-full object-cover" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/45 to-transparent" />
+                <figcaption className="absolute inset-x-4 bottom-4 text-white">
+                  <p className="font-serif text-xl leading-tight">Daniele Buatti</p>
+                  <p className="text-[12.5px] text-white/80">Diploma of Kinesiology · Functional Neuro Health</p>
+                </figcaption>
+              </div>
+              <ul className="grid gap-2 p-3 pt-4">
+                {[
+                  "Every session starts with an assessment, not a template",
+                  "You leave with written notes and one or two things to practise",
+                  "We track the same markers session to session, so progress isn't just a feeling",
+                ].map((line) => (
+                  <li key={line} className="flex items-start gap-2.5 text-[13.5px] leading-snug">
+                    <span className="mt-[5px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </figure>
           </div>
         </section>
 
-        {/* Client Words Section */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <FadeIn>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-serif text-dyad-dark mb-4">Client Words</h2>
-                <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
-                  Reflections from those who have walked the path of resonance.
-                </p>
-              </div>
-            </FadeIn>
-
-            <div className="grid md:grid-cols-2 gap-10">
-              {testimonials.map((t, i) => (
-                <FadeIn key={i} delay={0.2 * i} direction={i % 2 === 0 ? "right" : "left"}>
-                  <div className="bg-dyad-background-soft p-8 rounded-[2rem] border border-dyad-soft/10 relative h-full flex flex-col">
-                    <Quote className="h-8 w-8 text-dyad-accent/20 absolute top-6 left-6" />
-                    <p className="text-xl text-slate-700 italic mb-6 leading-relaxed relative z-10 pt-4">
-                      "{t.text}"
-                    </p>
-                    <div className="mt-auto">
-                      <p className="font-bold text-dyad-dark">{t.author}</p>
-                      <p className="text-sm text-slate-500">{t.role}</p>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
+        {/* Who this is for */}
+        <section className="border-t border-border/70">
+          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 md:grid-cols-[1fr_1.4fr] lg:gap-20">
+            <div>
+              <Eyebrow>Who this is for</Eyebrow>
+              <h2 className="font-serif text-[34px] font-light leading-[1.12] tracking-[-0.02em] text-brand sm:text-[40px]">
+                People usually arrive with something specific and physical.
+              </h2>
+            </div>
+            <div>
+              <ul className="divide-y divide-border border-y border-border">
+                {[
+                  "a jaw that won't unclench, or teeth you grind in your sleep",
+                  "a breath that never quite arrives all the way in",
+                  "neck and shoulders that massage helps for about two days",
+                  "a diagnosis that landed recently and hasn't been absorbed yet",
+                  "thoughts on a loop that no amount of understanding has interrupted",
+                ].map((line, i) => (
+                  <li key={line} className="flex items-baseline gap-5 py-4 text-[16px] leading-relaxed">
+                    <span className="w-6 shrink-0 font-serif text-sm tabular-nums text-brand">0{i + 1}</span>
+                    {line}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-[17px] leading-relaxed text-muted-foreground">
+                And usually something less specific underneath it: a long habit of handling things alone, and a quiet suspicion that it's a bit embarrassing to be asking for help this late.{" "}
+                <span className="text-foreground">It isn't. Almost everyone gets here later than they'd have liked.</span>
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Gift Card Section */}
-        <section className="bg-dyad-sky/5 py-16 md:py-24">
-          <div className="container mx-auto px-6 max-w-3xl text-center">
-            <FadeIn>
-              <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-dyad-soft/20 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-dyad-accent/5 rounded-full -translate-y-1/2 translate-x-1/2 transition-transform group-hover:scale-110 duration-700"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center justify-center mb-6">
-                    <Gift className="h-8 w-8 text-dyad-accent mr-3" />
-                    <h2 className="text-3xl md:text-4xl font-serif text-dyad-dark font-bold">Gift a Session</h2>
+        {/* What actually happens */}
+        <section id="how" className="scroll-mt-20 bg-muted/50">
+          <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+            <Eyebrow>What actually happens</Eyebrow>
+            <div className="grid gap-5 md:grid-cols-[1.35fr_1fr]">
+              <div className="rounded-3xl border border-border/70 bg-card p-7 sm:p-9">
+                <h3 className="font-serif text-[28px] font-normal tracking-[-0.015em] text-brand">Your first session</h3>
+                <ol className="relative mt-6 space-y-5 before:absolute before:bottom-2 before:left-[11px] before:top-2 before:w-px before:bg-border">
+                  {[
+                    "We talk first, and for longer than you might expect. History, what you've already tried, what your body is doing.",
+                    "Then the table. Fully clothed. Hands-on work around the diaphragm, ribs, collarbone and jaw.",
+                    "Some standing movement and balance testing.",
+                    "A breath-hold measure, so there's a number to come back to.",
+                    "Written notes by email afterwards, plus one or two small practices. Not a program. Two things.",
+                  ].map((line, i) => (
+                    <li key={line} className="relative flex gap-4">
+                      <span className="relative z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand/30 bg-card text-[11px] font-medium tabular-nums text-brand">
+                        {i + 1}
+                      </span>
+                      <span className="pt-0.5 text-[15px] leading-relaxed">{line}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div className="flex flex-col gap-5">
+                <div className="rounded-3xl border border-border/70 bg-card p-7 sm:p-9">
+                  <h3 className="font-serif text-[28px] font-normal tracking-[-0.015em] text-brand">Every session after that</h3>
+                  <ul className="mt-5 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
+                    <li>We start with what's happened since.</li>
+                    <li>We return to what was left unfinished.</li>
+                    <li className="text-foreground">Some sessions follow the plan. Some follow whatever you walked in carrying. Both count as the work.</li>
+                  </ul>
+                </div>
+                <div className="relative flex-1 overflow-hidden rounded-3xl border border-brand/10 bg-brand/[0.05] p-7 text-brand sm:p-9">
+                  <Rings className="absolute -bottom-40 -right-40 h-[420px] w-[420px] text-brand" />
+                  <Shirt className="relative h-5 w-5 text-brand/50" />
+                  <p className="relative mt-4 font-serif text-[22px] font-light leading-snug">Something you can move in. Everything stays on.</p>
+                  <div className="relative mt-6">
+                    <BookButton size="sm" />
                   </div>
-                  <p className="text-xl text-slate-700 mb-10 leading-relaxed font-light">
-                    Give the gift of neurological regulation and somatic balance to someone you care about.
-                  </p>
-                  <a href={GIFT_CARD_URL} target="_blank" rel="noopener noreferrer">
-                    <Button 
-                      size="lg" 
-                      className="bg-dyad-accent hover:bg-dyad-dark text-white font-bold shadow-xl px-12 h-16 rounded-full transition-all hover:scale-105 active:scale-95"
-                    >
-                      Buy Gift Card
-                      <ArrowRight className="ml-3 h-5 w-5" />
-                    </Button>
-                  </a>
                 </div>
               </div>
-            </FadeIn>
+            </div>
           </div>
         </section>
 
-        {/* Booking CTA */}
-        <section className="bg-dyad-dark py-20 md:py-28">
-          <div className="container mx-auto px-6 max-w-4xl text-center">
-            <FadeIn>
-              <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Begin Your Journey</h2>
-              <p className="text-xl text-white/60 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you are ready to book a full assessment or want to explore the work through a community session, the next step is simple.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/book-session">
-                  <Button size="lg" className="bg-dyad-accent hover:bg-white hover:text-dyad-dark text-white font-bold px-12 h-16 rounded-full text-lg transition-all hover:shadow-xl hover:-translate-y-1">
-                    Book a Session
-                    <ArrowRight className="ml-3 h-5 w-5" />
-                  </Button>
-                </a>
-                <a href="#peace-method">
-                  <Button variant="outline" size="lg" className="border-white/40 text-white bg-transparent hover:bg-white hover:text-dyad-dark font-bold px-12 h-16 rounded-full text-lg transition-all">
-                    The PEACE Method
-                  </Button>
-                </a>
+        {/* How long this takes */}
+        <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+          <div className="grid gap-10 md:grid-cols-[1fr_1.4fr] lg:gap-20">
+            <div>
+              <Eyebrow>How long this takes</Eyebrow>
+              <h2 className="font-serif text-[34px] font-light leading-[1.12] tracking-[-0.02em] text-brand sm:text-[40px]">Not one session.</h2>
+            </div>
+            <div>
+              <div className="mb-8 grid grid-cols-3 gap-2" aria-hidden>
+                {[
+                  ["1", "Orientation"],
+                  ["3–4", "Things start moving"],
+                  ["5+", "Where it lasts"],
+                ].map(([n, label], i) => (
+                  <div key={n} className="relative">
+                    <div className={cn("h-1.5 rounded-full", i === 0 ? "bg-brand/35" : i === 1 ? "bg-brand/65" : "bg-brand")} />
+                    <p className="mt-3 font-serif text-2xl tabular-nums">{n}</p>
+                    <p className="text-[13px] text-muted-foreground">{label}</p>
+                  </div>
+                ))}
               </div>
-            </FadeIn>
+              <p className="text-[17px] leading-relaxed text-muted-foreground">
+                The first is mostly orientation. Things tend to start moving around the third or fourth, and the sessions after that are where anything durable happens.
+              </p>
+              <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
+                If you're someone who tends to stop things around week five, say so at the start and we'll build something in for that.{" "}
+                <span className="text-foreground">It's a common pattern, not a character flaw.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* What this isn't */}
+        <section className="border-y border-border/70 bg-muted/30">
+          <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center">
+            <p className="shrink-0 font-serif text-2xl font-light tracking-[-0.015em] text-brand">What this isn't</p>
+            <ul className="flex flex-wrap gap-2 md:ml-auto md:justify-end">
+              {["Not a massage.", "Not a diagnosis.", "Not a single-session fix."].map((line) => (
+                <li key={line} className="rounded-full border border-border bg-card px-4 py-2 text-[14px] shadow-xs">{line}</li>
+              ))}
+              <li className="w-full text-[14px] leading-relaxed text-muted-foreground md:text-right">
+                Not a replacement for medical or psychological care. It works alongside it, and I'd rather you have both.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* About */}
+        <section id="about" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20 sm:px-8">
+          <div className="grid items-center gap-10 md:grid-cols-[280px_1fr] lg:gap-16">
+            <img
+              src={PROFILE_IMAGE_URL}
+              alt="Daniele Buatti"
+              className="mx-auto aspect-square w-48 rounded-full object-cover shadow-[0_24px_60px_-34px_hsl(var(--brand)/0.4)] ring-8 ring-card md:w-full md:rounded-[28px]"
+              loading="lazy"
+            />
+            <div>
+              <Eyebrow>About</Eyebrow>
+              <p className="font-serif text-[28px] font-light leading-snug tracking-[-0.015em] text-brand">
+                Hi, I'm Daniele. I hold a Diploma of Kinesiology from the College of Complementary Medicine, and work within the Functional Neuro Health framework.
+              </p>
+              <p className="mt-5 text-[17px] leading-relaxed text-muted-foreground">
+                I also spend most of my week as a music director and vocal coach, which is less of a detour than it sounds. Both jobs are about what a body does under pressure, and how much of that is old habit rather than fact.
+              </p>
+              <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
+                What I find genuinely interesting is watching that shift happen in a session: someone stands differently, breathes differently, and the thing they walked in carrying is just lighter. I don't get tired of seeing that.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ - from current landing page, adapted */}
+        <section id="faq" className="scroll-mt-20 border-t border-border/70">
+          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 md:grid-cols-[1fr_1.4fr] lg:gap-20">
+            <div>
+              <Eyebrow>Questions</Eyebrow>
+              <h2 className="font-serif text-[34px] font-light leading-[1.12] tracking-[-0.02em] text-brand sm:text-[40px]">Before you book</h2>
+              <p className="mt-4 text-[15px] text-muted-foreground">
+                Anything else —{" "}
+                <a href="mailto:daniele.kinesiology@gmail.com" className="text-foreground underline decoration-border underline-offset-4 hover:decoration-foreground">
+                  daniele.kinesiology@gmail.com
+                </a>
+              </p>
+              <p className="mt-2 text-[15px] text-muted-foreground">
+                685 Toorak Rd, Toorak VIC 3144
+              </p>
+            </div>
+            <Accordion type="single" collapsible className="rounded-2xl border border-border bg-card px-5 shadow-xs">
+              {[
+                { q: "What is the difference between Kinesiology and FNH?", a: "Both Kinesiology and FNH use muscle monitoring as a feedback tool, but they apply it within different frameworks. Kinesiology uses it to identify subconscious stress and emotional blocks, often working with meridians and acupressure. FNH (Functional Neuro Health) uses the same biofeedback principle but interprets responses through a functional neurology lens — specifically assessing neurological pathways, cranial nerves, and primitive reflexes to address physical performance and chronic pain." },
+                { q: "How many sessions will I need?", a: "While many people feel a shift after one session, deep neurological repatterning usually happens over 3-5 sessions. I will discuss a plan that suits your specific goals during our first meeting." },
+                { q: "Do I need to prepare anything?", a: "Just yourself! Wear comfortable clothing and ensure you're hydrated. You don't need to have a clear 'problem' to solve—I can work with whatever is present in your system." },
+                { q: "Is this work suitable for children?", a: "Yes, neuro-somatic work is excellent for children, particularly for primitive reflex integration and emotional regulation. Please contact me directly to discuss sessions for minors." },
+                { q: "Do I need to know what's wrong?", a: "No. Most people can't name it, and naming it is part of the work." },
+                { q: "Will I have to talk about my family?", a: "Sometimes it comes up. You set the pace, and you can stop anything." },
+                { q: "Can I do this while I'm seeing a therapist or GP?", a: "Yes, and please do." },
+                { q: "What do I wear?", a: "Something you can move in. Everything stays on." },
+                { q: "What if I cry, or shake, or nothing happens?", a: "All three are normal." },
+                { q: "What's your cancellation policy?", a: "24 hours' notice, please. Inside that window the session is still charged, since that time was held for you. Life happens though, so if something genuine comes up, just message me." },
+              ].map(({ q, a }, i, arr) => (
+                <AccordionItem key={q} value={q} className={cn(i === arr.length - 1 && "border-b-0")}>
+                  <AccordionTrigger className="py-5 text-left text-[15px] font-medium hover:no-underline">{q}</AccordionTrigger>
+                  <AccordionContent className="pb-5 text-[15px] leading-relaxed text-muted-foreground">{a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        {/* Closing */}
+        <section className="px-5 pb-24 sm:px-8">
+          <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[32px] border border-brand/10 bg-brand/[0.045] px-6 py-16 text-center text-brand sm:px-12 sm:py-20">
+            <Rings className="absolute left-1/2 top-1/2 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 text-brand" />
+            <div className="absolute inset-0 bg-[radial-gradient(60%_80%_at_50%_0%,hsl(0_0%_100%/0.7),transparent_70%)] dark:hidden" aria-hidden />
+            <div className="relative">
+              <BrandStar className="mx-auto h-8 w-8" />
+              <h2 className="mx-auto mt-6 max-w-2xl font-serif text-[36px] font-light leading-[1.1] tracking-[-0.02em] sm:text-[48px]">
+                Some things don't respond to trying harder.
+              </h2>
+              <p className="mt-4 text-[15px] text-muted-foreground">60 minutes · Toorak studio · $70</p>
+              <div className="mt-8 flex justify-center">
+                <BookButton />
+              </div>
+              <p className="mt-4 text-[13px] text-muted-foreground">
+                Also teaches voice and piano · <a href="https://danielebuatti.com/voice-piano-services" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">danielebuatti.com</a>
+              </p>
+            </div>
           </div>
         </section>
       </main>
 
-      <Footer />
+      <footer className="relative z-10 border-t border-border">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-8 pb-[calc(2rem+env(safe-area-inset-bottom))] text-[13px] text-muted-foreground sm:flex-row sm:items-center sm:px-8">
+          <span className="flex items-center gap-2">
+            <BrandLogo className="text-[15px]" /> <span>· Daniele Buatti</span>
+          </span>
+          <span className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:ml-auto">
+            <a href="mailto:daniele.kinesiology@gmail.com" className="hover:text-foreground">daniele.kinesiology@gmail.com</a>
+            <a href="tel:+61424174067" className="hover:text-foreground">0424 174 067</a>
+            <a href="https://studio.danielebuatti.com/guide" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Session guide</a>
+            <a href="https://resonance.danielebuatti.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-foreground">
+              Resonance Choir <ArrowUpRight size={12} />
+            </a>
+          </span>
+        </div>
+      </footer>
+
+      {/* Phone: booking always one tap away */}
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border/70 bg-background/85 px-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 backdrop-blur-xl sm:hidden">
+        <BookButton className="w-full justify-center" />
+      </div>
     </div>
   );
 };

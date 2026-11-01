@@ -23,6 +23,8 @@ export default {
         sans: ['"Inter"', 'sans-serif'],
       },
       colors: {
+        // Brand (from kinesiology-app Dawn design system)
+        brand: "hsl(var(--brand) / <alpha-value>)",
         // Dawn Brand Kit — Calm, warm, editorial
         'ground': '#FBF5F0',
         'surface': '#FFFFFF',

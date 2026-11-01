@@ -16,10 +16,8 @@ const BookSession = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/book-session", label: "Session Options" },
-    { href: "/resources", label: "Resources" },
-    { href: "/blog", label: "Journal" },
     { href: MUSIC_WORK_URL, label: "My Music Work", isExternal: true },
-    { href: "https://resonance-with-daniele.vercel.app/", label: "RESONANCE CHOIR", isExternal: true },
+    { href: "https://resonance.danielebuatti.com", label: "RESONANCE CHOIR", isExternal: true },
   ];
 
   const copyToClipboard = (text: string, label: string) => {

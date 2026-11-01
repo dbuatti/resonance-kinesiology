@@ -6,8 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import BookSession from "./pages/BookSession";
 import Schedule from "./pages/Schedule";
-import Resources from "./pages/Resources";
-import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
@@ -27,8 +25,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/book-session" element={<BookSession />} />
             <Route path="/schedule" element={<Schedule />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BackToTop />
