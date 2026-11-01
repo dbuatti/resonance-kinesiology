@@ -365,7 +365,6 @@ export default function KinesiologyGuidePage() {
     };
 
     setMeta("name", "description", meta.description);
-    setMeta("name", "robots", "noindex, follow");
     setMeta("property", "og:type", "article");
     setMeta("property", "og:title", cover.headline);
     setMeta("property", "og:description", meta.description);
