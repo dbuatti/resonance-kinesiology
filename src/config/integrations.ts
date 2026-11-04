@@ -10,4 +10,4 @@ export const CALCOM_CONFIG = {
   COMMUNITY_FREE_URL: "https://cal.com/danielebuatti/fnh-neuro-health-assessment-community-free",
 };
 
-export const PROFILE_IMAGE_URL = "https://resonance-kinesiology.vercel.app/daniele-buatti-hero.jpeg";
+export const PROFILE_IMAGE_URL = "/daniele-buatti-hero.jpeg";
