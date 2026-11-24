@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 .dyad/
 .vercel
+
+# Environment (direnv)
+.env
+.env.local
+.env.*.local
