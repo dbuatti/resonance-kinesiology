@@ -37,7 +37,7 @@ const Schedule = () => {
       default:
         return {
           title: "FNH Neuro-Health Assessment",
-          description: "1 hour @ A$70.00. New client rate focusing on neurological pathways, cranial nerves, and primitive reflex integration."
+          description: "1 hour @ A$95.00. New client rate focusing on neurological pathways, cranial nerves, and primitive reflex integration."
         };
     }
   };

@@ -84,12 +84,12 @@ const BookSession = () => {
                     <div className="bg-dyad-accent p-10 md:p-14 text-white flex flex-col justify-center">
                       <h2 className="text-3xl md:text-4xl font-serif mb-4">FNH Neuro-Health Assessment</h2>
                       <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-4xl font-bold text-white">$70</span>
+                        <span className="text-4xl font-bold text-white">$95</span>
                         <span className="text-white/60 font-light line-through ml-2">$120</span>
                         <span className="text-white/60 font-light ml-2">/ 60 min</span>
                       </div>
                       <div className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-8">
-                        Save $50
+                        Save $25
                       </div>
                       {/* Cal.com Popup Trigger */}
                       <Button 
